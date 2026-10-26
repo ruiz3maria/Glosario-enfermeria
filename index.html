@@ -88,7 +88,7 @@ body.readable-font *{font-family:"Comic Sans MS", "Arial", sans-serif!important}
 
 <!-- SECCIÓN VISUAL DE BANDEJAS CLÍNICAS -->
 <div class="card" style="margin-top: 20px;">
-  <h2>💉 Bandejas Clínicas </h2>
+  <h2>💉 Bandejas Clínicas</h2>
   <p>Insumos obligatorios y específicos para cada procedimiento con <b>Alcohol al 70%</b> incluido en todas las bandejas:</p>
   
   <div class="grid" style="margin-top:14px;">
@@ -214,7 +214,7 @@ function show(id){
     addSpeakButtons();
     target.scrollIntoView({behavior:'smooth',block:'start'});
   } else if(id==='games'){
-    document.querySelectorAll('.game-panel').forEach(p=>p.classList.add('hidden'));
+    document.querySelectorAll('#games .game-panel').forEach(p=>p.classList.add('hidden'));
     target.scrollIntoView({behavior:'smooth',block:'start'});
   } else if(id==='home'){
     window.scrollTo({top:0,behavior:'smooth'});
@@ -300,7 +300,7 @@ function finishTrayGame(){if(!trayRunning)return;let boxes=[...document.querySel
 function stopTrayClock(){if(!trayRunning)return;let elapsed=performance.now()-trayStart;trayRunning=false;if(trayInterval){clearInterval(trayInterval);trayInterval=null}document.getElementById('trayTimer').textContent=formatTrayTime(elapsed);let boxes=[...document.querySelectorAll('#trayChecklist input[type=checkbox]')];let selected=boxes.filter(x=>x.checked).map(x=>x.dataset.item);let correct=trayLists[trayCurrentType];let missing=correct.filter(x=>!selected.includes(x));let extra=selected.filter(x=>!correct.includes(x));document.getElementById('trayStartBtn').disabled=false;document.getElementById('trayFinishBtn').disabled=true;document.getElementById('trayStopBtn').disabled=true;document.getElementById('trayPlayer').disabled=false;document.getElementById('trayType').disabled=false;document.querySelectorAll('#trayChecklist input').forEach(x=>x.disabled=true);if(!missing.length&&!extra.length){trayScores.push({name:trayCurrentName,type:trayNames[trayCurrentType],ms:elapsed,display:formatTrayTime(elapsed)});trayScores.sort((a,b)=>a.ms-b.ms);document.getElementById('trayFeedback').textContent=`Cronómetro detenido. ${trayCurrentName}: bandeja correcta en ${formatTrayTime(elapsed)}.`;renderTrayResults()}else{document.getElementById('trayFeedback').textContent=`Cronómetro detenido en ${formatTrayTime(elapsed)}. La bandeja no estaba completa/correcta: faltan ${missing.length} elemento(s) y hay ${extra.length} elemento(s) de más. Esta partida no se agrega a los mejores tiempos.`}document.getElementById('trayInstruction').textContent='Tiempo detenido. Mostrá el resultado a quien coordina la actividad y presioná “Reiniciar / siguiente alumno” para una nueva partida.'} 
 function renderTrayResults(){let list=document.getElementById('trayResults');if(!list)return;if(!trayScores.length){list.innerHTML='<li>Todavía no hay tiempos registrados en esta página.</li>';return}list.innerHTML=trayScores.map((x,i)=>`<li class="${i===0?'tray-result-winner':''}">${i===0?'🥇 ':''}<b>${x.name}</b> — ${x.type}: ${x.display}${i===0?' · Mejor tiempo de esta página':''}</li>`).join('')}
 
-function renderHandQuestion(){let root=document.getElementById('handQuiz');if(!root)return;if(handIndex>=handDeck.length){root.innerHTML=`<div class="card"><h3>🎉 ¡Completaste los 5 momentos!</h3><p>Resultado: ${handScore} de ${handDeck.length} respuestas correctas.</p><button class="primary" onclick="startHandGame()">Volver a jugar</button></div>`;celebrateGame(`¡Completaste el juego de los 5 momentos de higiene de manos! Resultado: ${handScore} de ${handDeck.length}. ¡Excelente trabajo!`;return}let x=handDeck[handIndex],opts=shuffle(x.o);root.innerHTML=`<div class="game-progress"><b>Situación ${handIndex+1} de ${handDeck.length}</b><div class="mini-track"><div style="width:${Math.round(handIndex/handDeck.length*100)}%"></div></div></div><p class="gameq">${x.q}</p><div id="handOptions">${opts.map(o=>`<button class="quiz-choice" data-choice="${o}" onclick="answerHand(this,this.dataset.choice)">${o}</button>`).join('')}</div><p id="handFeedback" class="quiz-feedback"></p><button id="handNext" class="primary" style="display:none" onclick="handIndex++;renderHandQuestion()">Siguiente ➜</button>`}
+function renderHandQuestion(){let root=document.getElementById('handQuiz');if(!root)return;if(handIndex>=handDeck.length){root.innerHTML=`<div class="card"><h3>🎉 ¡Completaste los 5 momentos!</h3><p>Resultado: ${handScore} de ${handDeck.length} respuestas correctas.</p><button class="primary" onclick="startHandGame()">Volver a jugar</button></div>`;celebrateGame(`¡Completaste el juego de los 5 momentos de higiene de manos! Resultado: ${handScore} de ${handDeck.length}. ¡Excelente trabajo!`);return}let x=handDeck[handIndex],opts=shuffle(x.o);root.innerHTML=`<div class="game-progress"><b>Situación ${handIndex+1} de ${handDeck.length}</b><div class="mini-track"><div style="width:${Math.round(handIndex/handDeck.length*100)}%"></div></div></div><p class="gameq">${x.q}</p><div id="handOptions">${opts.map(o=>`<button class="quiz-choice" data-choice="${o}" onclick="answerHand(this,this.dataset.choice)">${o}</button>`).join('')}</div><p id="handFeedback" class="quiz-feedback"></p><button id="handNext" class="primary" style="display:none" onclick="handIndex++;renderHandQuestion()">Siguiente ➜</button>`}
 function answerHand(btn,choice){let x=handDeck[handIndex];let all=document.querySelectorAll('#handOptions .quiz-choice');all.forEach(b=>{b.disabled=true;if(b.textContent===x.a)b.classList.add('correct')});let ok=choice===x.a;if(!ok)btn.classList.add('incorrect');if(ok)handScore++;document.getElementById('handFeedback').textContent=ok?'¡Muy bien! Ese es el momento correcto. ⭐':'La respuesta correcta es: '+x.a+'. Repasá los cinco momentos en Conceptos.';document.getElementById('handNext').style.display='inline-block';if(handIndex===handDeck.length-1)document.getElementById('handNext').textContent='Ver resultado 🎉'}
 
 function showSticker(id){document.querySelectorAll('.sticker-info').forEach(x=>{if(x.id!==id)x.classList.remove('show')});document.getElementById(id).classList.toggle('show')}
@@ -367,4 +367,3 @@ window.addEventListener('mousemove', e=>{
   if(g && g.style.display==='block'){g.style.top=(e.clientY-20)+'px'}
 });
 </script></body></html>
-
