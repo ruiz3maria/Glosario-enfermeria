@@ -61,9 +61,8 @@ body.readable-font *{font-family:"Comic Sans MS", "Arial", sans-serif!important}
 <article class="need"><h3>🩺 Tensión arterial</h3><ul><li><b>Sistólica 90–139 mmHg y diastólica 60–89 mmHg:</b> normotenso.</li><li><b>Si la sistólica es de 140 mmHg o más, o la diastólica es de 90 mmHg o más:</b> hipertensión.</li><li><b>Si la sistólica es menor de 90 mmHg o la diastólica es menor de 60 mmHg:</b> hipotensión.</li></ul><p class="small">La tensión arterial se registra con dos valores: sistólica/diastólica, en mmHg. Para este juego se aplican estos rangos educativos; la valoración clínica deve considerar el contexto y el protocolo correspondiente.</p></article>
 </div><p class="small">Importante: estos parámetros son material de estudio solicitado para el glosario y no reemplazan la valoración clínica ni los protocolos del establecimiento.</p></section>
 
-<!-- SECCIÓN DE BANDEJAS CLÍNICAS (COMO PESTAÑA INDEPENDIENTE) -->
 <section id="trays" class="card hidden">
-  <h2>💉 Bandejas Clínicas Actualizada</h2>
+  <h2>💉 Bandejas Clínicas</h2>
   <p class="small">Insumos obligatorios y específicos para cada procedimiento con <b>Alcohol al 70%</b> incluido en todas las bandejas:</p>
   
   <div class="grid" style="margin-top:14px;">
@@ -224,12 +223,77 @@ function show(id){
   }
 }
 
-function showGamePanel(id){const games=document.getElementById('games');if(games.classList.contains('hidden'))show('games');document.querySelectorAll('#games .game-panel').forEach(p=>p.classList.add('hidden'));const panel=document.getElementById(id);if(panel)panel.classList.remove('hidden');if(id==='game')loadQ();if(id==='hendersonGame')startHendersonGame();if(id==='extraGame')document.getElementById('extraGame').scrollIntoView({behavior:'smooth',block:'nearest'});}
+function showGamePanel(id){
+  const games=document.getElementById('games');
+  if(games.classList.contains('hidden')) show('games');
+  document.querySelectorAll('#games .game-panel').forEach(p=>p.classList.add('hidden'));
+  const panel=document.getElementById(id);
+  if(panel) panel.classList.remove('hidden');
+  
+  if(id==='game') loadQ();
+  if(id==='hendersonGame') startHendersonGame();
+  if(id==='vitalGame') startVitalGame();
+  if(id==='handGame') startHandGame();
+  if(id==='trayGame') resetTrayGame();
+  if(id==='extraGame') document.getElementById('extraGame').scrollIntoView({behavior:'smooth',block:'nearest'});
+}
+
 function render(){let q=(document.getElementById('search').value||'').toLowerCase();document.getElementById('terms').innerHTML=terms.filter(x=>x[0].toLowerCase().includes(q)||x[1].toLowerCase().includes(q)).map(x=>`<article class="term"><h3>${x[0]}</h3><p>${x[1]}</p></article>`).join('')||'<div class="empty">🔎 No encontramos ese término. Probá con otra palabra.</div>';if(typeof addSpeakButtons==='function')addSpeakButtons()}
 function shuffle(a){return [...a].sort(()=>Math.random()-.5)}
-function loadQ(){let x=terms[qi%terms.length],opts=shuffle([x,...shuffle(terms.filter(y=>y!==x)).slice(0,3)]);document.getElementById('q').textContent='¿Qué significa “'+x[0]+'”?';document.getElementById('fb').textContent='';let box=document.getElementById('opts');box.innerHTML='';opts.forEach(o=>{let b=document.createElement('button');b.textContent=o[1];b.onclick=()=>{box.querySelectorAll('button').forEach(z=>z.disabled=true);if(o===x){b.classList.add('good');done.add(x[0]);pts+=10;document.getElementById('fb').textContent=encouragement[Math.floor(Math.random()*encouragement.length)]+' 🎉'}else{b.classList.add('bad');document.getElementById('fb').textContent='No te desanimes 💗, podés volver a consultar el glosario.';}update()};box.appendChild(b)})}
-function nextQ(){qi++;loadQ();update()}
-function update(){document.getElementById('pts').textContent=pts;document.getElementById('done').textContent=done.size;let pct=Math.round(done.size/100*100);document.getElementById('fill').style.width=pct+'%';document.getElementById('gameFill').style.width=pct+'%';document.getElementById('gamePct').textContent=pct+'%';document.getElementById('gameLeft').textContent=Math.max(0,100-done.size);if(done.size===100){document.getElementById('enc').textContent='💉 ¡Jeringuita completa! ¡Te felicito, lograste el máximo nivel!';celebrate()}else document.getElementById('enc').textContent='💉 Tu jeringuita se llena con cada término practicado.'}
+
+function loadQ(){
+  let uniqueTerms = terms.filter(x => !done.has(x[0]));
+  if(uniqueTerms.length === 0){
+    document.getElementById('q').textContent = '🎉 ¡Completaste todos los términos del glosario!';
+    document.getElementById('opts').innerHTML = '';
+    document.getElementById('fb').textContent = '';
+    celebrate();
+    return;
+  }
+  let x = uniqueTerms[Math.floor(Math.random() * uniqueTerms.length)];
+  let opts = shuffle([x, ...shuffle(terms.filter(y => y[0] !== x[0])).slice(0, 3)]);
+  document.getElementById('q').textContent = '¿Qué significa “'+x[0]+'”?';
+  document.getElementById('fb').textContent = '';
+  let box = document.getElementById('opts');
+  box.innerHTML = '';
+  opts.forEach(o=>{
+    let b = document.createElement('button');
+    b.textContent = o[1];
+    b.onclick = ()=>{
+      box.querySelectorAll('button').forEach(z=>z.disabled=true);
+      if(o[0]===x[0]){
+        b.classList.add('good');
+        done.add(x[0]);
+        pts+=10;
+        document.getElementById('fb').textContent = encouragement[Math.floor(Math.random()*encouragement.length)]+' 🎉';
+      }else{
+        b.classList.add('bad');
+        document.getElementById('fb').textContent = 'No te desanimes 💗, la respuesta correcta era: '+x[1];
+      }
+      update();
+    };
+    box.appendChild(b);
+  });
+}
+
+function nextQ(){ loadQ(); update(); }
+
+function update(){
+  document.getElementById('pts').textContent=pts;
+  document.getElementById('done').textContent=done.size;
+  let pct = Math.round((done.size / 100) * 100);
+  document.getElementById('fill').style.width = pct+'%';
+  document.getElementById('gameFill').style.width = pct+'%';
+  document.getElementById('gamePct').textContent = pct+'%';
+  document.getElementById('gameLeft').textContent = Math.max(0, 100 - done.size);
+  if(done.size >= 100){
+    document.getElementById('enc').textContent='💉 ¡Jeringuita completa! ¡Te felicito, lograste el máximo nivel!';
+    celebrate();
+  } else {
+    document.getElementById('enc').textContent='💉 Tu jeringuita se llena con cada término practicado.';
+  }
+}
+
 function celebrate(){if(document.getElementById('celebration'))return;let c=document.createElement('div');c.id='celebration';c.className='celebration';c.innerHTML='<div class="celebrate-box">🎉💉⭐<h2>¡Te felicito!</h2><p>¡Lograste el máximo nivel!<br>Completaste todos los términos.</p><button class="primary" onclick="this.parentElement.parentElement.remove()">¡Seguir aprendiendo! 💗</button></div>';document.body.appendChild(c);for(let i=0;i<90;i++){let x=document.createElement('span');x.className='confetti';x.textContent=['🎊','⭐','💗','✨','🩺','💉'][i%6];x.style.left=Math.random()*100+'vw';x.style.animationDelay=Math.random()*1.5+'s';c.appendChild(x)}}
 let tfIndex=0;let tfAnswered=new Set();
 function startTF(){tfIndex=0;tfAnswered.clear();renderTF();}
@@ -272,6 +336,7 @@ let vitalIndex=0,vitalScore=0,vitalDeck=[];
 function startVitalGame(){vitalDeck=shuffle(vitalQuestions);vitalIndex=0;vitalScore=0;renderVitalQuestion()}
 function renderVitalQuestion(){let root=document.getElementById('vitalQuiz');if(!root)return;if(vitalIndex>=vitalDeck.length){root.innerHTML=`<div class="card"><h3>🎉 ¡Terminaste el juego de signos vitales!</h3><p>Resultado: ${vitalScore} de ${vitalDeck.length} respuestas correctas.</p><button class="primary" onclick="startVitalGame()">Volver a jugar</button></div>`;celebrateGame(`¡Terminaste el juego de signos vitales con ${vitalScore} de ${vitalDeck.length} respuestas correctas! Seguí practicando para afianzar lo aprendido.`);return}let x=vitalDeck[vitalIndex],opts=shuffle(x.o);root.innerHTML=`<div class="game-progress"><b>Pregunta ${vitalIndex+1} de ${vitalDeck.length}</b><div class="mini-track"><div style="width:${Math.round(vitalIndex/vitalDeck.length*100)}%"></div></div></div><p class="gameq">${x.q}</p><div id="vitalOptions">${opts.map(o=>`<button class="quiz-choice" data-choice="${o}" onclick="answerVital(this,this.dataset.choice)">${o}</button>`).join('')}</div><p id="vitalFeedback" class="quiz-feedback"></p><button id="vitalNext" class="primary" style="display:none" onclick="vitalIndex++;renderVitalQuestion()">Siguiente ➜</button>`}
 function answerVital(btn,choice){let x=vitalDeck[vitalIndex];let all=document.querySelectorAll('#vitalOptions .quiz-choice');all.forEach(b=>{b.disabled=true;if(b.textContent===x.a)b.classList.add('correct')});let ok=choice===x.a;if(!ok)btn.classList.add('incorrect');if(ok)vitalScore++;document.getElementById('vitalFeedback').textContent=ok?'¡Correcto! Muy bien. ⭐':'La respuesta correcta es: '+x.a+'. Volvé a consultar los parámetros si lo necesitás.';document.getElementById('vitalNext').style.display='inline-block';if(vitalIndex===vitalDeck.length-1)document.getElementById('vitalNext').textContent='Ver resultado 🎉'}
+
 const handQuestions=[
 {q:'Vas a saludar y tocar por primera vez al paciente. ¿Qué momento corresponde?',a:'Antes de tocar al paciente',o:['Antes de tocar al paciente','Después de tocar al paciente','Después del contacto con el entorno del paciente']},
 {q:'Vas a realizar una curación que requiere técnica limpia o aséptica. ¿Qué momento corresponde?',a:'Antes de realizar una tarea limpia o aséptica',o:['Después de tocar al paciente','Antes de realizar una tarea limpia o aséptica','Después del riesgo de exposición a líquidos corporales']},
@@ -280,6 +345,10 @@ const handQuestions=[
 {q:'Acomodaste la mesa de luz y tocaste objetos cercanos al paciente, sin tocarlo. ¿Qué momento corresponde?',a:'Después del contacto con el entorno del paciente',o:['Antes de tocar al paciente','Después del contacto con el entorno del paciente','Después de tocar al paciente']}
 ];
 let handIndex=0,handScore=0,handDeck=[];
+function startHandGame(){handDeck=shuffle(handQuestions);handIndex=0;handScore=0;renderHandQuestion()}
+function renderHandQuestion(){let root=document.getElementById('handQuiz');if(!root)return;if(handIndex>=handDeck.length){root.innerHTML=`<div class="card"><h3>🎉 ¡Completaste los 5 momentos!</h3><p>Resultado: ${handScore} de ${handDeck.length} respuestas correctas.</p><button class="primary" onclick="startHandGame()">Volver a jugar</button></div>`;celebrateGame(`¡Completaste el juego de los 5 momentos de higiene de manos! Resultado: ${handScore} de ${handDeck.length}. ¡Excelente trabajo!`);return}let x=handDeck[handIndex],opts=shuffle(x.o);root.innerHTML=`<div class="game-progress"><b>Situación ${handIndex+1} de ${handDeck.length}</b><div class="mini-track"><div style="width:${Math.round(handIndex/handDeck.length*100)}%"></div></div></div><p class="gameq">${x.q}</p><div id="handOptions">${opts.map(o=>`<button class="quiz-choice" data-choice="${o}" onclick="answerHand(this,this.dataset.choice)">${o}</button>`).join('')}</div><p id="handFeedback" class="quiz-feedback"></p><button id="handNext" class="primary" style="display:none" onclick="handIndex++;renderHandQuestion()">Siguiente ➜</button>`}
+function answerHand(btn,choice){let x=handDeck[handIndex];let all=document.querySelectorAll('#handOptions .quiz-choice');all.forEach(b=>{b.disabled=true;if(b.textContent===x.a)b.classList.add('correct')});let ok=choice===x.a;if(!ok)btn.classList.add('incorrect');if(ok)handScore++;document.getElementById('handFeedback').textContent=ok?'¡Muy bien! Ese es el momento correcto. ⭐':'La respuesta correcta es: '+x.a+'. Repasá los cinco momentos en Conceptos.';document.getElementById('handNext').style.display='inline-block';if(handIndex===handDeck.length-1)document.getElementById('handNext').textContent='Ver resultado 🎉'}
+
 const trayLists={
  avp:["Guante de examinación","Descartador","Catéter venoso","3 torundas de algodón","Prolongador con llave de 3 vías","Prolongador con Y","Macrogoteo / Microgoteo","Baxter","Lazo hemostático","Tegaderm / cinta hipoalergénica","Alcohol al 70%"],
  ev:["Descartador","Guante de examinación","3 torundas de algodón","Jeringa (x) ml","Aguja 25/8","Lazo hemostático","Cinta","Fármaco","Alcohol al 70%"],
@@ -298,9 +367,6 @@ function toggleTrayItem(input){input.closest('.tray-item').classList.toggle('che
 function finishTrayGame(){if(!trayRunning)return;let boxes=[...document.querySelectorAll('#trayChecklist input[type=checkbox]')];let selected=boxes.filter(x=>x.checked).map(x=>x.dataset.item);let correct=trayLists[trayCurrentType];let missing=correct.filter(x=>!selected.includes(x));let extra=selected.filter(x=>!correct.includes(x));if(missing.length||extra.length){document.getElementById('trayFeedback').textContent='Todavía no está correcta. Revisá la selección: '+(missing.length?`faltan ${missing.length} elemento(s). `:'')+(extra.length?`hay ${extra.length} elemento(s) que no corresponden. `:'')+'El cronómetro sigue corriendo; corregí y volvé a comprobar.';return}let elapsed=performance.now()-trayStart;trayRunning=false;if(trayInterval){clearInterval(trayInterval);trayInterval=null}document.getElementById('trayTimer').textContent=formatTrayTime(elapsed);trayScores.push({name:trayCurrentName,type:trayNames[trayCurrentType],ms:elapsed,display:formatTrayTime(elapsed)});trayScores.sort((a,b)=>a.ms-b.ms);document.getElementById('trayFeedback').textContent=`¡Correcto, ${trayCurrentName}! Armó la bandeja ${trayNames[trayCurrentType]} en ${formatTrayTime(elapsed)}.`;document.getElementById('trayStartBtn').disabled=false;document.getElementById('trayFinishBtn').disabled=true;document.getElementById('trayStopBtn').disabled=true;document.getElementById('trayPlayer').disabled=false;document.getElementById('trayType').disabled=false;document.querySelectorAll('#trayChecklist input').forEach(x=>x.disabled=true);document.getElementById('trayInstruction').textContent='Tiempo detenido. Presioná “Reiniciar / siguiente alumno” para empezar una nueva partida desde cero.';renderTrayResults();celebrateGame(`¡${trayCurrentName} completó correctamente la bandeja ${trayNames[trayCurrentType]} en ${formatTrayTime(elapsed)}! La rapidez cuenta, pero también la selección correcta y la seguridad.`)}
 function stopTrayClock(){if(!trayRunning)return;let elapsed=performance.now()-trayStart;trayRunning=false;if(trayInterval){clearInterval(trayInterval);trayInterval=null}document.getElementById('trayTimer').textContent=formatTrayTime(elapsed);let boxes=[...document.querySelectorAll('#trayChecklist input[type=checkbox]')];let selected=boxes.filter(x=>x.checked).map(x=>x.dataset.item);let correct=trayLists[trayCurrentType];let missing=correct.filter(x=>!selected.includes(x));let extra=selected.filter(x=>!correct.includes(x));document.getElementById('trayStartBtn').disabled=false;document.getElementById('trayFinishBtn').disabled=true;document.getElementById('trayStopBtn').disabled=true;document.getElementById('trayPlayer').disabled=false;document.getElementById('trayType').disabled=false;document.querySelectorAll('#trayChecklist input').forEach(x=>x.disabled=true);if(!missing.length&&!extra.length){trayScores.push({name:trayCurrentName,type:trayNames[trayCurrentType],ms:elapsed,display:formatTrayTime(elapsed)});trayScores.sort((a,b)=>a.ms-b.ms);document.getElementById('trayFeedback').textContent=`Cronómetro detenido. ${trayCurrentName}: bandeja correcta en ${formatTrayTime(elapsed)}.`;renderTrayResults()}else{document.getElementById('trayFeedback').textContent=`Cronómetro detenido en ${formatTrayTime(elapsed)}. La bandeja no estaba completa/correcta: faltan ${missing.length} elemento(s) y hay ${extra.length} elemento(s) de más. Esta partida no se agrega a los mejores tiempos.`}document.getElementById('trayInstruction').textContent='Tiempo detenido. Mostrá el resultado a quien coordina la actividad y presioná “Reiniciar / siguiente alumno” para una nueva partida.'} 
 function renderTrayResults(){let list=document.getElementById('trayResults');if(!list)return;if(!trayScores.length){list.innerHTML='<li>Todavía no hay tiempos registrados en esta página.</li>';return}list.innerHTML=trayScores.map((x,i)=>`<li class="${i===0?'tray-result-winner':''}">${i===0?'🥇 ':''}<b>${x.name}</b> — ${x.type}: ${x.display}${i===0?' · Mejor tiempo de esta página':''}</li>`).join('')}
-
-function renderHandQuestion(){let root=document.getElementById('handQuiz');if(!root)return;if(handIndex>=handDeck.length){root.innerHTML=`<div class="card"><h3>🎉 ¡Completaste los 5 momentos!</h3><p>Resultado: ${handScore} de ${handDeck.length} respuestas correctas.</p><button class="primary" onclick="startHandGame()">Volver a jugar</button></div>`;celebrateGame(`¡Completaste el juego de los 5 momentos de higiene de manos! Resultado: ${handScore} de ${handDeck.length}. ¡Excelente trabajo!`);return}let x=handDeck[handIndex],opts=shuffle(x.o);root.innerHTML=`<div class="game-progress"><b>Situación ${handIndex+1} de ${handDeck.length}</b><div class="mini-track"><div style="width:${Math.round(handIndex/handDeck.length*100)}%"></div></div></div><p class="gameq">${x.q}</p><div id="handOptions">${opts.map(o=>`<button class="quiz-choice" data-choice="${o}" onclick="answerHand(this,this.dataset.choice)">${o}</button>`).join('')}</div><p id="handFeedback" class="quiz-feedback"></p><button id="handNext" class="primary" style="display:none" onclick="handIndex++;renderHandQuestion()">Siguiente ➜</button>`}
-function answerHand(btn,choice){let x=handDeck[handIndex];let all=document.querySelectorAll('#handOptions .quiz-choice');all.forEach(b=>{b.disabled=true;if(b.textContent===x.a)b.classList.add('correct')});let ok=choice===x.a;if(!ok)btn.classList.add('incorrect');if(ok)handScore++;document.getElementById('handFeedback').textContent=ok?'¡Muy bien! Ese es el momento correcto. ⭐':'La respuesta correcta es: '+x.a+'. Repasá los cinco momentos en Conceptos.';document.getElementById('handNext').style.display='inline-block';if(handIndex===handDeck.length-1)document.getElementById('handNext').textContent='Ver resultado 🎉'}
 
 function showSticker(id){document.querySelectorAll('.sticker-info').forEach(x=>{if(x.id!==id)x.classList.remove('show')});document.getElementById(id).classList.toggle('show')}
 function toggleDark(){document.body.classList.toggle('dark');localStorage.setItem('dark',document.body.classList.contains('dark'))}
