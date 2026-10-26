@@ -45,6 +45,7 @@ body.readable-font *{font-family:"Comic Sans MS", "Arial", sans-serif!important}
 <div class="sticker-wrap"><button class="sticker" onclick="showSticker('termometro')" aria-label="Termómetro">🌡️</button><div id="termometro" class="sticker-info"><h3>🌡️ Termómetro</h3><p>Instrumento utilizado para medir la temperatura corporal.</p><button onclick="speakText('Termómetro. Instrumento utilizado para medir la temperatura corporal.')">🔊 Escuchar</button></div></div>
 <div class="sticker-wrap"><button class="sticker" onclick="showSticker('curita')" aria-label="Curita">🩹</button><div id="curita" class="sticker-info"><h3>🩹 Curita</h3><p>Apósito adhesivo utilizado para proteger pequeñas heridas o lesiones de la piel.</p><button onclick="speakText('Curita. Apósito adhesivo utilizado para proteger pequeñas heridas o lesiones de la piel.')">🔊 Escuchar</button></div></div>
 <div class="sticker-wrap"><button class="sticker" onclick="showSticker('guantes')" aria-label="Guantes">🧤</button><div id="guantes" class="sticker-info"><h3>🧤 Guantes</h3><p>Elemento de protección personal que ayuda a proteger las manos durante la atención y disminuir el riesgo de contacto con fluidos y microorganismos.</p><button onclick="speakText('Guantes. Elemento de protección personal que ayuda a proteger las manos durante la atención y disminuir el riesgo de contacto con fluidos y microorganismos.')">🔊 Escuchar</button></div></div>
+<div class="sticker-wrap"><button class="sticker" onclick="showSticker('sillaRuedas')" aria-label="Silla de ruedas">♿</button><div id="sillaRuedas" class="sticker-info"><h3>♿ Silla de ruedas</h3><p>Dispositivo de apoyo para la movilidad que facilita el traslado seguro de personas con limitaciones de desplazamiento, favoreciendo su autonomía y participación.</p><button onclick="speakText('Silla de ruedas. Dispositivo de apoyo para la movilidad que facilita el traslado seguro de personas con limitaciones de desplazamiento, favoreciendo su autonomía y participación.')">🔊 Escuchar</button></div></div>
 <div class="sticker-wrap"><button class="sticker device-sticker" onclick="showSticker('tensiometroInfo')" aria-label="Tensiómetro manual"><span class="manual-device" aria-hidden="true"><span class="bp-cuff"></span><span class="bp-gauge"><i></i></span><span class="bp-tube"></span><span class="bp-bulb"></span></span></button><div id="tensiometroInfo" class="sticker-info"><h3>🩺 Tensiómetro manual</h3><p>Instrumento manual para medir la tensión arterial. Se utiliza con un manguito, una pera de insuflación y un manómetro; durante la medición auscultatoria se emplea también un estetoscopio.</p><button onclick="speakText('Tensiómetro manual. Instrumento manual para medir la tensión arterial. Se utiliza con un manguito, una pera de insuflación y un manómetro; durante la medición auscultatoria se emplea también un estetoscopio.')">🔊 Escuchar</button></div></div>
 <div class="sticker-wrap"><button class="sticker device-sticker" onclick="showSticker('oximetroInfo')" aria-label="Oxímetro de pulso"><span class="oximeter-device" aria-hidden="true"><span class="oxi-screen"><b>98</b><small>SpO₂</small><i>♥ 72</i></span><span class="oxi-jaw"></span><span class="oxi-finger-slot"></span></span></button><div id="oximetroInfo" class="sticker-info"><h3>🫁 Oxímetro de pulso</h3><p>Aparato pequeño que se coloca habitualmente en la punta de un dedo para estimar la saturación de oxígeno de la sangre y medir la frecuencia del pulso.</p><button onclick="speakText('Oxímetro de pulso. Aparato pequeño que se coloca habitualmente en la punta de un dedo para estimar la saturación de oxígeno de la sangre y medir la frecuencia del pulso.')">🔊 Escuchar</button></div></div>
 </div><p id="enc">¡Empezá y llená tu jeringuita de aprendizaje!</p><div id="qrSection" class="need" style="margin-top:18px;text-align:center"><h3>📱 Acceso a la página por código QR</h3><p id="qrMessage">Cuando esta página esté publicada en una dirección web pública, acá aparecerá un código QR para ingresar desde otro dispositivo.</p><img id="pageQR" class="hidden" alt="Código QR para abrir el Glosario de Enfermería Básica 1" style="width:220px;max-width:100%;height:auto;border:8px solid white;border-radius:12px;margin:8px auto"/><p id="qrUrl" class="small"></p></div>
@@ -82,8 +83,88 @@ body.readable-font *{font-family:"Comic Sans MS", "Arial", sans-serif!important}
 </div>
 <div id="vitalGame" class="game-panel hidden"><h2>🩺 Clasificá los signos vitales</h2><p>Leé el valor y elegí la clasificación que corresponde a los parámetros de este glosario.</p><div id="vitalQuiz"></div></div>
 <div id="handGame" class="game-panel hidden"><h2>🧼 Los 5 momentos de higiene de manos</h2><p>Leé la situación y elegí el momento correcto.</p><div id="handQuiz"></div></div>
-<div id="trayGame" class="game-panel hidden"><h2>🧺 Desafío: armá la bandeja contra reloj</h2><p>Primero elegí qué bandeja te piden. Después, cuando comiences, aparecerán todos los elementos mezclados. Seleccioná únicamente los que corresponden a esa bandeja y presioná <b>Comprobar bandeja</b>. El tiempo se detiene cuando la selección es correcta.</p><div class="tray-controls"><label for="trayPlayer"><b>Nombre de quien participa</b></label><input id="trayPlayer" class="search" placeholder="Ingresá tu nombre" maxlength="40"><label for="trayType"><b>Armá esta bandeja</b></label><select id="trayType" class="search"><option value="ev">Bandeja endovenosa</option><option value="im">Bandeja intramuscular</option><option value="sc">Bandeja subcutánea</option><option value="id">Bandeja intradérmica</option></select><button class="primary" id="trayStartBtn" onclick="startTrayGame()">⏱️ Comenzar desafío</button></div><div class="tray-clock" aria-live="polite"><span>⏱️ Tu tiempo</span><strong id="trayTimer">00:00.0</strong></div><p id="trayInstruction" class="small">Cada alumno tiene su propio cronómetro en la página que abrió.</p><div id="trayChecklist" class="tray-checklist"><p>Elegí la bandeja y comenzá para ver los elementos mezclados.</p></div><div class="tray-actions"><button class="primary" id="trayFinishBtn" onclick="finishTrayGame()" disabled>Comprobar bandeja</button><button id="trayStopBtn" onclick="stopTrayClock()" disabled>⏹️ Detener cronómetro</button><button onclick="resetTrayGame()">🔄 Reiniciar / siguiente alumno</button></div><p id="trayFeedback" aria-live="polite"></p><div class="tray-leaderboard"><h3>🏆 Mejores tiempos de esta página</h3><p class="small">Esta lista es local a esta pestaña/dispositivo. Para declarar un ganador entre alumnos conectados desde distintos dispositivos, los tiempos deben reunirse en un registro compartido o enviarse a quien coordina la competencia.</p><ol id="trayResults"><li>Todavía no hay tiempos registrados en esta página.</li></ol></div><p class="small">Material educativo: respetá las indicaciones docentes e institucionales sobre selección de jeringas, agujas, preparación de medicamentos y descarte seguro. En la lista se conservan las medidas tal como fueron proporcionadas.</p></div>
+<div id="trayGame" class="game-panel hidden"><h2>🧺 Desafío: armá la bandeja contra reloj</h2><p>Primero elegí qué bandeja te piden. Después, cuando comiences, aparecerán todos los elementos mezclados. Seleccioná únicamente los que corresponden a esa bandeja y presioná <b>Comprobar bandeja</b>. El tiempo se detiene cuando la selección es correcta.</p><div class="tray-controls"><label for="trayPlayer"><b>Nombre de quien participa</b></label><input id="trayPlayer" class="search" placeholder="Ingresá tu nombre" maxlength="40"><label for="trayType"><b>Armá esta bandeja</b></label><select id="trayType" class="search"><option value="avp">Bandeja de Acceso Venoso Periférico (AVP)</option><option value="ev">Bandeja endovenosa</option><option value="im">Bandeja intramuscular</option><option value="sc">Bandeja subcutánea</option><option value="id">Bandeja intradérmica</option></select><button class="primary" id="trayStartBtn" onclick="startTrayGame()">⏱️ Comenzar desafío</button></div><div class="tray-clock" aria-live="polite"><span>⏱️ Tu tiempo</span><strong id="trayTimer">00:00.0</strong></div><p id="trayInstruction" class="small">Cada alumno tiene su propio cronómetro en la página que abrió.</p><div id="trayChecklist" class="tray-checklist"><p>Elegí la bandeja y comenzá para ver los elementos mezclados.</p></div><div class="tray-actions"><button class="primary" id="trayFinishBtn" onclick="finishTrayGame()" disabled>Comprobar bandeja</button><button id="trayStopBtn" onclick="stopTrayClock()" disabled>⏹️ Detener cronómetro</button><button onclick="resetTrayGame()">🔄 Reiniciar / siguiente alumno</button></div><p id="trayFeedback" aria-live="polite"></p><div class="tray-leaderboard"><h3>🏆 Mejores tiempos de esta página</h3><p class="small">Esta lista es local a esta pestaña/dispositivo. Para declarar un ganador entre alumnos conectados desde distintos dispositivos, los tiempos deben reunirse en un registro compartido o enviarse a quien coordina la competencia.</p><ol id="trayResults"><li>Todavía no hay tiempos registrados en esta página.</li></ol></div><p class="small">Material educativo: respetá las indicaciones docentes e institucionales sobre selección de jeringas, agujas, preparación de medicamentos y descarte seguro. En la lista se conservan las medidas tal como fueron proporcionadas.</p></div>
 <div id="extraGame" class="game-panel hidden" style="margin-top:18px"></div></section></div>
+
+<!-- SECCIÓN VISUAL DE BANDEJAS CLÍNICAS -->
+<div class="card" style="margin-top: 20px;">
+  <h2>💉 Bandejas Clínicas </h2>
+  <p>Insumos obligatorios y específicos para cada procedimiento con <b>Alcohol al 70%</b> incluido en todas las bandejas:</p>
+  
+  <div class="grid" style="margin-top:14px;">
+    <div class="term">
+      <h3>Bandeja de Acceso Venoso Periférico (AVP)</h3>
+      <p style="font-size:14px; margin:0;">
+        • Guante de examinación<br>
+        • Descartador<br>
+        • Catéter venoso<br>
+        • 3 Torundas de algodón<br>
+        • Prolongador con llave de 3 vías<br>
+        • Prolongador con Y<br>
+        • Macrogoteo / Microgoteo<br>
+        • Baxter<br>
+        • Lazo hemostático<br>
+        • Tegaderm / cinta hipoalergénica<br>
+        • <b>Alcohol al 70%</b>
+      </p>
+    </div>
+
+    <div class="term">
+      <h3>Bandeja Endovenosa (EV)</h3>
+      <p style="font-size:14px; margin:0;">
+        • Descartador<br>
+        • Guante de examinación<br>
+        • 3 torundas de algodón<br>
+        • Jeringa (x) ml<br>
+        • Aguja 25/8<br>
+        • Lazo hemostático<br>
+        • Cinta<br>
+        • Fármaco<br>
+        • <b>Alcohol al 70%</b>
+      </p>
+    </div>
+
+    <div class="term">
+      <h3>Bandeja Intramuscular (IM)</h3>
+      <p style="font-size:14px; margin:0;">
+        • Descartador<br>
+        • Guante de examinación<br>
+        • Jeringa (x) ml<br>
+        • 3 torundas de algodón<br>
+        • Agujas 50/8, 40/8 y 25/8, según el tejido adiposo<br>
+        • Fármaco<br>
+        • <b>Alcohol al 70%</b>
+      </p>
+    </div>
+
+    <div class="term">
+      <h3>Bandeja Subcutánea (SC)</h3>
+      <p style="font-size:14px; margin:0;">
+        • Descartador<br>
+        • Guante de examinación<br>
+        • Jeringa de 1 ml<br>
+        • Agujas 15/5 y 16/5<br>
+        • Fármaco<br>
+        • 2 torundas de algodón<br>
+        • <b>Alcohol al 70%</b>
+      </p>
+    </div>
+
+    <div class="term">
+      <h3>Bandeja Intradérmica (ID)</h3>
+      <p style="font-size:14px; margin:0;">
+        • Descartador<br>
+        • Guante de examinación<br>
+        • Jeringa de 1 ml<br>
+        • Agujas 15/5 y 16/5<br>
+        • 2 torundas de algodón<br>
+        • Lapicera<br>
+        • Fármaco<br>
+        • <b>Alcohol al 70%</b>
+      </p>
+    </div>
+  </div>
+</div>
 
 <!-- Widget Flotante de Accesibilidad Estilo EqualWeb -->
 <button class="access-widget-btn" onclick="toggleAccessModal()" aria-label="Abrir menú de accesibilidad" title="Accesibilidad">♿</button>
@@ -201,13 +282,14 @@ let handIndex=0,handScore=0,handDeck=[];
 
 function startHandGame(){handDeck=shuffle(handQuestions);handIndex=0;handScore=0;renderHandQuestion()}
 const trayLists={
- ev:["Descartador","Guante de examinación","3 torundas de algodón","Jeringa (x) ml","Aguja 25/8","Lazo hemostático","Cinta","Fármaco"],
- im:["Descartador","Guante de examinación","Jeringa (x) ml","3 torundas de algodón","Agujas 50/8, 40/8 y 25/8, según el tejido adiposo de la persona","Fármaco"],
- sc:["Descartador","Guante de examinación","Jeringa de 1 ml","Agujas 15/5 y 16/5","Fármaco","2 torundas de algodón"],
- id:["Descartador","Guante de examinación","Jeringa de 1 ml","Agujas 15/5 y 16/5","2 torundas de algodón","Lapicera","Fármaco"]
+ avp:["Guante de examinación","Descartador","Catéter venoso","3 torundas de algodón","Prolongador con llave de 3 vías","Prolongador con Y","Macrogoteo / Microgoteo","Baxter","Lazo hemostático","Tegaderm / cinta hipoalergénica","Alcohol al 70%"],
+ ev:["Descartador","Guante de examinación","3 torundas de algodón","Jeringa (x) ml","Aguja 25/8","Lazo hemostático","Cinta","Fármaco","Alcohol al 70%"],
+ im:["Descartador","Guante de examinación","Jeringa (x) ml","3 torundas de algodón","Agujas 50/8, 40/8 y 25/8, según el tejido adiposo de la persona","Fármaco","Alcohol al 70%"],
+ sc:["Descartador","Guante de examinación","Jeringa de 1 ml","Agujas 15/5 y 16/5","Fármaco","2 torundas de algodón","Alcohol al 70%"],
+ id:["Descartador","Guante de examinación","Jeringa de 1 ml","Agujas 15/5 y 16/5","2 torundas de algodón","Lapicera","Fármaco","Alcohol al 70%"]
 };
-const trayNames={ev:'Endovenosa',im:'Intramuscular',sc:'Subcutánea',id:'Intradérmica'};
-let trayInterval=null,trayStart=0,trayRunning=false,trayCurrentName='',trayCurrentType='ev',trayScores=[];
+const trayNames={avp:'Acceso Venoso Periférico (AVP)',ev:'Endovenosa',im:'Intramuscular',sc:'Subcutánea',id:'Intradérmica'};
+let trayInterval=null,trayStart=0,trayRunning=false,trayCurrentName='',trayCurrentType='avp',trayScores=[];
 const trayPool=[...new Set(Object.values(trayLists).flat())];
 function formatTrayTime(ms){let mins=Math.floor(ms/60000),secs=Math.floor((ms%60000)/1000),tenths=Math.floor((ms%1000)/100);return String(mins).padStart(2,'0')+':'+String(secs).padStart(2,'0')+'.'+tenths}
 function updateTrayClock(){if(trayRunning)document.getElementById('trayTimer').textContent=formatTrayTime(performance.now()-trayStart)}
@@ -218,7 +300,7 @@ function finishTrayGame(){if(!trayRunning)return;let boxes=[...document.querySel
 function stopTrayClock(){if(!trayRunning)return;let elapsed=performance.now()-trayStart;trayRunning=false;if(trayInterval){clearInterval(trayInterval);trayInterval=null}document.getElementById('trayTimer').textContent=formatTrayTime(elapsed);let boxes=[...document.querySelectorAll('#trayChecklist input[type=checkbox]')];let selected=boxes.filter(x=>x.checked).map(x=>x.dataset.item);let correct=trayLists[trayCurrentType];let missing=correct.filter(x=>!selected.includes(x));let extra=selected.filter(x=>!correct.includes(x));document.getElementById('trayStartBtn').disabled=false;document.getElementById('trayFinishBtn').disabled=true;document.getElementById('trayStopBtn').disabled=true;document.getElementById('trayPlayer').disabled=false;document.getElementById('trayType').disabled=false;document.querySelectorAll('#trayChecklist input').forEach(x=>x.disabled=true);if(!missing.length&&!extra.length){trayScores.push({name:trayCurrentName,type:trayNames[trayCurrentType],ms:elapsed,display:formatTrayTime(elapsed)});trayScores.sort((a,b)=>a.ms-b.ms);document.getElementById('trayFeedback').textContent=`Cronómetro detenido. ${trayCurrentName}: bandeja correcta en ${formatTrayTime(elapsed)}.`;renderTrayResults()}else{document.getElementById('trayFeedback').textContent=`Cronómetro detenido en ${formatTrayTime(elapsed)}. La bandeja no estaba completa/correcta: faltan ${missing.length} elemento(s) y hay ${extra.length} elemento(s) de más. Esta partida no se agrega a los mejores tiempos.`}document.getElementById('trayInstruction').textContent='Tiempo detenido. Mostrá el resultado a quien coordina la actividad y presioná “Reiniciar / siguiente alumno” para una nueva partida.'} 
 function renderTrayResults(){let list=document.getElementById('trayResults');if(!list)return;if(!trayScores.length){list.innerHTML='<li>Todavía no hay tiempos registrados en esta página.</li>';return}list.innerHTML=trayScores.map((x,i)=>`<li class="${i===0?'tray-result-winner':''}">${i===0?'🥇 ':''}<b>${x.name}</b> — ${x.type}: ${x.display}${i===0?' · Mejor tiempo de esta página':''}</li>`).join('')}
 
-function renderHandQuestion(){let root=document.getElementById('handQuiz');if(!root)return;if(handIndex>=handDeck.length){root.innerHTML=`<div class="card"><h3>🎉 ¡Completaste los 5 momentos!</h3><p>Resultado: ${handScore} de ${handDeck.length} respuestas correctas.</p><button class="primary" onclick="startHandGame()">Volver a jugar</button></div>`;celebrateGame(`¡Completaste el juego de los 5 momentos de higiene de manos! Resultado: ${handScore} de ${handDeck.length}. ¡Excelente trabajo!`);return}let x=handDeck[handIndex],opts=shuffle(x.o);root.innerHTML=`<div class="game-progress"><b>Situación ${handIndex+1} de ${handDeck.length}</b><div class="mini-track"><div style="width:${Math.round(handIndex/handDeck.length*100)}%"></div></div></div><p class="gameq">${x.q}</p><div id="handOptions">${opts.map(o=>`<button class="quiz-choice" data-choice="${o}" onclick="answerHand(this,this.dataset.choice)">${o}</button>`).join('')}</div><p id="handFeedback" class="quiz-feedback"></p><button id="handNext" class="primary" style="display:none" onclick="handIndex++;renderHandQuestion()">Siguiente ➜</button>`}
+function renderHandQuestion(){let root=document.getElementById('handQuiz');if(!root)return;if(handIndex>=handDeck.length){root.innerHTML=`<div class="card"><h3>🎉 ¡Completaste los 5 momentos!</h3><p>Resultado: ${handScore} de ${handDeck.length} respuestas correctas.</p><button class="primary" onclick="startHandGame()">Volver a jugar</button></div>`;celebrateGame(`¡Completaste el juego de los 5 momentos de higiene de manos! Resultado: ${handScore} de ${handDeck.length}. ¡Excelente trabajo!`;return}let x=handDeck[handIndex],opts=shuffle(x.o);root.innerHTML=`<div class="game-progress"><b>Situación ${handIndex+1} de ${handDeck.length}</b><div class="mini-track"><div style="width:${Math.round(handIndex/handDeck.length*100)}%"></div></div></div><p class="gameq">${x.q}</p><div id="handOptions">${opts.map(o=>`<button class="quiz-choice" data-choice="${o}" onclick="answerHand(this,this.dataset.choice)">${o}</button>`).join('')}</div><p id="handFeedback" class="quiz-feedback"></p><button id="handNext" class="primary" style="display:none" onclick="handIndex++;renderHandQuestion()">Siguiente ➜</button>`}
 function answerHand(btn,choice){let x=handDeck[handIndex];let all=document.querySelectorAll('#handOptions .quiz-choice');all.forEach(b=>{b.disabled=true;if(b.textContent===x.a)b.classList.add('correct')});let ok=choice===x.a;if(!ok)btn.classList.add('incorrect');if(ok)handScore++;document.getElementById('handFeedback').textContent=ok?'¡Muy bien! Ese es el momento correcto. ⭐':'La respuesta correcta es: '+x.a+'. Repasá los cinco momentos en Conceptos.';document.getElementById('handNext').style.display='inline-block';if(handIndex===handDeck.length-1)document.getElementById('handNext').textContent='Ver resultado 🎉'}
 
 function showSticker(id){document.querySelectorAll('.sticker-info').forEach(x=>{if(x.id!==id)x.classList.remove('show')});document.getElementById(id).classList.toggle('show')}
@@ -285,3 +367,4 @@ window.addEventListener('mousemove', e=>{
   if(g && g.style.display==='block'){g.style.top=(e.clientY-20)+'px'}
 });
 </script></body></html>
+
