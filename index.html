@@ -12,4 +12,519 @@ body.dark .welcome-illustration{background:linear-gradient(135deg,#263846,#30303
 
 .hend-progress-wrap{margin:10px 0 14px}.hend-progress-track{height:16px;border-radius:999px;background:#e8edf5;overflow:hidden;border:2px solid #d5deea}.hend-progress-fill{height:100%;width:0;background:linear-gradient(90deg,#7ed957,#39b86b);border-radius:999px;transition:width .35s ease}.hend-progress-label{display:flex;justify-content:space-between;margin-top:6px;font-size:.9rem}.hend-legend{display:flex;gap:16px;flex-wrap:wrap;margin:8px 0 14px;font-weight:700}.legend-good{color:#16803b}.legend-bad{color:#d13c3c}.hend-card.correct{border-color:#35b85b;background:#e9f9ee;color:#155c2c;box-shadow:0 0 0 3px #35b85b33}.hend-card.incorrect{border-color:#e05a5a;background:#fff0f0;color:#7a2222;box-shadow:0 0 0 3px #e05a5a22}.dark .hend-card.correct{background:#173d27;color:#caffd8;border-color:#45d76c}.dark .hend-card.incorrect{background:#4a2025;color:#ffd6d6;border-color:#f06a6a}.dark .hend-progress-track{background:#1c2636;border-color:#51617a}.dark .hend-progress-label{color:#fff}.dark .hend-legend{color:#fff}.dark .legend-good{color:#72e89a}.dark .legend-bad{color:#ff8d8d}
 .game-hub{display:flex;flex-wrap:wrap;gap:10px;margin:14px 0}.game-hub button{flex:1 1 180px;min-height:58px;background:#eaf8ff;border:2px solid #c5e8f6}body.dark .game-hub button{background:#304553!important;color:#f5fbff!important;border-color:#527083!important}body.dark nav button{color:#f5fbff!important}body.dark nav button:hover{background:#426074!important} .win-confetti{position:fixed;top:-35px;z-index:10000;font-size:24px;pointer-events:none;animation:fall 3.2s linear forwards}@media(prefers-reduced-motion:reduce){.win-confetti{animation-duration:.1s}} 
-.game-panel{border:2px solid #d8eaf3;border-radius:24px;padding:16px;margin-top:16px;background:#f9fdff;color:#244052}.game-panel .card{margin:0;background:#fff}.feedback-ok{color:#146c36;background:#dff7e7;border:2px solid #42a976;border-radius:14px;padding:10px;font-weight:800}.feedback-no{color:#8b2433;background:#ffe4e9;border:2px solid #dc6d83;border-radius:14px;padding:10px;font-weight:800}.tfbtn.correct{background:#dff7e7!important;color:#155c2c!important;border-color:#42a976!important}.tfbtn.incorrect{background:#ffe4e9!important;color:#8b2433!important;border-color:#dc6d83!important}.memory-card.revealed{background:#fff0f6!important;color:#24324a!important;border-color:#ff91bd!important}.memory-card.matched{background:#dff7e7!important;color:#155c2c!important;border-color:#42a976!important}body.dark .game-panel{background:#18242e!important;color:#f1f7fb!important;border-color:#4a6474!important}body.dark .game-panel .card,body.dark .tf-card,body.dark .memory-card-game,body.dark .celebration-inline{background:#24313d!important;color:#f1f7fb!important;border-color:#4a6474!important}body.dark .game-panel p,body.dark .game-panel h2,body.dark .game-panel h3,body.dark .game-panel b,body.dark .game-panel span{color:#f1f7fb}body.dark .game-panel .options button{background:#304553!important;color:#f5fbff!important;border-color:#527083!important}body.dark .game-panel .options button.good{background:#17462c!important;color:#caffd8!important;border-color:#45d76c!important}body.dark .game-panel .options button.bad{background:#55272e!important;color:#ffd6d6!important;border-color:#f06a6a!important}body.dark .game-panel .tfbtn.correct{background:#17462c!important;color:#caffd8!important;border-color:#45d76c!important}body.dark .game-panel .tfbtn.incorrect{background:#55272e!important;color:#ffd6d6!important;border-color:#f06a6a!important}body.dark .game-panel .feedback-ok{background:#17462c!important;color:#caffd8!important;border-color:#45d76c!important}body.dark .game-panel .feedback-no{background:#55272e!important;col
+.game-panel{border:2px solid #d8eaf3;border-radius:24px;padding:16px;margin-top:16px;background:#f9fdff;color:#244052}.game-panel .card{margin:0;background:#fff}.feedback-ok{color:#146c36;background:#dff7e7;border:2px solid #42a976;border-radius:14px;padding:10px;font-weight:800}.feedback-no{color:#8b2433;background:#ffe4e9;border:2px solid #dc6d83;border-radius:14px;padding:10px;font-weight:800}.tfbtn.correct{background:#dff7e7!important;color:#155c2c!important;border-color:#42a976!important}.tfbtn.incorrect{background:#ffe4e9!important;color:#8b2433!important;border-color:#dc6d83!important}.memory-card.revealed{background:#fff0f6!important;color:#24324a!important;border-color:#ff91bd!important}.memory-card.matched{background:#dff7e7!important;color:#155c2c!important;border-color:#42a976!important}body.dark .game-panel{background:#18242e!important;color:#f1f7fb!important;border-color:#4a6474!important}body.dark .game-panel .card,body.dark .tf-card,body.dark .memory-card-game,body.dark .celebration-inline{background:#24313d!important;color:#f1f7fb!important;border-color:#4a6474!important}body.dark .game-panel p,body.dark .game-panel h2,body.dark .game-panel h3,body.dark .game-panel b,body.dark .game-panel span{color:#f1f7fb}body.dark .game-panel .options button{background:#304553!important;color:#f5fbff!important;border-color:#527083!important}body.dark .game-panel .options button.good{background:#17462c!important;color:#caffd8!important;border-color:#45d76c!important}body.dark .game-panel .options button.bad{background:#55272e!important;color:#ffd6d6!important;border-color:#f06a6a!important}body.dark .game-panel .tfbtn.correct{background:#17462c!important;color:#caffd8!important;border-color:#45d76c!important}body.dark .game-panel .tfbtn.incorrect{background:#55272e!important;color:#ffd6d6!important;border-color:#f06a6a!important}body.dark .game-panel .feedback-ok{background:#17462c!important;color:#caffd8!important;border-color:#45d76c!important}body.dark .game-panel .feedback-no{background:#55272e!important;color:#ffd6d6!important;border-color:#f06a6a!important}body.dark .game-panel .tfbtn.correct{background:#17462c!important;color:#caffd8!important;border-color:#45d76c!important}body.dark .game-panel .tfbtn.incorrect{background:#55272e!important;color:#ffd6d6!important;border-color:#f06a6a!important}body.dark .game-panel .feedback-ok{background:#17462c!important;color:#caffd8!important;border-color:#45d76c!important}body.dark .game-panel .feedback-no{background:#55272e!important;color:#ffd6d6!important;border-color:#f06a6a!important}body.dark .game-panel .memory-card{background:#304553!important;color:#f5fbff!important;border-color:#527083!important}body.dark .game-panel .memory-card.revealed{background:#5b3850!important;color:#fff!important;border-color:#ff91bd!important}body.dark .game-panel .memory-card.matched{background:#17462c!important;color:#caffd8!important;border-color:#42a976!important}body.dark .celebration{background:rgba(8,13,19,.88)!important}body.dark .celebrate-box{background:#24313d!important;color:#f1f7fb!important;border-color:#ff9fc5!important}body.dark .celebrate-box h2,body.dark .celebrate-box p{color:#f1f7fb!important}body.dark .sticker-info{background:#24313d;color:#f1f7fb;border-color:#4a6474}body.dark .sticker-info h3,body.dark .sticker-info p{color:#f1f7fb}
+.vital-grid ul{padding-left:22px;line-height:1.7}.vital-grid li{margin:4px 0}.quiz-choice{display:block;width:100%;text-align:left;margin:9px 0;padding:12px;border:2px solid var(--blue);border-radius:12px;background:#fff;color:#203747;cursor:pointer;font-weight:600}.quiz-choice:disabled{cursor:default;opacity:1}.quiz-choice.correct,.quiz-choice.good{background:#d8f8df!important;color:#124c26!important;border-color:#23934a!important}.quiz-choice.incorrect,.quiz-choice.bad{background:#ffe0e0!important;color:#7b1010!important;border-color:#c52a2a!important}.quiz-feedback{font-weight:700;min-height:26px;margin:12px 0}.quiz-actions{display:flex;gap:10px;flex-wrap:wrap}.dark .vital-grid .need,.dark .quiz-choice{background:#253746;color:#f5f8fb;border-color:#6caed5}.dark .quiz-choice.correct,.dark .quiz-choice.good{background:#174b2b!important;color:#effff2!important;border-color:#4fc777!important}.dark .quiz-choice.incorrect,.dark .quiz-choice.bad{background:#5b2228!important;color:#fff0f0!important;border-color:#ff7777!important}.dark .vital-grid .small{color:#d2dce4}
+.tray-controls{display:grid;grid-template-columns:1fr;gap:8px;max-width:520px;margin:14px 0}.tray-controls .search{width:100%;box-sizing:border-box;padding:11px;border:2px solid #b8dce9;border-radius:12px;background:#fff;color:#203747}.tray-clock{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 18px;margin:14px 0;border-radius:18px;background:#e5f7ff;border:2px solid #80cfe8;color:#17465a}.tray-clock strong{font-size:clamp(1.7rem,5vw,2.5rem);font-variant-numeric:tabular-nums}.tray-checklist{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:9px;margin:14px 0}.tray-item{display:flex;align-items:flex-start;gap:10px;padding:12px;border:2px solid #d7e8ef;border-radius:13px;background:#fff;color:#203747;cursor:pointer}.tray-item input{width:20px;height:20px;flex:0 0 auto;accent-color:#16834a}.tray-item.checked{background:#e3f8e9;border-color:#45a86c}.tray-item span{line-height:1.35}.tray-actions{display:flex;flex-wrap:wrap;gap:10px}.tray-leaderboard{margin-top:20px;padding:14px;border-radius:16px;background:#fff7e8;border:2px solid #f1d28e;color:#3e3522}.tray-leaderboard li{margin:7px 0}.tray-result-winner{font-weight:800;color:#16733b}.tray-controls button:disabled,.tray-actions button:disabled{opacity:.5;cursor:not-allowed}body.dark .tray-controls .search{background:#24313d;color:#f1f7fb;border-color:#4a6474}body.dark .tray-clock{background:#203b49;color:#e8f7ff;border-color:#4a8299}body.dark .tray-item{background:#24313d;color:#f1f7fb;border-color:#4a6474}body.dark .tray-item.checked{background:#17462c;border-color:#45d76c}body.dark .tray-leaderboard{background:#3c3424;color:#fff3d2;border-color:#8c7440}
+
+/* Estilos para el Widget y Menú Flotante de Accesibilidad Estilo EqualWeb */
+.access-widget-btn{position:fixed;left:18px;bottom:18px;z-index:9999;width:56px;height:56px;border-radius:50%;background:#0056b3;color:white;border:3px solid white;box-shadow:0 4px 14px rgba(0,0,0,0.3);display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:28px;transition:transform .2s}
+.access-widget-btn:hover{transform:scale(1.1)}
+.access-modal{position:fixed;left:18px;bottom:85px;z-index:10000;width:min(360px, calc(100vw - 20px));max-height:80vh;background:#fff;border:3px solid #0056b3;border-radius:20px;box-shadow:0 10px 30px rgba(0,0,0,0.3);display:flex;flex-direction:column;overflow:hidden;animation:pop .25s}
+.access-modal.hidden{display:none!important}
+.access-header{background:#0056b3;color:white;padding:12px 16px;display:flex;justify-content:space-between;align-items:center;font-weight:bold;font-size:18px}
+.access-header button{background:none;border:none;color:white;font-size:22px;cursor:pointer;padding:0;box-shadow:none}
+.access-body{padding:14px;overflow-y:auto;max-height:calc(80vh - 60px)}
+.access-section-title{font-size:14px;font-weight:bold;color:#0056b3;margin:12px 0 6px;border-bottom:2px solid #e1ecf4;padding-bottom:4px;display:flex;justify-content:space-between;align-items:center}
+.access-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:10px}
+.access-tool-btn{background:#f0f6fc;border:2px solid #cfe2f3;border-radius:12px;padding:10px;text-align:center;cursor:pointer;color:#003366;font-size:12px;font-weight:bold;display:flex;flex-direction:column;align-items:center;gap:6px;box-shadow:none;transition:.15s}
+.access-tool-btn:hover{background:#e1ecf4;transform:translateY(-2px)}
+.access-tool-btn span.icon{font-size:22px}
+body.high-saturation{filter:saturate(2.5)}
+body.low-saturation{filter:saturate(0.3)}
+body.monochrome{filter:grayscale(100%)}
+body.high-contrast-light{background:#fff!important;color:#000!important}
+body.high-contrast-light .card,body.high-contrast-light .term,body.high-contrast-light .need{background:#fff!important;color:#000!important;border-color:#000!important}
+body.readable-font *{font-family:"Comic Sans MS", "Arial", sans-serif!important}
+.reading-guide{position:fixed;left:0;right:0;height:40px;background:rgba(255,235,59,0.35);border-top:2px dashed #fbc02d;border-bottom:2px dashed #fbc02d;pointer-events:none;z-index:9998;display:none}
+</style></head><body>
+<div id="readingGuide" class="reading-guide"></div>
+
+<header><span class="floating f1">💗</span><span class="floating f2">🩹</span><span class="floating f3">⭐</span><span class="floating f4">💉</span><div class="icons">🩺 💉 🌡️ 🧤 🩹</div><h1>Glosario de Enfermería Básica 1</h1><p><b>Basado en las clases con la profesora Natalia Méndez</b></p><p>100 términos · conceptos · juegos · Enfermerita Virtual</p></header><div class="wrap"><div class="card hero"><div class="welcome-illustration"><div class="mini-nurse">👩‍⚕️</div><div><h2>💉 ¡Aprendé jugando!</h2><p>Explorá el glosario, los conceptos, las 14 necesidades de Henderson y practicá con preguntas.</p></div></div><nav><button class="primary" onclick="show('home')">🏠 Inicio</button><button onclick="show('gloss')">📖 Glosario</button><button onclick="show('concepts')">📚 Conceptos</button><button onclick="show('vitalSigns')">🩺 Signos vitales</button><button onclick="show('trays')">💉 Bandejas</button><button onclick="show('bandajes')">🩹 Vendajes</button><button onclick="show('henderson')">❤️ Henderson</button><button onclick="show('games')">🎮 Juegos</button><button onclick="toggleDark()">🌙 Fondo oscuro</button></nav></div>
+<section id="home" class="card"><h2>💉 Tu progreso</h2><div class="syringe"><div class="cartoon-syringe"><div class="plunger"></div><div class="rod"></div><div class="barrel"><div class="liquid"></div></div><div class="tip"></div><div class="needle"></div><span class="smile">⌣</span></div></div><div class="syringe-track"><div id="fill" class="syringe-fill"></div></div><div class="sticker-row">
+<div class="sticker-wrap"><button class="sticker" onclick="showSticker('steto')" aria-label="Estetoscopio">🩺</button><div id="steto" class="sticker-info"><h3>🩺 Estetoscopio</h3><p>Instrumento utilizado para auscultar y escuchar sonidos internos del cuerpo.</p><button onclick="speakText('Estetoscopio. Instrumento utilizado para auscultar y escuchar sonidos internos del cuerpo.')">🔊 Escuchar</button></div></div>
+<div class="sticker-wrap"><button class="sticker" onclick="showSticker('termometro')" aria-label="Termómetro">🌡️</button><div id="termometro" class="sticker-info"><h3>🌡️ Termómetro</h3><p>Instrumento utilizado para medir la temperatura corporal.</p><button onclick="speakText('Termómetro. Instrumento utilizado para medir la temperatura corporal.')">🔊 Escuchar</button></div></div>
+<div class="sticker-wrap"><button class="sticker" onclick="showSticker('curita')" aria-label="Curita">🩹</button><div id="curita" class="sticker-info"><h3>🩹 Curita</h3><p>Apósito adhesivo utilizado para proteger pequeñas heridas o lesiones de la piel.</p><button onclick="speakText('Curita. Apósito adhesivo utilizado para proteger pequeñas heridas o lesiones de la piel.')">🔊 Escuchar</button></div></div>
+<div class="sticker-wrap"><button class="sticker" onclick="showSticker('guantes')" aria-label="Guantes">🧤</button><div id="guantes" class="sticker-info"><h3>🧤 Guantes</h3><p>Elemento de protección personal que ayuda a proteger las manos durante la atención y disminuir el riesgo de contacto con fluidos y microorganismos.</p><button onclick="speakText('Guantes. Elemento de protección personal que ayuda a proteger las manos durante la atención y disminuir el riesgo de contacto con fluidos y microorganismos.')">🔊 Escuchar</button></div></div>
+<div class="sticker-wrap"><button class="sticker" onclick="showSticker('sillaRuedas')" aria-label="Silla de ruedas">♿</button><div id="sillaRuedas" class="sticker-info"><h3>♿ Silla de ruedas</h3><p>Dispositivo de apoyo para la movilidad que facilita el traslado seguro de personas con limitaciones de desplazamiento, favoreciendo su autonomía y participación.</p><button onclick="speakText('Silla de ruedas. Dispositivo de apoyo para la movilidad que facilita el traslado seguro de personas con limitaciones de desplazamiento, favoreciendo su autonomía y participación.')">🔊 Escuchar</button></div></div>
+<div class="sticker-wrap"><button class="sticker device-sticker" onclick="showSticker('tensiometroInfo')" aria-label="Tensiómetro manual"><span class="manual-device" aria-hidden="true"><span class="bp-cuff"></span><span class="bp-gauge"><i></i></span><span class="bp-tube"></span><span class="bp-bulb"></span></span></button><div id="tensiometroInfo" class="sticker-info"><h3>🩺 Tensiómetro manual</h3><p>Instrumento manual para medir la tensión arterial. Se utiliza con un manguito, una pera de insuflación y un manómetro; durante la medición auscultatoria se emplea también un estetoscopio.</p><button onclick="speakText('Tensiómetro manual. Instrumento manual para medir la tensión arterial. Se utiliza con un manguito, una pera de insuflación y un manómetro; durante la medición auscultatoria se emplea también un estetoscopio.')">🔊 Escuchar</button></div></div>
+<div class="sticker-wrap"><button class="sticker device-sticker" onclick="showSticker('oximetroInfo')" aria-label="Oxímetro de pulso"><span class="oximeter-device" aria-hidden="true"><span class="oxi-screen"><b>98</b><small>SpO₂</small><i>♥ 72</i></span><span class="oxi-jaw"></span><span class="oxi-finger-slot"></span></span></button><div id="oximetroInfo" class="sticker-info"><h3>🫁 Oxímetro de pulso</h3><p>Aparato pequeño que se coloca habitualmente en la punta de un dedo para estimar la saturación de oxígeno de la sangre y medir la frecuencia del pulso.</p><button onclick="speakText('Oxímetro de pulso. Aparato pequeño que se coloca habitualmente en la punta de un dedo para estimar la saturación de oxígeno de la sangre y medir la frecuencia del pulso.')">🔊 Escuchar</button></div></div>
+</div><p id="enc">¡Empezá y llená tu jeringuita de aprendizaje!</p><div id="qrSection" class="need" style="margin-top:18px;text-align:center"><h3>📱 Acceso a la página por código QR</h3><p id="qrMessage">Cuando esta página esté publicada en una dirección web pública, acá aparecerá un código QR para ingresar desde otro dispositivo.</p><img id="pageQR" class="hidden" alt="Código QR para abrir el Glosario de Enfermería Básica 1" style="width:220px;max-width:100%;height:auto;border:8px solid white;border-radius:12px;margin:8px auto"/><p id="qrUrl" class="small"></p></div>
+<div class="stats"><div class="stat"><b id="pts">0</b>Puntos</div><div class="stat"><b id="done">0</b>Practicados</div><div class="stat"><b>100</b>Términos</div></div></section>
+<section id="gloss" class="card hidden"><h2>📖 Glosario A–Z</h2><input id="search" class="search" placeholder="Buscar término..." oninput="render()"><div id="terms" class="grid"></div></section>
+<section id="concepts" class="card hidden"><h2>📚 Conceptos fundamentales de Enfermería</h2><p class="small">Acá encontrás los conceptos principales incluidos en esta página, las pioneras trabajadas y la definición de salud de la OMS.</p><div class="grid"><article class="need"><h3>👩‍⚕️ ¿Qué es la enfermería?</h3><p>Área profesional orientada al cuidado de las personas, familias y comunidades, favoreciendo la salud, la recuperación y el bienestar.</p></article><article class="need"><h3>🌡️ Signos vitales</h3><p>Parámetros que permiten valorar funciones esenciales del organismo. En este proyecto: temperatura, pulso, frecuencia respiratoria, tensión arterial y saturación de oxígeno.</p></article><article class="need"><h3>❤️ ¿Qué es la salud según la OMS?</h3><p>La Organización Mundial de la Salud (OMS) define la salud como un estado de completo bienestar físico, mental y social, y no solamente la ausencia de afecciones o enfermedades.</p></article><article class="need"><h3>🕯️ Pionera: Florence Nightingale</h3><p>Pionera de la enfermería moderna. Teoría naturalista: destacó la importancia del ambiente, la higiene, la ventilación, la limpieza y las condiciones que favorecen la recuperación.</p></article><article class="need"><h3>❤️ Pionera: Virginia Henderson</h3><p>Su propuesta se centra en las <strong>14 necesidades básicas</strong> de la persona y en ayudarla a alcanzar independencia.</p></article><article class="need"><h3>💪 Pionera: Dorothea Orem</h3><p>Su teoría se centra en el autocuidado y en la intervención de enfermería cuando existe una capacidad insuficiente para satisfacer las necesidades de autocuidado.</p></article></div><h2 style="margin-top:28px">🌟 Cualidades del profesional de salud</h2><div class="grid"><article class="need"><h3>Responsabilidad</h3><p>Cumplir con las obligaciones del rol de enfermería, actuar de manera responsable y hacerse cargo de las acciones realizadas en el cuidado.</p></article><article class="need"><h3>Respeto</h3><p>Reconocer y valorar a cada persona, sus derechos, decisiones, privacidad, cultura y dignidad durante el cuidado.</p></article><article class="need"><h3>Empatía</h3><p>Comprender cómo puede sentirse otra persona y brindar un cuidado humano, respetuoso y atento a sus necesidades.</p></article><article class="need"><h3>Comunicación</h3><p>Transmitir y recibir información de manera clara, adecuada y comprensible para favorecer el cuidado y el trabajo en equipo.</p></article><article class="need"><h3>Ética</h3><p>Actuar de acuerdo con principios profesionales y respetar los derechos, la dignidad y el bienestar de la persona cuidada.</p></article><article class="need"><h3>👀 Observación</h3><p>Capacidad de mirar y valorar de manera sistemática a la persona para reconocer datos, cambios o signos que sean importantes para el cuidado.</p></article><article class="need"><h3>🤝 Trabajo en equipo</h3><p>Capacidad de colaborar con otros integrantes del equipo de salud, compartir información y coordinar acciones para brindar una atención segura y organizada.</p></article><article class="need"><h3>🧠 Conocimientos y habilidades</h3><p>Los conocimientos permiten comprender qué hacer y por qué hacerlo; las habilidades permiten aplicar esos conocimientos de manera correcta y segura en la práctica de enfermería.</p></article></div><h2 style="margin-top:28px">🧼 Los 5 momentos para la higiene de manos</h2><div class="grid"><article class="need"><h3>1. Antes de tocar al paciente</h3><p>Antes del contacto directo con la persona atendida.</p></article><article class="need"><h3>2. Antes de realizar una tarea limpia o aséptica</h3><p>Antes de un procedimiento que requiere evitar la introducción de microorganismos.</p></article><article class="need"><h3>3. Después del riesgo de exposición a líquidos corporales</h3><p>Después de una actividad con posibilidad de contacto con sangre u otros líquidos corporales.</p></article><article class="need"><h3>4. Después de tocar al paciente</h3><p>Al finalizar el contacto directo con la persona atendida.</p></article><article class="need"><h3>5. Después del contacto con el entorno del paciente</h3><p>Depois de tocar objetos o superficies cercanas al paciente, aunque no se lo haya tocado directamente.</p></article></div></section>
+<section id="vitalSigns" class="card hidden"><h2>🩺 Signos vitales y parámetros de valoración</h2><p class="small">Consultá los rangos de referencia indicados para este glosario. La valoración clínica debe considerar el contexto de la persona y las indicaciones del equipo de salud.</p><div class="grid vital-grid">
+<article class="need"><h3>💗 Dolor (escala 0–10)</h3><ul><li><b>0:</b> nada de dolor.</li><li><b>1–3:</b> dolor leve.</li><li><b>4–6:</b> dolor medio.</li><li><b>7–9:</b> dolor intenso.</li><li><b>10:</b> dolor extremo.</li></ul></article>
+<article class="need"><h3>❤️ Frecuencia cardíaca</h3><p>Se expresa en latidos por minuto (lpm).</p><ul><li><b>60–100 lpm:</b> normocardia.</li><li><b>Más de 100 lpm:</b> taquicardia.</li><li><b>Menos de 60 lpm:</b> bradicardia.</li></ul></article>
+<article class="need"><h3>🌬️ Frecuencia respiratoria</h3><p>Se expresa en respiraciones por minuto (rpm).</p><ul><li><b>Más de 20 rpm:</b> taquipneico.</li><li><b>12–20 rpm:</b> eupnea.</li><li><b>Menos de 12 rpm:</b> bradipneico.</li></ul></article>
+<article class="need"><h3>🫁 Saturación de oxígeno</h3><ul><li><b>95–100 %:</b> parámetro estable.</li><li><b>90–94 %:</b> desaturación leve.</li><li><b>86–89 %:</b> desaturación moderada.</li><li><b>Menos de 85 %:</b> desaturación grave.</li></ul><p class="small">Los rangos anteriores se transcriben según los parámetros solicitados.</p></article>
+<article class="need"><h3>🌡️ Temperatura corporal</h3><ul><li><b>33–34 °C:</b> hipotermia severa.</li><li><b>34,1–35 °C:</b> hipotermia moderada.</li><li><b>35,1–35,9 °C:</b> hipotermia leve.</li><li><b>36–37,4 °C:</b> normotermia.</li><li><b>37,5–37,9 °C:</b> febrícula.</li><li><b>38–39,5 °C:</b> fiebre, pirexia o febril.</li><li><b>39,6–42 °C:</b> hiperpirexia o hipertermia.</li></ul></article>
+<article class="need"><h3>🩺 Tensión arterial</h3><ul><li><b>Sistólica 90–139 mmHg y diastólica 60–89 mmHg:</b> normotenso.</li><li><b>Si la sistólica es de 140 mmHg o más, o la diastólica es de 90 mmHg o más:</b> hipertensión.</li><li><b>Si la sistólica es menor de 90 mmHg o la diastólica es menor de 60 mmHg:</b> hipotensión.</li></ul><p class="small">La tensión arterial se registra con dos valores: sistólica/diastólica, en mmHg. Para este juego se aplican estos rangos educativos; la valoración clínica <b>debe</b> considerar el contexto y el protocolo correspondiente.</p></article>
+</div><p class="small">Importante: estos parámetros son material de estudio solicitado para el glosario y no reemplazan la valoración clínica ni los protocolos del establecimiento.</p></section>
+
+<section id="trays" class="card hidden">
+  <h2>💉 Bandejas Clínicas Actualizadas</h2>
+  <p class="small">Insumos obligatorios y específicos para cada procedimiento con <b>Alcohol al 70%</b> incluido en todas las bandejas:</p>
+  
+  <div class="grid" style="margin-top:14px;">
+    <div class="term">
+      <h3>Bandeja de Acceso Venoso Periférico (AVP)</h3>
+      <p style="font-size:14px; margin:0;">
+        • Guante de examinación<br>
+        • Descartador<br>
+        • Catéter venoso<br>
+        • 3 Torundas de algodón<br>
+        • Prolongador con llave de 3 vías<br>
+        • Prolongador con Y<br>
+        • Macrogoteo / Microgoteo<br>
+        • Baxter<br>
+        • Lazo hemostático<br>
+        • Tegaderm / cinta hipoalergénica<br>
+        • <b>Alcohol al 70%</b>
+      </p>
+    </div>
+
+    <div class="term">
+      <h3>Bandeja Endovenosa (EV)</h3>
+      <p style="font-size:14px; margin:0;">
+        • Descartador<br>
+        • Guante de examinación<br>
+        • 3 torundas de algodón<br>
+        • Jeringa (x) ml<br>
+        • Aguja 25/8<br>
+        • Lazo hemostático<br>
+        • Cinta<br>
+        • Fármaco<br>
+        • <b>Alcohol al 70%</b>
+      </p>
+    </div>
+
+    <div class="term">
+      <h3>Bandeja Intramuscular (IM)</h3>
+      <p style="font-size:14px; margin:0;">
+        • Descartador<br>
+        • Guante de examinación<br>
+        • Jeringa (x) ml<br>
+        • 3 torundas de algodón<br>
+        • Agujas 50/8, 40/8 y 25/8, según el tejido adiposo<br>
+        • Fármaco<br>
+        • <b>Alcohol al 70%</b>
+      </p>
+    </div>
+
+    <div class="term">
+      <h3>Bandeja Subcutánea (SC)</h3>
+      <p style="font-size:14px; margin:0;">
+        • Descartador<br>
+        • Guante de examinación<br>
+        • Jeringa de 1 ml<br>
+        • Agujas 15/5 y 16/5<br>
+        • Fármaco<br>
+        • 2 torundas de algodón<br>
+        • <b>Alcohol al 70%</b>
+      </p>
+    </div>
+
+    <div class="term">
+      <h3>Bandeja Intradérmica (ID)</h3>
+      <p style="font-size:14px; margin:0;">
+        • Descartador<br>
+        • Guante de examinación<br>
+        • Jeringa de 1 ml<br>
+        • Agujas 15/5 y 16/5<br>
+        • 2 torundas de algodón<br>
+        • Lapicera<br>
+        • Fármaco<br>
+        • <b>Alcohol al 70%</b>
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="bandajes" class="card hidden">
+  <h2>🩹 Tipos de Vendajes y Definiciones</h2>
+  <p class="small">El vendaje es el arte de envolver un miembro o región del cuerpo mediante vendas, gasas, lienzos o materiales similares.</p>
+  <div class="grid" style="margin-top:14px;">
+    <article class="need">
+      <span>Técnica</span>
+      <h3>Vendaje circular</h3>
+      <p>Se utiliza para vendar una zona cilíndrica del cuerpo o fijar el vendaje en sus extremos. Comenzaremos desenrrollando la venda cubriendo la zona, de manera que cada vuelta vaya cubriendo a la anterior por completo. Nunca se debe iniciar ni terminar el vendaje sobre una lesión, hay que dejar un margen de al menos 5 cm. Tiene función de protección y sujeción.</p>
+    </article>
+    <article class="need">
+      <span>Técnica</span>
+      <h3>Vendaje espiral</h3>
+      <p>Se usa normalmente en las extremidades, su función es compresiva y protectora. Se coloca llevando hacia arriba el vendaje en un leve ángulo, de modo que se cubra la zona que se desea. Las vueltas de venda son paralelas y se superponen a la misma en unos dos tercios del ancho.</p>
+    </article>
+    <article class="need">
+      <span>Técnica</span>
+      <h3>Vendaje de espiga</h3>
+      <p>Se usa para miembros inferiores y en ocasiones en los superiores. Se realiza igual que el vendaje en espiral, salvo que vamos retrocediendo con la venda, de manera, que las vueltas que se van superponiendo se crucen. Tiene función compresiva y favorece el retorno venoso.</p>
+    </article>
+    <article class="need">
+      <span>Técnica</span>
+      <h3>Vendaje en ocho</h3>
+      <p>Se utiliza para vendar articulaciones, especialmente manos y pies, es muy útil en rodilla y codo. Iniciamos el vendaje sujetando la venda bajo la articulación con varias vueltas espirales, luego, se realiza una vuelta ascendente que cubre la articulación, la aseguramos con vueltas espirales en la zona superior. Despues alternaremos vueltas ascendentes y descendentes que se cruzan entre si y se van superponiendo a las anteriores en al menos dos tercios del ancho de la venda, dibujando la figura del ocho.</p>
+    </article>
+    <article class="need">
+      <span>Técnica</span>
+      <h3>Vendaje recurrente</h3>
+      <p>Se utiliza para realizar capelinas (vendaje de cabeza), vendar dedos y muñones. Fijaremos la venda en la zona proximal con dos vueltas circulares, giraremos la venda para que quede perpendicular a las vueltas circulares y vendaremos la zona distal de delante a la inversa hasta que quede bien cubierto, luego fijaremos con varias vueltas circulares. Su función es la de proteger, sujetar y comprimir.</p>
+    </article>
+    <article class="need">
+      <span>Técnica</span>
+      <h3>Velpeau</h3>
+      <p>Se utiliza para las lesiones de la cintura escapular. El brazo se coloca a lo largo del tórax con el codo en flexión y la mano más alta que el codo. Se dan vueltas de venda alrededor del tórax y brazo para mantener la posición. En nuestro medio se emplea para inmovilizar hombro en una luxación acromioclavicular.</p>
+    </article>
+    <article class="need">
+      <span>Técnica</span>
+      <h3>Blandos o contentivo</h3>
+      <p>Este vendaje es utilizado generalmente para contener y mantener alguna masa medicinal en el sitio afectado, este vendaje permite una movilidad relativa.</p>
+    </article>
+    <article class="need">
+      <span>Técnica</span>
+      <h3>Vendaje compresivo</h3>
+      <p>Utilizado para ejercer una compresión progresiva a nivel de una extremidad, de la parte distal a la proximal, con el fin de favorecer el retorno venoso. También se usa para limitar el movimiento de alguna articulación en el caso de contusiones y esguinces de 1º grado. El objetivo del vendaje compresivo es que, situándolo sobre la herida y aplicándole cierta presión, se consigue detener la hemorragia.</p>
+    </article>
+  </div>
+</section>
+
+<section id="henderson" class="card hidden"><h2>❤️ Las 14 necesidades de Virginia Henderson</h2><p>Estas necesidades orientan la valoración y el cuidado de la persona, buscando favorecer su independencia.</p><div class="grid"><article class="need"><span>Necesidad 1</span><h3>Respirar normalmente</h3><p>Necesidad de mantener una respiración adecuada.</p></article><article class="need"><span>Necesidad 2</span><h3>Comer y beber adecuadamente</h3><p>Necesidad de ingerir alimentos y líquidos suficientes.</p></article><article class="need"><span>Necesidad 3</span><h3>Eliminar por todas las vías corporales</h3><p>Necesidad de eliminar los productos de desecho del organismo.</p></article><article class="need"><span>Necesidad 4</span><h3>Moverse y mantener una postura adecuada</h3><p>Necesidad de movimiento, desplazamiento y mantenimiento de una postura conveniente.</p></article><article class="need"><span>Necesidad 5</span><h3>Dormir y descansar</h3><p>Necesidad de disponer de períodos adecuados de sueño y descanso.</p></article><article class="need"><span>Necesidad 6</span><h3>Escoger ropa adecuada, vestirse y desvestirse</h3><p>Necesidad de seleccionar y utilizar ropa apropiada y poder vestirse y desvestirse.</p></article><article class="need"><span>Necesidad 7</span><h3>Mantener la temperatura corporal</h3><p>Necesidad de conservar la temperatura corporal dentro de límites normales mediante medidas adecuadas.</p></article><article class="need"><span>Necesidad 8</span><h3>Mantener la higiene e integridad de la piel</h3><p>Necesidad de cuidar la higiene corporal y proteger la piel.</p></article><article class="need"><span>Necesidad 9</span><h3>Evitar peligros ambientales y evitar lesionar a otros</h3><p>Necesidad de prevenir riesgos y protegerse y proteger a otras personas.</p></article><article class="need"><span>Necesidad 10</span><h3>Comunicarse</h3><p>Necesidad de expresar sentimientos, necesidades, temores y opiniones y relacionarse con otras personas.</p></article><article class="need"><span>Necesidad 11</span><h3>Vivir según sus valores y creencias</h3><p>Necesidad de actuar de acuerdo con los valores y creencias propios.</p></article><article class="need"><span>Necesidad 12</span><h3>Trabajar y sentirse realizado</h3><p>Necesidad de realizar actividades que permitan sentirse útil y realizado.</p></article><article class="need"><span>Necesidad 13</span><h3>Participar en actividades recreativas</h3><p>Necesidad de recrearse y participar en actividades de ocio.</p></article><article class="need"><span>Necesidad 14</span><h3>Aprender, descubrir o satisfacer la curiosidad</h3><p>Necesidad de aprender, adquirir conocimientos y utilizar recursos disponibles para mantener o mejorar la salud.</p></article></div></section>
+<section id="games" class="card hidden"><h2>🎮 Juegos</h2><p>Todos los juegos están reunidos en esta sección. Elegí una actividad para comenzar.</p><div class="game-hub">
+<button onclick="showGamePanel('game')">🎯 Elegí la definición</button>
+<button onclick="showGamePanel('extraGame');startTF()">🧠 Verdadero o falso</button>
+<button onclick="showGamePanel('extraGame');startMemory()">🧩 Memoria de enfermería</button>
+<button onclick="showGamePanel('hendersonGame')">❤️ Las 14 necesidades de Henderson</button>
+<button onclick="showGamePanel('vitalGame');startVitalGame()">🩺 Clasificá los signos vitales</button>
+<button onclick="showGamePanel('handGame');startHandGame()">🧼 Los 5 momentos de higiene de manos</button>
+<button onclick="showGamePanel('trayGame');resetTrayGame()">🧺 Armá la bandeja contra reloj</button>
+<button onclick="showGamePanel('bandageGame');startBandageGame()">🩹 Juego de Vendajes</button>
+</div>
+<div id="game" class="game-panel hidden">
+<h2>🎯 ¿Qué significa?</h2><p>Elegí la definición correcta y ganá puntos.</p>
+<div class="game-progress"><div><b>Progreso: <span id="gamePct">0%</span></b> · Te faltan <b><span id="gameLeft">100</span></b> términos</div><div class="syringe-track"><div id="gameFill" class="syringe-fill"></div></div></div>
+<div id="q" class="gameq"></div><div id="opts" class="options"></div><p id="fb"></p><button class="primary" onclick="nextQ()">Siguiente</button>
+</div>
+<div id="hendersonGame" class="game-panel hidden">
+<h2>❤️ Juego: Las 14 necesidades de Henderson</h2><p>Ordená las necesidades según su numeración correcta. Tocá una necesidad para seleccionarla y luego otra para intercambiarlas.</p>
+<div class="hend-game-info"><b>Progreso: <span id="hProg">0/14</span></b><span>Intentos: <span id="hAttempts">0</span></span></div>
+<div class="hend-progress-wrap"><div class="hend-progress-track"><div id="hendProgressFill" class="hend-progress-fill"></div></div><div class="hend-progress-label"><span>Ubicaciones correctas</span><b id="hPercent">0%</b></div></div>
+<p class="hend-legend"><span class="legend-good">✓ Correcta</span><span class="legend-bad">✗ Incorrecta</span></p><div id="hendGameBoard" class="hend-game-board"></div><p id="hFeedback" class="game-feedback"></p><button class="primary" onclick="startHendersonGame()">🔄 Mezclar nuevamente</button>
+</div>
+<div id="vitalGame" class="game-panel hidden"><h2>🩺 Clasificá los signos vitales</h2><p>Leé la valor y elegí la clasificación que corresponde a los parámetros de este glosario.</p><div id="vitalQuiz"></div></div>
+<div id="handGame" class="game-panel hidden"><h2>🧼 Los 5 momentos de higiene de manos</h2><p>Leé la situación y elegí el momento correcto.</p><div id="handQuiz"></div></div>
+<div id="trayGame" class="game-panel hidden"><h2>🧺 Desafío: armá la bandeja contra reloj</h2><p>Primero elegí qué bandeja te piden. Después, cuando comiences, aparecerán todos los elementos mezclados. Seleccioná únicamente los que corresponden a esa bandeja y presioná <b>Comprobar bandeja</b>. El tiempo se detiene cuando la selección es correcta.</p><div class="tray-controls"><label for="trayPlayer"><b>Nombre de quien participa</b></label><input id="trayPlayer" class="search" placeholder="Ingresá tu nombre" maxlength="40"><label for="trayType"><b>Armá esta bandeja</b></label><select id="trayType" class="search"><option value="avp">Bandeja de Acceso Venoso Periférico (AVP)</option><option value="ev">Bandeja endovenosa</option><option value="im">Bandeja intramuscular</option><option value="sc">Bandeja subcutánea</option><option value="id">Bandeja intradérmica</option></select><button class="primary" id="trayStartBtn" onclick="startTrayGame()">⏱️ Comenzar desafío</button></div><div class="tray-clock" aria-live="polite"><span>⏱️ Tu tiempo</span><strong id="trayTimer">00:00.0</strong></div><p id="trayInstruction" class="small">Cada alumno tiene su propio cronómetro en la página que abrió.</p><div id="trayChecklist" class="tray-checklist"><p>Elegí la bandeja y comenzá para ver los elementos mezclados.</p></div><div class="tray-actions"><button class="primary" id="trayFinishBtn" onclick="finishTrayGame()" disabled>Comprobar bandeja</button><button id="trayStopBtn" onclick="stopTrayClock()" disabled>⏹️ Detener cronómetro</button><button onclick="resetTrayGame()">🔄 Reiniciar / siguiente alumno</button></div><p id="trayFeedback" aria-live="polite"></p><div class="tray-leaderboard"><h3>🏆 Mejores tiempos de esta página</h3><p class="small">Esta lista es local a esta pestaña/dispositivo. Para declarar un ganador entre alumnos conectados desde distintos dispositivos, los tiempos deben reunirse en un registro compartido o enviarse a quien coordina la competencia.</p><ol id="trayResults"><li>Todavía no hay tiempos registrados en esta página.</li></ol></div><p class="small">Material educativo: respetá las indicaciones docentes e institucionales sobre selección de jeringas, agujas, preparación de medicamentos y descarte seguro. En la lista se conservan las medidas tal como fueron proporcionadas.</p></div>
+
+<div id="bandageGame" class="game-panel hidden">
+  <h2>🩹 Juego de Tipos de Vendajes</h2>
+  <p>Leé atentamente la definición o característica y seleccioná el tipo de vendaje correspondiente.</p>
+  <div id="bandageQuiz"></div>
+</div>
+
+<div id="extraGame" class="game-panel hidden" style="margin-top:18px"></div></section></div>
+
+<!-- Widget Flotante de Accesibilidad Estilo EqualWeb -->
+<button class="access-widget-btn" onclick="toggleAccessModal()" aria-label="Abrir menú de accesibilidad" title="Accesibilidad">♿</button>
+<div id="accessModal" class="access-modal hidden">
+  <div class="access-header">
+    <span>Accesibilidad</span>
+    <button onclick="toggleAccessModal()" aria-label="Cerrar">×</button>
+  </div>
+  <div class="access-body">
+    <div class="access-section-title">Perfiles de accesibilidad</div>
+    <div class="access-grid">
+      <button class="access-tool-btn" onclick="setProfile('dyslexia')"><span class="icon">🔤</span>Dislexia</button>
+      <button class="access-tool-btn" onclick="setProfile('adhd')"><span class="icon">🧠</span>TDAH</button>
+      <button class="access-tool-btn" onclick="setProfile('epilepsy')"><span class="icon">⚡</span>Bloquear parpadeos</button>
+      <button class="access-tool-btn" onclick="resetAccessibility()"><span class="icon">🔄</span>Restablecer</button>
+    </div>
+
+    <div class="access-section-title">Ajustes de voz y lectura</div>
+    <div class="access-grid">
+      <button class="access-tool-btn" onclick="readPageText()"><span class="icon">🔊</span>Lector de texto</button>
+      <button class="access-tool-btn" onclick="toggleReadingGuide()"><span class="icon">📏</span>Guía de lectura</button>
+    </div>
+
+    <div class="access-section-title">Ajuste de color y contraste</div>
+    <div class="access-grid">
+      <button class="access-tool-btn" onclick="setContrast('dark')"><span class="icon">🌙</span>Contraste oscuro</button>
+      <button class="access-tool-btn" onclick="setContrast('light')"><span class="icon">☀️</span>Contraste claro</button>
+      <button class="access-tool-btn" onclick="setContrast('mono')"><span class="icon">👁️</span>Monocromo</button>
+      <button class="access-tool-btn" onclick="setContrast('low')"><span class="icon">💧</span>Baja saturación</button>
+    </div>
+  </div>
+</div>
+
+<div id="nurseWidget" class="nurse-widget"><button class="nurse-avatar" onclick="toggleChat()" aria-label="Abrir Enfermerita Virtual" title="Enfermerita Virtual"><span>👩‍⚕️</span><i>💬</i></button><div id="floatingChat" class="floating-chat hidden"><div class="floating-head"><strong>👩‍⚕️ Enfermerita Virtual</strong><button onclick="toggleChat()" aria-label="Cerrar">×</button></div><div id="chatlog" class="chatlog"><div class="bubble botmsg">¡Hola! 👋 Soy la Enfermerita Virtual. Colocá una palabra para buscar su definición o escribime una pregunta. 💗</div></div><div class="chatrow"><input id="chatinput" class="search" aria-label="Escribí tu pregunta" placeholder="Preguntame algo..." onkeydown="if(event.key==='Enter')sendChat()"><button class="primary" onclick="sendChat()">💬</button></div><div class="quick"><button onclick="quickChat('¿Qué es PAE?')">PAE</button><button onclick="quickChat('¿Qué es edema?')">Edema</button><button onclick="quickChat('Necesidad 8 de Henderson')">Henderson</button><button onclick="quickChat('¿Qué es salud según la OMS?')">OMS</button></div></div></div><footer>🩺 Glosario de Enfermería Básica 1 · 100 términos · Interfaz educativa</footer><script>
+const terms=[["Antiséptico", "Sustancia aplicada sobre tejidos vivos para destruir o inhibir microorganismos."], ["Antitrendelenburg", "Posición en la que la cabeza queda más elevada que los pies."], ["Apnea", "Ausencia temporal de la respiración."], ["Ateromas", "Depósitos de sustancias grasas y otros componentes en la pared de las arterias."], ["Auscultación", "Técnica de valoración que consiste en escuchar sonidos del cuerpo, generalmente mediante un estetoscopio."], ["Autocuidado", "Actividades que una persona realiza para cuidar su propia salud y bienestar."], ["Bioseguridad", "Medidas destinadas a prevenir o reducir riesgos de transmisión de microorganismos y agentes biológicos durante la atención de salud."], ["Bolsa mortuoria", "Bolsa utilizada para contener y trasladar el cuerpo de una persona fallecida."], ["Bradicárdico", "Que presenta una frecuencia cardíaca inferior a los valores normales."], ["Bradipneico", "Que presenta una frecuencia respiratoria menor que la normal."], ["Butilbromuro de hioscina", "Medicamento antiespasmódico utilizado para aliviar espasmos del músculo liso y cólicos."], ["Cefalocaudal", "Dirección que va desde la cabeza hacia los pies."], ["Cianótica", "Que presenta coloración azulada de piel o mucosas, asociada a una disminución de la oxigenación."], ["Colonización", "Presencia y multiplicación de microorganismos sin que necesariamente produzcan signos o síntomas de infección."], ["Compresas", "Materiales utilizados para cubrir, proteger, limpiar o absorber secreciones."], ["Decúbito prono", "Posición en la que la persona se encuentra acostada sobre el abdomen."], ["Decúbito supino", "Posición en la que la persona se encuentra acostada sobre la espalda, con la cara hacia arriba."], ["Descomplejizar", "Retirar los dispositivos al paciente, según la situación y el plan de cuidados."], ["Diástole", "Fase del ciclo cardíaco en la que el corazón se relaja y se llena de sangre."], ["Disnea", "Dificultad o sensación de falta de aire."], ["Dolor agudo", "Dolor de aparición reciente, generalmente relacionado con una lesión, enfermedad o procedimiento."], ["Dolor crónico", "Dolor que persiste durante un período prolongado y puede continuar más allá del tiempo esperado de recuperación."], ["Drenaje", "Procedimiento destinado a permitir la salida de líquidos, secreciones o sustancias acumuladas en una zona del cuerpo."], ["Edema", "Acumulación anormal de líquido en los tejidos que produce hinchazón."], ["Endovenosa", "Vía de administración en la que un medicamento o solución se introduce directamente en una vena."], ["Enteral", "Vía de administración de medicamentos o nutrientes que utiliza el tracto gastrointestinal."], ["EPP — Elementos de Protección Personal", "Elementos utilizados por el personal de salud para protegerse frente a riesgos durante la atención."], ["Eritema", "Enrojecimiento de la piel producido por una alteración o aumento del flujo sanguíneo en los vasos de la piel."], ["Estetoscopio", "Instrumento utilizado para auscultar y escuchar sonidos internos del cuerpo."], ["Eupneico", "Que presenta una respiración normal, tranquila y sin esfuerzo."], ["Febrícula", "Elevación leve de la temperatura corporal por encima de los valores normales."], ["Feedback", "Información que se recibe como respuesta a una acción o comunicación y permite conocer el resultado y realizar ajustes."], ["Flora residente", "Microorganismos que normalmente viven en una zona del organismo y que generalmente no producen enfermedad."], ["Flora transitoria", "Microorganismos que permanecen temporalmente en la piel, generalmente adquiridos por contacto."], ["Fluidos corporales", "Líquidos presentes o producidos por el organismo, algunos de los cuales pueden transmitir microorganismos."], ["Fowler", "Posición semisentada con la cabecera de la cama elevada."], ["Genupectoral", "Posición en la que el cuerpo se apoya sobre las rodillas y el tórax, con la pelvis elevada."], ["Habitación por cohorte", "Habitación compartida por pacientes que requieren las mismas medidas de prevención para reducir la transmisión de infecciones."], ["Hematuria", "Presencia de sangre en la orina."], ["Hemiparesia", "Disminución de la fuerza muscular o debilidad que afecta un lado del cuerpo."], ["Hiperpirexia", "Elevación extrema de la temperatura corporal."], ["Hipertensión", "Elevación de la tensión arterial por encima de los valores normales."], ["Hipotensión", "Disminución de la tensión arterial por debajo de los valores normales."], ["Hipotermia", "Disminución de la temperatura corporal por debajo de los valores normales."], ["Hipoxemia", "Disminución de la concentración de oxígeno en la sangre arterial."], ["Hipoxia", "Disminución del aporte de oxígeno a los tejidos."], ["Impericia", "Falta de conocimientos o habilidades necesarios para realizar una actividad profesional."], ["Imprudencia", "Acción en más: falta de tacto, cautela, mesura, precaución, discernimiento y buen juicio debidos por parte del profesional de la salud."], ["Incontinencia urinaria", "Pérdida involuntaria de orina, con dificultad para controlar completamente su eliminación."], ["Infección", "Invasión y multiplicación de microorganismos que producen una respuesta del organismo y pueden causar signos y síntomas."], ["Inobservancia", "De los deberes a su cargo: incumplimiento de las disposiciones que regulan el ejercicio de una determinada actividad; en este caso, enfermería."], ["Inspección", "Observación sistemática del cuerpo para identificar características normales o alteraciones."], ["Intradérmica", "Vía de administración en la que un medicamento se introduce en la dermis."], ["Intramuscular", "Vía de administración en la que un medicamento se introduce en el tejido muscular."], ["Isquemia", "Disminución o interrupción del aporte sanguíneo a un tejido, con menor llegada de oxígeno y nutrientes."], ["Lazo hemostático", "Dispositivo utilizado para realizar compresión temporal y controlar el sangrado o facilitar un acceso vascular."], ["Lesión por presión", "Lesión localizada de la piel y de los tejidos subyacentes, principalmente por presión prolongada o presión combinada con cizallamiento."], ["Microorganismos", "Agentes microscópicos, como bacterias, virus y hongos."], ["Multiparamétrico", "Monitor que permite controlar simultáneamente varios parámetros vitales."], ["Necrosis celular", "Muerte de células o tejidos como consecuencia de una lesión o daño."], ["Nefrotóxica", "Sustancia capaz de producir daño o alteración en los riñones."], ["Negligencia", "Falta de cuidado o atención necesaria en una actuación profesional."], ["Neutropénico", "Persona que presenta una disminución de los neutrófilos."], ["Normocárdico", "Que presenta una frecuencia cardíaca dentro de los valores normales."], ["Normotérmico", "Que presenta una temperatura corporal dentro del rango normal."], ["Óbito", "Muerte o fallecimiento."], ["Ortopnea", "Dificultad para respirar al estar acostado que mejora al sentarse o adoptar una posición erguida."], ["PAE — Proceso de Atención de Enfermería", "Método sistemático que permite organizar y brindar cuidados de enfermería de manera individualizada."], ["Palpación", "Técnica de valoración que consiste en examinar el cuerpo mediante el tacto."], ["Parenteral", "Vía de administración que evita el tracto gastrointestinal, generalmente mediante una inyección."], ["Percusión", "Técnica de valoración que consiste en dar pequeños golpes sobre una superficie corporal para evaluar las estructuras subyacentes mediante los sonidos producidos."], ["Pinza Kocher", "Instrumento quirúrgico utilizado para sujetar, comprimir o controlar tejidos o materiales."], ["Pirexia", "Elevación de la temperatura corporal por encima de los valores normales."], ["Posición de Sims", "Posición lateral parcialmente prona, con la pierna superior flexionada."], ["Postmortem", "Que ocurre o se realiza después de muerte."], ["Pulso", "Expansión rítmica de una arteria producida por la contracción del corazón."], ["Punción arterial", "Procedimiento mediante el cual se obtiene una muestra de sangre de una arteria para su análisis."], ["Respiración de Biot", "Patrón respiratorio irregular, con grupos de respiraciones seguidos de períodos de apnea."], ["Respiración de Cheyne-Stokes", "Patrón respiratorio con aumento y disminución progresiva de la respiración seguido de períodos de apnea."], ["Respiración de Kussmaul", "Respiración profunda, generalmente rápida, asociada a alteraciones importantes del equilibrio ácido-base."], ["Riesgo biológico", "Riesgo producido por la exposición a microorganismos o agentes biológicos capaces de causar daño o enfermedad."], ["Riesgo ergonómico", "Riesgo relacionado con posturas, movimientos, esfuerzos o condiciones de trabajo que pueden producir lesiones."], ["Rigor mortis", "Rigidez muscular que aparece después de la muerte."], ["Roser", "Posición supina con la cabeza extendida más allá del borde de la cama."], ["Saturómetro", "Dispositivo que permite medir la saturación de oxígeno de la sangre y, generalmente, la frecuencia del pulso."], ["Semi-Fowler", "Posición semisentada con la cabecera elevada aproximadamente entre 30° y 45°."], ["Sístole", "Fase del ciclo cardíaco en la que el corazón se contrae y expulsa sangre."], ["Solución gelificada de lidocaína", "Preparación en gel que contiene lidocaína y se utiliza para producir anestesia local."], ["Sonidos de Korotkoff", "Sonidos que se escuchan con el estetoscopio al desinflar el manguito del tensiómetro. El primer sonido que aparece corresponde a la tensión arterial sistólica; la desaparición de los sonidos suele indicar la tensión arterial diastólica."], ["Subcutánea", "Vía de administración en la que un medicamento se introduce en el tejido situado debajo de la piel."], ["Sublingual", "Vía de administración en la que el medicamento se coloca debajo de la lengua para su absorción."], ["Taquicárdico", "Que presenta una frecuencia cardíaca superior a los valores normales."], ["Taquipneico", "Que presenta una frecuencia respiratoria mayor que la normal."], ["Tegaderm", "Apósito transparente adhesivo utilizado para cubrir y proteger la piel, especialmente en accesos vasculares."], ["Tensiómetro", "Instrumento utilizado para medir la tensión arterial."], ["Tónico-clónico", "Tipo de actividad muscular involuntaria que presenta una fase de rigidez muscular seguida de contracciones musculares repetidas."], ["Tópica", "Administración de un medicamento directamente sobre la piel o una superficie corporal, generalmente con efecto local."], ["Torunda de algodón", "Pequeña porción de algodón utilizada para limpiar, secar o aplicar una sustancia."], ["Trendelenburg", "Posición en la que la cabeza queda más baja que los pies."], ["Vendaje", "Aplicación de una venda o material similar para proteger, sostener o inmovilizar una zona."]], needs=[["1", "Respirar normalmente", "Necesidad de mantener una respiración adecuada."], ["2", "Comer y beber adecuadamente", "Necesidad de ingerir alimentos y líquidos suficientes."], ["3", "Eliminar por todas las vías corporales", "Necesidad de eliminar los productos de desecho del organismo."], ["4", "Moverse y mantener una postura adecuada", "Necesidad de movimiento, desplazamiento y mantenimiento de una postura conveniente."], ["5", "Dormir y descansar", "Necesidad de disponer de períodos adecuados de sueño y descanso."], ["6", "Escoger ropa adecuada, vestirse y desvestirse", "Necesidad de seleccionar y utilizar ropa apropiada y poder vestirse y desvestirse."], ["7", "Mantener la temperatura corporal", "Necesidad de conservar la temperatura corporal dentro de límites normales mediante medidas adecuadas."], ["8", "Mantener la higiene e integridad de la piel", "Necesidad de cuidar la higiene corporal y proteger la piel."], ["9", "Evitar peligros ambientales y evitar lesionar a otros", "Necesidad de prevenir riesgos y protegerse y proteger a otras personas."], ["10", "Comunicarse", "Necesidad de expresar sentimientos, necesidades, temores y opiniones y relacionarse con otras personas."], ["11", "Vivir según sus valores y creencias", "Necesidad de actuar de acuerdo con los valores y creencias propios."], ["12", "Trabajar y sentirse realizado", "Necesidad de realizar actividades que permitan sentirse útil y realizado."], ["13", "Participar en actividades recreativas", "Necesidad de recrearse y participar en actividades de ocio."], ["14", "Aprender, descubrir o satisfacer la curiosidad", "Necesidad de aprender, adquirir conocimientos y utilizar recursos disponibles para mantener o mejorar la salud."]];let qi=0,pts=0,done=new Set();
+const encouragement=['¡Muy bien! 🎉','¡Seguí así! 💪','¡Excelente! ⭐','¡Muy bueno! 👏'];
+const retryMsgs=['No te desanimes 💗, podés volver a intentarlo.'];
+
+function show(id){
+  document.querySelectorAll('section').forEach(s=>s.classList.add('hidden'));
+  const target=document.getElementById(id);
+  if(!target)return;
+  target.classList.remove('hidden');
+  addSpeakButtons();
+  if(id==='gloss'){
+    render();
+    addSpeakButtons();
+    target.scrollIntoView({behavior:'smooth',block:'start'});
+  } else if(id==='games'){
+    document.querySelectorAll('.game-panel').forEach(p=>p.classList.add('hidden'));
+    target.scrollIntoView({behavior:'smooth',block:'start'});
+  } else if(id==='home'){
+    window.scrollTo({top:0,behavior:'smooth'});
+  } else {
+    target.scrollIntoView({behavior:'smooth',block:'start'});
+  }
+}
+
+function showGamePanel(id){
+  const games=document.getElementById('games');
+  if(games.classList.contains('hidden')) show('games');
+  document.querySelectorAll('#games .game-panel').forEach(p=>p.classList.add('hidden'));
+  const panel=document.getElementById(id);
+  if(panel) panel.classList.remove('hidden');
+  
+  if(id==='game') loadQ();
+  if(id==='hendersonGame') startHendersonGame();
+  if(id==='vitalGame') startVitalGame();
+  if(id==='handGame') startHandGame();
+  if(id==='trayGame') resetTrayGame();
+  if(id==='bandageGame') startBandageGame();
+  if(id==='extraGame') document.getElementById('extraGame').scrollIntoView({behavior:'smooth',block:'nearest'});
+}
+
+function render(){let q=(document.getElementById('search').value||'').toLowerCase();document.getElementById('terms').innerHTML=terms.filter(x=>x[0].toLowerCase().includes(q)||x[1].toLowerCase().includes(q)).map(x=>`<article class="term"><h3>${x[0]}</h3><p>${x[1]}</p></article>`).join('')||'<div class="empty">🔎 No encontramos ese término. Probá con otra palabra.</div>';if(typeof addSpeakButtons==='function')addSpeakButtons()}
+function shuffle(a){return [...a].sort(()=>Math.random()-.5)}
+
+function loadQ(){
+  let uniqueTerms = terms.filter(x => !done.has(x[0]));
+  if(uniqueTerms.length === 0){
+    document.getElementById('q').textContent = '🎉 ¡Completaste todos los términos del glosario!';
+    document.getElementById('opts').innerHTML = '';
+    document.getElementById('fb').textContent = '';
+    celebrate();
+    return;
+  }
+  let x = uniqueTerms[Math.floor(Math.random() * uniqueTerms.length)];
+  let opts = shuffle([x, ...shuffle(terms.filter(y => y[0] !== x[0])).slice(0, 3)]);
+  document.getElementById('q').textContent = '¿Qué significa “'+x[0]+'”?';
+  document.getElementById('fb').textContent = '';
+  let box = document.getElementById('opts');
+  box.innerHTML = '';
+  opts.forEach(o=>{
+    let b = document.createElement('button');
+    b.textContent = o[1];
+    b.onclick = ()=>{
+      box.querySelectorAll('button').forEach(z=>z.disabled=true);
+      if(o[0]===x[0]){
+        b.classList.add('good');
+        done.add(x[0]);
+        pts+=10;
+        document.getElementById('fb').textContent = encouragement[Math.floor(Math.random()*encouragement.length)]+' 🎉';
+      }else{
+        b.classList.add('bad');
+        document.getElementById('fb').textContent = 'No te desanimes 💗, la respuesta correcta era: '+x[1];
+      }
+      update();
+    };
+    box.appendChild(b);
+  });
+}
+
+function nextQ(){ loadQ(); update(); }
+
+function update(){
+  document.getElementById('pts').textContent=pts;
+  document.getElementById('done').textContent=done.size;
+  let pct = Math.round((done.size / 100) * 100);
+  document.getElementById('fill').style.width = pct+'%';
+  document.getElementById('gameFill').style.width = pct+'%';
+  document.getElementById('gamePct').textContent = pct+'%';
+  document.getElementById('gameLeft').textContent = Math.max(0, 100 - done.size);
+  if(done.size >= 100){
+    document.getElementById('enc').textContent='💉 ¡Jeringuita completa! ¡Te felicito, lograste el máximo nivel!';
+    celebrate();
+  } else {
+    document.getElementById('enc').textContent='💉 Tu jeringuita se llena con cada término practicado.';
+  }
+}
+
+function celebrate(){if(document.getElementById('celebration'))return;let c=document.createElement('div');c.id='celebration';c.className='celebration';c.innerHTML='<div class="celebrate-box">🎉💉⭐<h2>¡Te felicito!</h2><p>¡Lograste el máximo nivel!<br>Completaste todos los términos.</p><button class="primary" onclick="this.parentElement.parentElement.remove()">¡Seguir aprendiendo! 💗</button></div>';document.body.appendChild(c);for(let i=0;i<90;i++){let x=document.createElement('span');x.className='confetti';x.textContent=['🎊','⭐','💗','✨','🩺','💉'][i%6];x.style.left=Math.random()*100+'vw';x.style.animationDelay=Math.random()*1.5+'s';c.appendChild(x)}}
+let tfIndex=0;let tfAnswered=new Set();
+function startTF(){tfIndex=0;tfAnswered.clear();renderTF();}
+function renderTF(){let x=terms[tfIndex%terms.length];let truth=Math.random()>.5;let alternatives=shuffle(terms.filter(y=>y!==x));let wrong=alternatives[0];let statement=truth?x[0]+': '+x[1]:x[0]+': '+wrong[1];let box=document.getElementById('extraGame');box.innerHTML=`<div class="card tf-card"><h3>✅ Verdadero o falso</h3><div class="tf-progress"><b>Pregunta ${tfIndex+1} de 100</b><span>${Math.round(((tfIndex)/100)*100)}% completado</span></div><div class="mini-track"><div style="width:${tfIndex}%"></div></div><p class="gameq">${statement}</p><div class="options"><button class="tfbtn" data-choice="true" onclick="answerTF(${truth},true,this)">VERDADERO</button><button class="tfbtn" data-choice="false" onclick="answerTF(${truth},false,this)">FALSO</button></div><p id="tfFeedback"></p><button id="tfNext" class="primary" style="display:none" onclick="nextTF()">Siguiente ➜</button></div>`}
+function answerTF(truth,choice,btn){if(tfAnswered.has(tfIndex))return;tfAnswered.add(tfIndex);let correct=truth===choice;let buttons=[...document.querySelectorAll('.tfbtn')];buttons.forEach(b=>b.disabled=true);btn.classList.add(correct?'correct':'incorrect');let other=buttons.find(b=>b!==btn);if(!correct)other.classList.add('correct');let el=document.getElementById('tfFeedback');el.className=correct?'feedback-ok':'feedback-no';el.textContent=correct?'¡Muy bien! ⭐':'No te desanimes, podés volver a consultar el glosario. 💗';if(correct)pts+=5;document.getElementById('pts').textContent=pts;document.getElementById('tfNext').style.display='inline-block';if(tfIndex===99)document.getElementById('tfNext').textContent='Finalizar 🎉'}
+function nextTF(){if(tfIndex<99){tfIndex++;renderTF()}else{document.getElementById('extraGame').innerHTML='<div class="card celebration-inline"><h2>🎉 ¡Completaste las 100 preguntas!</h2><p>Terminaste el recorrido de Verdadero o Falso del glosario.</p><button class="primary" onclick="startTF()">Volver a jugar</button></div>';celebrateGame('¡Terminaste las 100 preguntas de Verdadero o Falso! Tu esfuerzo cuenta. ¡Seguí así!')}}
+let mem=[];let firstMem=null;let memoryMatched=0;
+function startMemory(){mem=shuffle(terms).slice(0,8);firstMem=null;memoryMatched=0;let cards=[];mem.forEach((x,i)=>{cards.push({type:'term',text:x[0],pair:i});cards.push({type:'def',text:x[1],pair:i})});cards=shuffle(cards);document.getElementById('extraGame').innerHTML='<div class="card memory-card-game"><h3>🧩 Memoria de enfermería</h3><p>Da vuelta las tarjetas y encontrá el término con su definición.</p><div class="memory-score">Parejas: <b id="memScore">0/8</b></div><div id="memoryGrid" class="memory-grid"></div><p id="memoryFeedback"></p><button class="primary" onclick="startMemory()">🔄 Nueva partida</button></div>';let grid=document.getElementById('memoryGrid');cards.forEach((c,i)=>{let b=document.createElement('button');b.className='memory-card';b.innerHTML='<span class="card-front">💉</span><span class="card-back">'+c.text+'</span>';b.dataset.pair=c.pair;b.dataset.index=i;b.onclick=()=>flipMemory(b);grid.appendChild(b)})}
+function flipMemory(b){if(b.classList.contains('revealed')||b.classList.contains('matched')||document.querySelectorAll('.memory-card.revealed:not(.matched)').length>=2)return;b.classList.add('revealed');if(!firstMem){firstMem=b;return}let second=b;if(firstMem.dataset.pair===second.dataset.pair){firstMem.classList.add('matched');second.classList.add('matched');memoryMatched++;document.getElementById('memScore').textContent=memoryMatched+'/8';document.getElementById('memoryFeedback').textContent='🎉 ¡Pareja encontrada!';firstMem=null;if(memoryMatched===8){document.getElementById('memoryFeedback').textContent='🏆 ¡Completaste todas las parejas!';celebrateGame('¡Encontraste las 8 parejas! Excelente memoria y atención. ¡Seguí así!')}}else{document.getElementById('memoryFeedback').textContent='🔍 No coinciden. Probá otra vez.';let a=firstMem,c=second;setTimeout(()=>{a.classList.remove('revealed');c.classList.remove('revealed');firstMem=null},850)}}
+
+const vitalQuestions=[
+{q:'Dolor: valor 0/10',a:'Nada de dolor',o:['Dolor leve','Nada de dolor','Dolor medio','Dolor extremo']},
+{q:'Dolor: valor 2/10',a:'Dolor leve',o:['Dolor intenso','Dolor leve','Dolor medio','Dolor extremo']},
+{q:'Frecuencia cardíaca: 76 lpm',a:'Normocardia',o:['Bradicardia','Taquicardia','Normocardia']},
+{q:'Frecuencia cardíaca: 112 lpm',a:'Taquicardia',o:['Normocardia','Taquicardia','Bradicardia']},
+{q:'Frecuencia cardíaca: 54 lpm',a:'Bradicardia',o:['Taquicardia','Normocardia','Bradicardia']},
+{q:'Frecuencia respiratoria: 24 rpm',a:'Taquipneico',o:['Eupnea','Bradipneico','Taquipneico']},
+{q:'Frecuencia respiratoria: 16 rpm',a:'Eupnea',o:['Eupnea','Taquipneico','Bradipneico']},
+{q:'Frecuencia respiratoria: 10 rpm',a:'Bradipneico',o:['Taquipneico','Bradipneico','Eupnea']},
+{q:'Saturación de oxígeno: 97 %',a:'Parámetro estable',o:['Desaturación moderada','Desaturación leve','Parámetro estable','Desaturación grave']},
+{q:'Saturación de oxígeno: 92 %',a:'Desaturación leve',o:['Parámetro estable','Desaturación leve','Desaturación grave','Desaturación moderada']},
+{q:'Saturación de oxígeno: 87 %',a:'Desaturación moderada',o:['Desaturación grave','Desaturación moderada','Parámetro estable','Desaturación leve']},
+{q:'Saturación de oxígeno: 82 %',a:'Desaturación grave',o:['Desaturación leve','Parámetro estable','Desaturación grave','Desaturación moderada']},
+{q:'Temperatura corporal: 33,5 °C',a:'Hipotermia severa',o:['Hipotermia leve','Hipotermia severa','Normotermia','Hipotermia moderada']},
+{q:'Temperatura corporal: 34,5 °C',a:'Hipotermia moderada',o:['Hipotermia moderada','Hipotermia severa','Febrícula','Hipotermia leve']},
+{q:'Temperatura corporal: 35,5 °C',a:'Hipotermia leve',o:['Normotermia','Hipotermia leve','Hipotermia moderada','Febrícula']},
+{q:'Temperatura corporal: 36,8 °C',a:'Normotermia',o:['Febrícula','Normotermia','Fiebre / pirexia','Hipotermia leve']},
+{q:'Temperatura corporal: 37,7 °C',a:'Febrícula',o:['Hiperpirexia / hipertermia','Normotermia','Febrícula','Fiebre / pirexia']},
+{q:'Temperatura corporal: 38,5 °C',a:'Fiebre / pirexia / febril',o:['Febrícula','Normotermia','Fiebre / pirexia / febril','Hiperpirexia / hipertermia']},
+{q:'Temperatura corporal: 40 °C',a:'Hiperpirexia / hipertermia',o:['Hipotermia severa','Fiebre / pirexia / febril','Hiperpirexia / hipertermia','Normotermia']},
+{q:'Tensión arterial: 120/80 mmHg',a:'Normotenso',o:['Hipertenso','Hipotensión','Normotenso']},
+{q:'Tensión arterial: 140/80 mmHg',a:'Hipertensión',o:['Normotenso','Hipertensión','Hipotensión']},
+{q:'Tensión arterial: 120/95 mmHg',a:'Hipertensión',o:['Normotenso','Hipertensión','Hipotensión']},
+{q:'Tensión arterial: 85/70 mmHg',a:'Hipotensión',o:['Hipertensión','Hipotensión','Normotenso']},
+{q:'Tensión arterial: 120/55 mmHg',a:'Hipotensión',o:['Hipertensión','Hipotensión','Normotenso']},
+{q:'Dolor: valor 8/10',a:'Dolor intenso',o:['Dolor leve','Dolor medio','Dolor intenso','Nada de dolor']},
+{q:'Dolor: valor 5/10',a:'Dolor medio',o:['Dolor extremo','Dolor medio','Dolor leve','Dolor intenso']}
+];
+let vitalIndex=0,vitalScore=0,vitalDeck=[];
+function startVitalGame(){vitalDeck=shuffle(vitalQuestions);vitalIndex=0;vitalScore=0;renderVitalQuestion()}
+function renderVitalQuestion(){let root=document.getElementById('vitalQuiz');if(!root)return;if(vitalIndex>=vitalDeck.length){root.innerHTML=`<div class="card"><h3>🎉 ¡Terminaste el juego de signos vitales!</h3><p>Resultado: ${vitalScore} de ${vitalDeck.length} respuestas correctas.</p><button class="primary" onclick="startVitalGame()">Volver a jugar</button></div>`;celebrateGame(`¡Terminaste el juego de signos vitales con ${vitalScore} de ${vitalDeck.length} respuestas correctas! Seguí practicando para afianzar lo aprendido.`);return}let x=vitalDeck[vitalIndex],opts=shuffle(x.o);root.innerHTML=`<div class="game-progress"><b>Pregunta ${vitalIndex+1} de ${vitalDeck.length}</b><div class="mini-track"><div style="width:${Math.round(vitalIndex/vitalDeck.length*100)}%"></div></div></div><p class="gameq">${x.q}</p><div id="vitalOptions">${opts.map(o=>`<button class="quiz-choice" data-choice="${o}" onclick="answerVital(this,this.dataset.choice)">${o}</button>`).join('')}</div><p id="vitalFeedback" class="quiz-feedback"></p><button id="vitalNext" class="primary" style="display:none" onclick="vitalIndex++;renderVitalQuestion()">Siguiente ➜</button>`}
+function answerVital(btn,choice){let x=vitalDeck[vitalIndex];let all=document.querySelectorAll('#vitalOptions .quiz-choice');all.forEach(b=>{b.disabled=true;if(b.textContent===x.a)b.classList.add('correct')});let ok=choice===x.a;if(!ok)btn.classList.add('incorrect');if(ok)vitalScore++;document.getElementById('vitalFeedback').textContent=ok?'¡Correcto! Muy bien. ⭐':'La respuesta correcta es: '+x.a+'. Volvé a consultar los parámetros si lo necesitás.';document.getElementById('vitalNext').style.display='inline-block';if(vitalIndex===vitalDeck.length-1)document.getElementById('vitalNext').textContent='Ver resultado 🎉'}
+
+const handQuestions=[
+{q:'Vas a saludar y tocar por primera vez al paciente. ¿Qué momento corresponde?',a:'Antes de tocar al paciente',o:['Antes de tocar al paciente','Después de tocar al paciente','Después del contacto con el entorno del paciente']},
+{q:'Vas a realizar una curación que requiere técnica limpia o aséptica. ¿Qué momento corresponde?',a:'Antes de realizar una tarea limpia o aséptica',o:['Después de tocar al paciente','Antes de realizar una tarea limpia o aséptica','Después del riesgo de exposición a líquidos corporales']},
+{q:'Terminaste una actividad con riesgo de contacto con sangre o líquidos corporales. ¿Qué momento corresponde?',a:'Después del riesgo de exposición a líquidos corporales',o:['Antes de tocar al paciente','Después del riesgo de exposición a líquidos corporales','Después del contacto con el entorno del paciente']},
+{q:'Terminaste el contacto directo con la persona atendida. ¿Qué momento corresponde?',a:'Después de tocar al paciente',o:['Después de tocar al paciente','Antes de realizar una tarea limpia o aséptica','Antes de tocar al paciente']},
+{q:'Acomodaste la mesa de luz y tocaste objetos cercanos al paciente, sin tocarlo. ¿Qué momento corresponde?',a:'Después del contacto con el entorno del paciente',o:['Antes de tocar al paciente','Depois del contacto con el entorno del paciente','Después de tocar al paciente']}
+];
+let handIndex=0,handScore=0,handDeck=[];
+function startHandGame(){handDeck=shuffle(handQuestions);handIndex=0;handScore=0;renderHandQuestion()}
+function renderHandQuestion(){let root=document.getElementById('handQuiz');if(!root)return;if(handIndex>=handDeck.length){root.innerHTML=`<div class="card"><h3>🎉 ¡Completaste los 5 momentos!</h3><p>Resultado: ${handScore} de ${handDeck.length} respuestas correctas.</p><button class="primary" onclick="startHandGame()">Volver a jugar</button></div>`;celebrateGame(`¡Completaste el juego de los 5 momentos de higiene de manos! Resultado: ${handScore} de ${handDeck.length}. ¡Excelente trabajo!`);return}let x=handDeck[handIndex],opts=shuffle(x.o);root.innerHTML=`<div class="game-progress"><b>Situación ${handIndex+1} de ${handDeck.length}</b><div class="mini-track"><div style="width:${Math.round(handIndex/handDeck.length*100)}%"></div></div></div><p class="gameq">${x.q}</p><div id="handOptions">${opts.map(o=>`<button class="quiz-choice" data-choice="${o}" onclick="answerHand(this,this.dataset.choice)">${o}</button>`).join('')}</div><p id="handFeedback" class="quiz-feedback"></p><button id="handNext" class="primary" style="display:none" onclick="handIndex++;renderHandQuestion()">Siguiente ➜</button>`}
+function answerHand(btn,choice){let x=handDeck[handIndex];let all=document.querySelectorAll('#handOptions .quiz-choice');all.forEach(b=>{b.disabled=true;if(b.textContent===x.a)b.classList.add('correct')});let ok=choice===x.a;if(!ok)btn.classList.add('incorrect');if(ok)handScore++;document.getElementById('handFeedback').textContent=ok?'¡Muy bien! Ese es el momento correcto. ⭐':'La respuesta correcta es: '+x.a+'. Repasá los cinco momentos en Conceptos.';document.getElementById('handNext').style.display='inline-block';if(handIndex===handDeck.length-1)document.getElementById('handNext').textContent='Ver resultado 🎉'}
+
+const trayLists={
+ avp:["Guante de examinación","Descartador","Catéter venoso","3 torundas de algodón","Prolongador con llave de 3 vías","Prolongador con Y","Macrogoteo / Microgoteo","Baxter","Lazo hemostático","Tegaderm / cinta hipoalergénica","Alcohol al 70%"],
+ ev:["Descartador","Guante de examinación","3 torundas de algodón","Jeringa (x) ml","Aguja 25/8","Lazo hemostático","Cinta","Fármaco","Alcohol al 70%"],
+ im:["Descartador","Guante de examinación","Jeringa (x) ml","3 torundas de algodón","Agujas 50/8, 40/8 y 25/8, según el tejido adiposo de la persona","Fármaco","Alcohol al 70%"],
+ sc:["Descartador","Guante de examinación","Jeringa de 1 ml","Agujas 15/5 y 16/5","Fármaco","2 torundas de algodón","Alcohol al 70%"],
+ id:["Descartador","Guante de examinación","Jeringa de 1 ml","Agujas 15/5 y 16/5","2 torundas de algodón","Lapicera","Fármaco","Alcohol al 70%"]
+};
+const trayNames={avp:'Acceso Venoso Periférico (AVP)',ev:'Endovenosa',im:'Intramuscular',sc:'Subcutánea',id:'Intradérmica'};
+let trayInterval=null,trayStart=0,trayRunning=false,trayCurrentName='',trayCurrentType='avp',trayScores=[];
+const trayPool=[...new Set(Object.values(trayLists).flat())];
+function formatTrayTime(ms){let mins=Math.floor(ms/60000),secs=Math.floor((ms%60000)/1000),tenths=Math.floor((ms%1000)/100);return String(mins).padStart(2,'0')+':'+String(secs).padStart(2,'0')+'.'+tenths}
+function updateTrayClock(){if(trayRunning)document.getElementById('trayTimer').textContent=formatTrayTime(performance.now()-trayStart)}
+function resetTrayGame(){if(trayInterval){clearInterval(trayInterval);trayInterval=null}trayRunning=false;trayCurrentName='';document.getElementById('trayTimer').textContent='00:00.0';document.getElementById('trayChecklist').innerHTML='<p>Elegí la bandeja y comenzá para ver los elementos mezclados.</p>';document.getElementById('trayFeedback').textContent='';document.getElementById('trayStartBtn').disabled=false;document.getElementById('trayFinishBtn').disabled=true;document.getElementById('trayStopBtn').disabled=true;document.getElementById('trayPlayer').disabled=false;document.getElementById('trayType').disabled=false;document.getElementById('trayInstruction').textContent='El cronómetro se reinicia para cada nueva partida y se ve solo en esta página/dispositivo.';renderTrayResults()}
+function startTrayGame(){let name=document.getElementById('trayPlayer').value.trim();if(!name){document.getElementById('trayFeedback').textContent='Escribí el nombre de quien participa antes de comenzar.';document.getElementById('trayPlayer').focus();return}if(trayInterval){clearInterval(trayInterval);trayInterval=null}trayCurrentName=name;trayCurrentType=document.getElementById('trayType').value;trayRunning=true;trayStart=performance.now();document.getElementById('trayTimer').textContent='00:00.0';document.getElementById('trayFeedback').textContent='¡Tiempo en marcha! Seleccioná todos los elementos que pertenecen a la bandeja '+trayNames[trayCurrentType]+'.';document.getElementById('trayInstruction').textContent='Seleccioná los elementos correctos. Si marcás alguno que no corresponde o te falta uno, podrás corregirlo y volver a comprobar.';document.getElementById('trayStartBtn').disabled=true;document.getElementById('trayFinishBtn').disabled=false;document.getElementById('trayStopBtn').disabled=false;document.getElementById('trayPlayer').disabled=true;document.getElementById('trayType').disabled=true;document.getElementById('trayChecklist').innerHTML=shuffle(trayPool).map((item,i)=>`<label class="tray-item"><input type="checkbox" data-item="${item.replace(/&/g,'&amp;').replace(/"/g,'&quot;')}" onchange="toggleTrayItem(this)"><span>${item}</span></label>`).join('');trayInterval=setInterval(updateTrayClock,100)}
+function toggleTrayItem(input){input.closest('.tray-item').classList.toggle('checked',input.checked);let all=[...document.querySelectorAll('#trayChecklist input[type=checkbox]')];let count=all.filter(x=>x.checked).length;document.getElementById('trayFeedback').textContent=`Seleccionaste ${count} elemento(s). Cuando creas que están todos los correctos, comprobá la bandeja.`}
+function finishTrayGame(){if(!trayRunning)return;let boxes=[...document.querySelectorAll('#trayChecklist input[type=checkbox]')];let selected=boxes.filter(x=>x.checked).map(x=>x.dataset.item);let correct=trayLists[trayCurrentType];let missing=correct.filter(x=>!selected.includes(x));let extra=selected.filter(x=>!correct.includes(x));if(missing.length||extra.length){document.getElementById('trayFeedback').textContent='Todavía no está correcta. Revisá la selección: '+(missing.length?`faltan ${missing.length} elemento(s). `:'')+(extra.length?`hay ${extra.length} elemento(s) que no corresponden. `:'')+'El cronómetro sigue corriendo; corregí y volvé a comprobar.';return}let elapsed=performance.now()-trayStart;trayRunning=false;if(trayInterval){clearInterval(trayInterval);trayInterval=null}document.getElementById('trayTimer').textContent=formatTrayTime(elapsed);trayScores.push({name:trayCurrentName,type:trayNames[trayCurrentType],ms:elapsed,display:formatTrayTime(elapsed)});trayScores.sort((a,b)=>a.ms-b.ms);document.getElementById('trayFeedback').textContent=`¡Correcto, ${trayCurrentName}! Armó la bandeja ${trayNames[trayCurrentType]} en ${formatTrayTime(elapsed)}.`;document.getElementById('trayStartBtn').disabled=false;document.getElementById('trayFinishBtn').disabled=true;document.getElementById('trayStopBtn').disabled=true;document.getElementById('trayPlayer').disabled=false;document.getElementById('trayType').disabled=false;document.querySelectorAll('#trayChecklist input').forEach(x=>x.disabled=true);document.getElementById('trayInstruction').textContent='Tiempo detenido. Presioná “Reiniciar / siguiente alumno” para empezar una nueva partida desde cero.';renderTrayResults();celebrateGame(`¡${trayCurrentName} completó correctamente la bandeja ${trayNames[trayCurrentType]} en ${formatTrayTime(elapsed)}! La rapidez cuenta, pero también la selección correcta y la seguridad.`)}
+function stopTrayClock(){if(!trayRunning)return;let elapsed=performance.now()-trayStart;trayRunning=false;if(trayInterval){clearInterval(trayInterval);trayInterval=null}document.getElementById('trayTimer').textContent=formatTrayTime(elapsed);let boxes=[...document.querySelectorAll('#trayChecklist input[type=checkbox]')];let selected=boxes.filter(x=>x.checked).map(x=>x.dataset.item);let correct=trayLists[trayCurrentType];let missing=correct.filter(x=>!selected.includes(x));let extra=selected.filter(x=>!correct.includes(x));document.getElementById('trayStartBtn').disabled=false;document.getElementById('trayFinishBtn').disabled=true;document.getElementById('trayStopBtn').disabled=true;document.getElementById('trayPlayer').disabled=false;document.getElementById('trayType').disabled=false;document.querySelectorAll('#trayChecklist input').forEach(x=>x.disabled=true);if(!missing.length&&!extra.length){trayScores.push({name:trayCurrentName,type:trayNames[trayCurrentType],ms:elapsed,display:formatTrayTime(elapsed)});trayScores.sort((a,b)=>a.ms-b.ms);document.getElementById('trayFeedback').textContent=`Cronómetro detenido. ${trayCurrentName}: bandeja correcta en ${formatTrayTime(elapsed)}.`;renderTrayResults()}else{document.getElementById('trayFeedback').textContent=`Cronómetro detenido en ${formatTrayTime(elapsed)}. La bandeja no estaba completa/correcta: faltan ${missing.length} elemento(s) y hay ${extra.length} elemento(s) de más. Esta partida no se agrega a los mejores tiempos.`}document.getElementById('trayInstruction').textContent='Tiempo detenido. Mostrá el resultado a quien coordina la actividad y presioná “Reiniciar / siguiente alumno” para una nueva partida.'} 
+function renderTrayResults(){let list=document.getElementById('trayResults');if(!list)return;if(!trayScores.length){list.innerHTML='<li>Todavía no hay tiempos registrados en esta página.</li>';return}list.innerHTML=trayScores.map((x,i)=>`<li class="${i===0?'tray-result-winner':''}">${i===0?'🥇 ':''}<b>${x.name}</b> — ${x.type}: ${x.display}${i===0?' · Mejor tiempo de esta página':''}</li>`).join('')}
+
+// --- JUEGO DE VENDAJES ---
+const bandageQuestions = [
+  { q: "Se utiliza para vendar una zona cilíndrica del cuerpo o fijar el vendaje en sus extremos, cubriendo por completo la vuelta anterior.", a: "Vendaje circular", o: ["Vendaje circular", "Vendaje espiral", "Vendaje en ocho", "Velpeau"] },
+  { q: "Se usa normalmente en las extremidades con función compresiva y protectora; las vueltas son paralelas y se superponen en unos dos tercios.", a: "Vendaje espiral", o: ["Vendaje espiral", "Vendaje circular", "Vendaje recurrente", "Vendaje compresivo"] },
+  { q: "Se usa para miembros inferiores y superiores; se realiza con vueltas que se van superponiendo cruzándose para favorecer el retorno venoso.", a: "Vendaje de espiga", o: ["Vendaje de espiga", "Vendaje espiral", "Velpeau", "Blandos o contentivo"] },
+  { q: "Se utiliza para vendar articulaciones como rodillas, codos, manos y pies, dibujando la figura de un ocho.", a: "Vendaje en ocho", o: ["Vendaje en ocho", "Vendaje circular", "Vendaje recurrente", "Vendaje de espiga"] },
+  { q: "Se utiliza para realizar capelinas (cabeza), vendar dedos y muñones.", a: "Vendaje recurrente", o: ["Vendaje recurrente", "Velpeau", "Vendaje espiral", "Vendaje compresivo"] },
+  { q: "Se utiliza para lesiones de la cintura escapular; el brazo va a lo largo del tórax con el codo en flexión para inmovilizar el hombro.", a: "Velpeau", o: ["Velpeau", "Vendaje en ocho", "Blandos o contentivo", "Vendaje circular"] },
+  { q: "Utilizado generalmente para contener y mantener alguna masa medicinal en el sitio afectado permitiendo movilidad relativa.", a: "Blandos o contentivo", o: ["Blandos o contentivo", "Vendaje compresivo", "Vendaje de espiga", "Vendaje recurrente"] },
+  { q: "Ejerce compresión progresiva de distal a proximal para favorecer el retorno venoso, limitar movimiento o detener hemorragias.", a: "Vendaje compresivo", o: ["Vendaje compresivo", "Vendaje circular", "Velpeau", "Vendaje espiral"] }
+];
+let bandageIndex = 0, bandageScore = 0, bandageDeck = [];
+function startBandageGame() {
+  bandageDeck = shuffle(bandageQuestions);
+  bandageIndex = 0;
+  bandageScore = 0;
+  renderBandageQuestion();
+}
+function renderBandageQuestion() {
+  let root = document.getElementById('bandageQuiz');
+  if (!root) return;
+  if (bandageIndex >= bandageDeck.length) {
+    root.innerHTML = `<div class="card"><h3>🎉 ¡Terminaste el juego de vendajes!</h3><p>Resultado: ${bandageScore} de ${bandageDeck.length} respuestas correctas.</p><button class="primary" onclick="startBandageGame()">Volver a jugar</button></div>`;
+    celebrateGame(`¡Terminaste el juego de vendajes con ${bandageScore} de ${bandageDeck.length} respuestas correctas! Excelente práctica.`);
+    return;
+  }
+  let x = bandageDeck[bandageIndex], opts = shuffle(x.o);
+  root.innerHTML = `<div class="game-progress"><b>Pregunta ${bandageIndex+1} de ${bandageDeck.length}</b><div class="mini-track"><div style="width:${Math.round(bandageIndex/bandageDeck.length*100)}%"></div></div></div><p class="gameq">${x.q}</p><div id="bandageOptions">${opts.map(o=>`<button class="quiz-choice" data-choice="${o}" onclick="answerBandage(this,this.dataset.choice)">${o}</button>`).join('')}</div><p id="bandageFeedback" class="quiz-feedback"></p><button id="bandageNext" class="primary" style="display:none" onclick="bandageIndex++;renderBandageQuestion()">Siguiente ➜</button>`;
+}
+function answerBandage(btn, choice) {
+  let x = bandageDeck[bandageIndex];
+  let all = document.querySelectorAll('#bandageOptions .quiz-choice');
+  all.forEach(b => { b.disabled = true; if (b.textContent === x.a) b.classList.add('correct'); });
+  let ok = (choice === x.a);
+  if (!ok) btn.classList.add('incorrect');
+  if (ok) bandageScore++;
+  document.getElementById('bandageFeedback').textContent = ok ? '¡Correcto! Muy bien. ⭐' : 'La respuesta correcta era: ' + x.a + '.';
+  document.getElementById('bandageNext').style.display = 'inline-block';
+  if (bandageIndex === bandageDeck.length - 1) document.getElementById('bandageNext').textContent = 'Ver resultado 🎉';
+}
+
+function showSticker(id){document.querySelectorAll('.sticker-info').forEach(x=>{if(x.id!==id)x.classList.remove('show')});document.getElementById(id).classList.toggle('show')}
+function toggleDark(){document.body.classList.toggle('dark');localStorage.setItem('dark',document.body.classList.contains('dark'))}
+if(localStorage.getItem('dark')==='true')document.body.classList.add('dark');
+function normalize(t){return t.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'')}
+function addChat(text,who){let log=document.getElementById('chatlog');let d=document.createElement('div');d.className='bubble '+(who==='user'?'usermsg':'botmsg');d.textContent=text;log.appendChild(d);log.scrollTop=log.scrollHeight}
+function toggleChat(){let c=document.getElementById('floatingChat');c.classList.toggle('hidden');if(!c.classList.contains('hidden'))setTimeout(()=>document.getElementById('chatinput').focus(),80)}
+function quickChat(t){document.getElementById('chatinput').value=t;sendChat()}
+let hendOrder=[];let hendAttempts=0;let hendSelected=null;function startHendersonGame(){hendOrder=[...needs].sort(()=>Math.random()-0.5);hendAttempts=0;hendSelected=null;renderHendersonGame();document.getElementById('hFeedback').textContent='';document.getElementById('hFeedback').className='game-feedback';}
+function renderHendersonGame(){let b=document.getElementById('hendGameBoard');if(!b)return;b.innerHTML=hendOrder.map((x,i)=>{let right=Number(x[0])===i+1;return `<button class="hend-card ${right?'correct':'incorrect'}" data-i="${i}" onclick="selectHend(${i})"><span class="hend-num">${i+1}</span><span>${x[1]}</span><strong aria-label="${right?'Correcta':'Incorrecta'}">${right?'✓':'✗'}</strong></button>`}).join('');updateHendProgress();}
+function selectHend(i){if(hendSelected===null){hendSelected=i;document.querySelector(`[data-i="${i}"]`).classList.add('selected');return;}if(hendSelected===i)return;let a=hendSelected,b=i;[hendOrder[a],hendOrder[b]]=[hendOrder[b],hendOrder[a]];hendAttempts++;hendSelected=null;renderHendersonGame();let right=hendOrder.filter((x,idx)=>Number(x[0])===idx+1).length;let fb=document.getElementById('hFeedback');if(right===14){fb.textContent='🎉 ¡Excelente! Las 14 necesidades están en el lugar correcto.';fb.className='game-feedback good';celebrateGame('¡Ordenaste correctamente las 14 necesidades de Virginia Henderson! ¡Excelente trabajo!')}else{let moved=hendOrder[b];fb.textContent=`Tenés ${right} de 14 correctas. Revisá las que están en rojo y volvé a intercambiarlas.`;fb.className='game-feedback';}}
+function updateHendProgress(){let right=hendOrder.filter((x,i)=>Number(x[0])===i+1).length;let pct=Math.round(right/14*100);document.getElementById('hProg').textContent=`${right}/14`;document.getElementById('hAttempts').textContent=hendAttempts;let fill=document.getElementById('hendProgressFill');if(fill)fill.style.width=pct+'%';let per=document.getElementById('hPercent');if(per)per.textContent=pct+'%';}
+function sendChat(){let input=document.getElementById('chatinput');let q=input.value.trim();if(!q)return;addChat(q,'user');input.value='';let n=normalize(q);let answer='';let found=terms.find(x=>{let title=normalize(x[0]);let short=title.split(' — ')[0].trim();return n.includes(title)||n.includes(short)});if(found)answer=found[0]+': '+found[1];else if(/henderson/.test(n)){let m=q.match(/\b([1-9]|1[0-4])\b/);if(m){let nd=needs.find(x=>x[0]===m[1]);answer=nd?'Necesidad '+nd[0]+': '+nd[1]+'. '+nd[2]:'Las necesidades de Henderson están numeradas del 1 al 14.';}else answer='Virginia Henderson plantea 14 necesidades básicas. Podés preguntarme, por ejemplo, “Necesidad 8 de Henderson”.';}else if(/(enfermeria|enfermería)/.test(n)&&/(que es|definicion|significa)/.test(n))answer='La enfermería es un área profesional orientada al cuidado de las personas, familias y comunidades, favoreciendo la salud, la recuperación y el bienestar.';else if(/(oms|who|salud)/.test(n))answer='La OMS define la salud como un estado de completo bienestar físico, mental y social, y no solamente la ausencia de afecciones o enfermedades. Podés verlo también en la sección Conceptos.';else if(/(ayuda|como usar|que puedo preguntar)/.test(n))answer='Podés preguntarme por cualquiera de los 100 términos, por las 14 necesidades de Henderson o por los conceptos incluidos en la página.';else answer='Todavía no encuentro esa respuesta en este glosario. Probá escribiendo el nombre de un término o una necesidad de Henderson.';setTimeout(()=>addChat(answer,'bot'),180)}
+document.getElementById('search').addEventListener('input',render);render();loadQ();update();setTimeout(addSpeakButtons,0);
+function setupPageQR(){const url=window.location.href;const message=document.getElementById('qrMessage');const qr=document.getElementById('pageQR');const label=document.getElementById('qrUrl');if(!/^https?:$/.test(window.location.protocol)){message.textContent='Esta copia todavía se está abriendo como archivo local.';return;}message.textContent='Escaneá este código con la cámara de tu teléfono para abrir el glosario.';qr.src='https://api.qrserver.com/v1/create-qr-code/?size=240x240&data='+encodeURIComponent(url);qr.classList.remove('hidden');label.textContent=url;}
+setupPageQR();
+
+function celebrateGame(message='¡Excelente trabajo! Terminaste el juego. ¡Cada paso te acerca a tu objetivo!'){
+  let old=document.getElementById('gameCelebration'); if(old)old.remove();
+  let box=document.createElement('div'); box.id='gameCelebration'; box.className='celebration';
+  box.innerHTML=`<div class="celebrate-box">🎉💗⭐<h2>¡Lo lograste!</h2><p>${message}</p><button class="primary" onclick="document.getElementById('gameCelebration').remove()">¡Seguir aprendiendo!</button></div>`;
+  document.body.appendChild(box);
+  for(let i=0;i<75;i++){let c=document.createElement('span');c.className='confetti';c.textContent=['🎊','⭐','💗','✨','🩺','💉'][i%6];c.style.left=Math.random()*100+'vw';c.style.animationDelay=(Math.random()*1.2)+'s';box.appendChild(c)}
+}
+
+function speakText(text){if(!('speechSynthesis' in window)){alert('Este navegador no ofrece lectura en voz alta. Podés usar la función de accesibilidad del dispositivo.');return;}speechSynthesis.cancel();let u=new SpeechSynthesisUtterance(text);u.lang='es-AR';u.rate=.92;speechSynthesis.speak(u)}
+function addSpeakButtons(){document.querySelectorAll('.term,.need').forEach(card=>{if(card.querySelector('.speak-term')||card.classList.contains('sticker-info'))return;let title=card.querySelector('h3')?.innerText||'';let desc=card.querySelector('p')?.innerText||'';if(!title||!desc)return;let b=document.createElement('button');b.className='speak-term';b.textContent='🔊 Escuchar';b.setAttribute('aria-label','Escuchar: '+title);b.onclick=()=>speakText(title+'. '+desc);card.appendChild(b)})}
+
+function toggleAccessModal(){let m=document.getElementById('accessModal');m.classList.toggle('hidden')}
+function setProfile(profile){
+  resetAccessibility();
+  if(profile==='dyslexia'){document.body.classList.add('readable-font');alert('Perfil Dislexia activado.');}
+  if(profile==='adhd'){document.body.classList.add('low-saturation');alert('Perfil TDAH / Enfoque activado.');}
+  if(profile==='epilepsy'){
+    let style=document.createElement('style');style.id='noAnim';style.innerHTML='*{animation:none !important;transition:none !important;}';document.head.appendChild(style);
+    alert('Modo Bloquear parpadeos activado.');
+  }
+}
+function setContrast(type){
+  document.body.classList.remove('monochrome','low-saturation','high-contrast-light','dark');
+  if(type==='dark') toggleDark();
+  if(type==='light') document.body.classList.add('high-contrast-light');
+  if(type==='mono') document.body.classList.add('monochrome');
+  if(type==='low') document.body.classList.add('low-saturation');
+}
+function resetAccessibility(){
+  document.body.classList.remove('readable-font','low-saturation','monochrome','high-contrast-light','dark');
+  let na=document.getElementById('noAnim');if(na)na.remove();
+  let rg=document.getElementById('readingGuide');if(rg)rg.style.display='none';
+  alert('Se restablecieron los ajustes de accesibilidad.');
+}
+function readPageText(){
+  let text = document.querySelector('header h1').innerText + ". " + document.querySelector('.hero p').innerText;
+  speakText(text);
+}
+function toggleReadingGuide(){
+  let g=document.getElementById('readingGuide');
+  g.style.display = g.style.display==='block'?'none':'block';
+}
+window.addEventListener('mousemove', e=>{
+  let g=document.getElementById('readingGuide');
+  if(g && g.style.display==='block'){g.style.top=(e.clientY-20)+'px'}
+});
+</script></body></html>
