@@ -39,7 +39,7 @@ body.readable-font *{font-family:"Comic Sans MS", "Arial", sans-serif!important}
 </style></head><body>
 <div id="readingGuide" class="reading-guide"></div>
 
-<header><span class="floating f1">💗</span><span class="floating f2">🩹</span><span class="floating f3">⭐</span><span class="floating f4">💉</span><div class="icons">🩺 💉 🌡️ 🧤 🩹</div><h1>Glosario de Enfermería Básica 1</h1><p><b>Basado en las clases con la profesora Natalia Méndez</b></p><p>100 términos · conceptos · juegos · Enfermerita Virtual</p></header><div class="wrap"><div class="card hero"><div class="welcome-illustration"><div class="mini-nurse">👩‍⚕️</div><div><h2>💉 ¡Aprendé jugando!</h2><p>Explorá el glosario, los conceptos, las 14 necesidades de Henderson y practicá con preguntas.</p></div></div><nav><button class="primary" onclick="show('home')">🏠 Inicio</button><button onclick="show('gloss')">📖 Glosario</button><button onclick="show('concepts')">📚 Conceptos</button><button onclick="show('vitalSigns')">🩺 Signos vitales</button><button onclick="show('trays')">💉 Bandejas</button><button onclick="show('bandajes')">🩹 Vendajes</button><button onclick="show('henderson')">❤️ Henderson</button><button onclick="show('games')">🎮 Juegos</button><button onclick="toggleDark()">🌙 Fondo oscuro</button></nav></div>
+<header><span class="floating f1">💗</span><span class="floating f2">🩹</span><span class="floating f3">⭐</span><span class="floating f4">💉</span><div class="icons">🩺 💉 🌡️ 🧤 🩹</div><h1>Glosario de Enfermería Básica 1</h1><p><b>Basado en las clases con la profesora Natalia Méndez</b></p><p>100 términos · conceptos · curaciones · vendajes · juegos · Enfermerita Virtual</p></header><div class="wrap"><div class="card hero"><div class="welcome-illustration"><div class="mini-nurse">👩‍⚕️</div><div><h2>💉 ¡Aprendé jugando!</h2><p>Explorá el glosario, los conceptos, las curaciones, vendajes, las 14 necesidades de Henderson y practicá con preguntas.</p></div></div><nav><button class="primary" onclick="show('home')">🏠 Inicio</button><button onclick="show('gloss')">📖 Glosario</button><button onclick="show('concepts')">📚 Conceptos</button><button onclick="show('curacionesSec')">🩹 Curaciones</button><button onclick="show('vitalSigns')">🩺 Signos vitales</button><button onclick="show('trays')">💉 Bandejas</button><button onclick="show('bandajes')">🎗️ Vendajes</button><button onclick="show('henderson')">❤️ Henderson</button><button onclick="show('games')">🎮 Juegos</button><button onclick="toggleDark()">🌙 Fondo oscuro</button></nav></div>
 <section id="home" class="card"><h2>💉 Tu progreso</h2><div class="syringe"><div class="cartoon-syringe"><div class="plunger"></div><div class="rod"></div><div class="barrel"><div class="liquid"></div></div><div class="tip"></div><div class="needle"></div><span class="smile">⌣</span></div></div><div class="syringe-track"><div id="fill" class="syringe-fill"></div></div><div class="sticker-row">
 <div class="sticker-wrap"><button class="sticker" onclick="showSticker('steto')" aria-label="Estetoscopio">🩺</button><div id="steto" class="sticker-info"><h3>🩺 Estetoscopio</h3><p>Instrumento utilizado para auscultar y escuchar sonidos internos del cuerpo.</p><button onclick="speakText('Estetoscopio. Instrumento utilizado para auscultar y escuchar sonidos internos del cuerpo.')">🔊 Escuchar</button></div></div>
 <div class="sticker-wrap"><button class="sticker" onclick="showSticker('termometro')" aria-label="Termómetro">🌡️</button><div id="termometro" class="sticker-info"><h3>🌡️ Termómetro</h3><p>Instrumento utilizado para medir la temperatura corporal.</p><button onclick="speakText('Termómetro. Instrumento utilizado para medir la temperatura corporal.')">🔊 Escuchar</button></div></div>
@@ -51,7 +51,39 @@ body.readable-font *{font-family:"Comic Sans MS", "Arial", sans-serif!important}
 </div><p id="enc">¡Empezá y llená tu jeringuita de aprendizaje!</p><div id="qrSection" class="need" style="margin-top:18px;text-align:center"><h3>📱 Acceso a la página por código QR</h3><p id="qrMessage">Cuando esta página esté publicada en una dirección web pública, acá aparecerá un código QR para ingresar desde otro dispositivo.</p><img id="pageQR" class="hidden" alt="Código QR para abrir el Glosario de Enfermería Básica 1" style="width:220px;max-width:100%;height:auto;border:8px solid white;border-radius:12px;margin:8px auto"/><p id="qrUrl" class="small"></p></div>
 <div class="stats"><div class="stat"><b id="pts">0</b>Puntos</div><div class="stat"><b id="done">0</b>Practicados</div><div class="stat"><b>100</b>Términos</div></div></section>
 <section id="gloss" class="card hidden"><h2>📖 Glosario A–Z</h2><input id="search" class="search" placeholder="Buscar término..." oninput="render()"><div id="terms" class="grid"></div></section>
-<section id="concepts" class="card hidden"><h2>📚 Conceptos fundamentales de Enfermería</h2><p class="small">Acá encontrás los conceptos principales incluidos en esta página, las pioneras trabajadas y la definición de salud de la OMS.</p><div class="grid"><article class="need"><h3>👩‍⚕️ ¿Qué es la enfermería?</h3><p>Área profesional orientada al cuidado de las personas, familias y comunidades, favoreciendo la salud, la recuperación y el bienestar.</p></article><article class="need"><h3>🌡️ Signos vitales</h3><p>Parámetros que permiten valorar funciones esenciales del organismo. En este proyecto: temperatura, pulso, frecuencia respiratoria, tensión arterial y saturación de oxígeno.</p></article><article class="need"><h3>❤️ ¿Qué es la salud según la OMS?</h3><p>La Organización Mundial de la Salud (OMS) define la salud como un estado de completo bienestar físico, mental y social, y no solamente la ausencia de afecciones o enfermedades.</p></article><article class="need"><h3>🕯️ Pionera: Florence Nightingale</h3><p>Pionera de la enfermería moderna. Teoría naturalista: destacó la importancia del ambiente, la higiene, la ventilación, la limpieza y las condiciones que favorecen la recuperación.</p></article><article class="need"><h3>❤️ Pionera: Virginia Henderson</h3><p>Su propuesta se centra en las <strong>14 necesidades básicas</strong> de la persona y en ayudarla a alcanzar independencia.</p></article><article class="need"><h3>💪 Pionera: Dorothea Orem</h3><p>Su teoría se centra en el autocuidado y en la intervención de enfermería cuando existe una capacidad insuficiente para satisfacer las necesidades de autocuidado.</p></article></div><h2 style="margin-top:28px">🌟 Cualidades del profesional de salud</h2><div class="grid"><article class="need"><h3>Responsabilidad</h3><p>Cumplir con las obligaciones del rol de enfermería, actuar de manera responsable y hacerse cargo de las acciones realizadas en el cuidado.</p></article><article class="need"><h3>Respeto</h3><p>Reconocer y valorar a cada persona, sus derechos, decisiones, privacidad, cultura y dignidad durante el cuidado.</p></article><article class="need"><h3>Empatía</h3><p>Comprender cómo puede sentirse otra persona y brindar un cuidado humano, respetuoso y atento a sus necesidades.</p></article><article class="need"><h3>Comunicación</h3><p>Transmitir y recibir información de manera clara, adecuada y comprensible para favorecer el cuidado y el trabajo en equipo.</p></article><article class="need"><h3>Ética</h3><p>Actuar de acuerdo con principios profesionales y respetar los derechos, la dignidad y el bienestar de la persona cuidada.</p></article><article class="need"><h3>👀 Observación</h3><p>Capacidad de mirar y valorar de manera sistemática a la persona para reconocer datos, cambios o signos que sean importantes para el cuidado.</p></article><article class="need"><h3>🤝 Trabajo en equipo</h3><p>Capacidad de colaborar con otros integrantes del equipo de salud, compartir información y coordinar acciones para brindar una atención segura y organizada.</p></article><article class="need"><h3>🧠 Conocimientos y habilidades</h3><p>Los conocimientos permiten comprender qué hacer y por qué hacerlo; las habilidades permiten aplicar esos conocimientos de manera correcta y segura en la práctica de enfermería.</p></article></div><h2 style="margin-top:28px">🧼 Los 5 momentos para la higiene de manos</h2><div class="grid"><article class="need"><h3>1. Antes de tocar al paciente</h3><p>Antes del contacto directo con la persona atendida.</p></article><article class="need"><h3>2. Antes de realizar una tarea limpia o aséptica</h3><p>Antes de un procedimiento que requiere evitar la introducción de microorganismos.</p></article><article class="need"><h3>3. Después del riesgo de exposición a líquidos corporales</h3><p>Después de una actividad con posibilidad de contacto con sangre u otros líquidos corporales.</p></article><article class="need"><h3>4. Después de tocar al paciente</h3><p>Al finalizar el contacto directo con la persona atendida.</p></article><article class="need"><h3>5. Después del contacto con el entorno del paciente</h3><p>Depois de tocar objetos o superficies cercanas al paciente, aunque no se lo haya tocado directamente.</p></article></div></section>
+<section id="concepts" class="card hidden"><h2>📚 Conceptos fundamentales de Enfermería</h2><p class="small">Acá encontrás los conceptos principales incluidos en esta página, las pioneras trabajadas y la definición de salud de la OMS.</p><div class="grid"><article class="need"><h3>👩‍⚕️ ¿Qué es la enfermería?</h3><p>Área profesional orientada al cuidado de las personas, familias y comunidades, favoreciendo la salud, la recuperación y el bienestar.</p></article><article class="need"><h3>🌡️ Signos vitales</h3><p>Parámetros que permiten valorar funciones esenciales del organismo. En este proyecto: temperatura, pulso, frecuencia respiratoria, tensión arterial y saturación de oxígeno.</p></article><article class="need"><h3>❤️ ¿Qué es la salud según la OMS?</h3><p>La Organización Mundial de la Salud (OMS) define la salud como un estado de completo bienestar físico, mental y social, y no solamente la ausencia de afecciones o enfermedades.</p></article><article class="need"><h3>🕯️ Pionera: Florence Nightingale</h3><p>Pionera de la enfermería moderna. Teoría naturalista: destacó la importancia del ambiente, la higiene, la ventilación, la limpieza y las condiciones que favorecen la recuperación.</p></article><article class="need"><h3>❤️ Pionera: Virginia Henderson</h3><p>Su propuesta se centra en las <strong>14 necesidades básicas</strong> de la persona y en ayudarla a alcanzar independencia.</p></article><article class="need"><h3>💪 Pionera: Dorothea Orem</h3><p>Su teoría se centra en el autocuidado y en la intervención de enfermería cuando existe una capacidad insuficiente para satisfacer las necesidades de autocuidado.</p></article></div></section>
+
+<section id="curacionesSec" class="card hidden">
+  <h2>🩹 Curaciones y Procedimientos</h2>
+  <p class="small">Guía completa basada en el material de estudio sobre heridas, clasificación, debridamiento, toma de cultivo y modalidades de curación.</p>
+  
+  <div class="grid" style="margin-top:14px;">
+    <article class="need">
+      <span>Fundamento</span>
+      <h3>1. Curación y Objetivos</h3>
+      <p><b>Definición:</b> Procedimiento realizado sobre la herida, destinado a prevenir y controlar las infecciones y promover la cicatrización. Es una técnica aséptica, por lo que se debe usar material estéril[span_1](start_span)[span_1](end_span).<br><br><b>Objetivos:</b><br>• Remover tejido necrótico y cuerpos extraños.<br>• Identificar y eliminar la infección.<br>• Absorber exceso de exudado.<br>• Mantener ambiente húmedo y térmico en las heridas.<br>• Proteger el tejido de regeneración del trauma y la invasión bacteriana[span_2](start_span)[span_2](end_span).</p>
+    </article>
+
+    <article class="need">
+      <span>Tipos y Clasificación</span>
+      <h3>2. Clasificación de Heridas</h3>
+      <p>• <b>Según integridad:</b> Abierta y cerrada.<br>• <b>Según gravedad:</b> Superficial o penetrante/profunda.<br>• <b>Según contaminación:</b><br>  - <i>Limpia:</i> Quirúrgica bajo condiciones asépticas, trauma mínimo.<br>  - <i>Contaminadas:</i> Tiempo corto desde la injuria, tejidos inoculados sin desarrollo bacteriano aún.<br>  - <i>Infectada:</i> Con desarrollo microbiano (inflamación, dolor, exudado purulento)[span_3](start_span)[span_3](end_span).<br><br><b>Grados y Estadios:</b><br>• <i>Grado I / Estadio I:</i> Enrojecimiento.<br>• <i>Grado II / Estadio II:</i> Dermis dañada parcialmente.<br>• <i>Grado III / Estadio III:</i> Dermis totalmente dañada, grasa subcutánea visible.<br>• <i>Grado IV / Estadio IV:</i> Daño hasta músculo, tendón o hueso[span_4](start_span)[span_4](end_span).</p>
+    </article>
+
+    <article class="need">
+      <span>Técnicas</span>
+      <h3>3. Métodos y Debridamiento</h3>
+      <p>• <b>Arrastre Mecánico:</b> Lavado o irrigación con solución fisiológica, Ringer Lactato o agua destilada para eliminar contaminantes y preservar tejido de granulación[span_5](start_span)[span_5](end_span).<br>• <b>Debridamiento Quirúrgico:</b> Elección en heridas infectadas, úlceras tipo 3 y 4, quemaduras y pie diabético grado II a IV[span_6](start_span)[span_6](end_span).<br>• <b>Debridamiento Médico:</b><br>  - <i>Mecánico:</i> Gasa húmeda adherida al tejido necrótico retirada a las 24 h.<br>  - <i>Enzimático:</i> Pomadas con enzimas proteolíticas o agentes desnaturalizantes.<br>  - <i>Autolítico:</i> Apósito interactivo/bioactivo que permite al organismo eliminar el tejido necrótico[span_7](start_span)[span_7](end_span).<br>• <b>Toma de Cultivo:</b> Obtención de muestra para estudio microbiológico[span_8](start_span)[span_8](end_span).</p>
+    </article>
+
+    <article class="need">
+      <span>Modalidades</span>
+      <h3>4. Modalidades de Curación</h3>
+      <p>• <b>Curación Plana:</b> Limpieza con torundas empapadas en solución fisiológica o Ringer Lactato mediante un solo movimiento de arrastre mecánico (técnica aséptica)[span_9](start_span)[span_9](end_span).<br>• <b>Curación Irrigada:</b> Lavado o irrigación para heridas contaminadas/infectadas o de difícil acceso (ducho-terapia, lavado con jeringa y aguja)[span_10](start_span)[span_10](end_span).<br>• <b>Curación Avanzada:</b> Limpieza con solución fisiológica dejando como cobertura un apósito interactivo, bioactivo o mixto según las condiciones de la lesión[span_11](start_span)[span_11](end_span).</p>
+    </article>
+  </div>
+</section>
+
 <section id="vitalSigns" class="card hidden"><h2>🩺 Signos vitales y parámetros de valoración</h2><p class="small">Consultá los rangos de referencia indicados para este glosario. La valoración clínica debe considerar el contexto de la persona y las indicaciones del equipo de salud.</p><div class="grid vital-grid">
 <article class="need"><h3>💗 Dolor (escala 0–10)</h3><ul><li><b>0:</b> nada de dolor.</li><li><b>1–3:</b> dolor leve.</li><li><b>4–6:</b> dolor medio.</li><li><b>7–9:</b> dolor intenso.</li><li><b>10:</b> dolor extremo.</li></ul></article>
 <article class="need"><h3>❤️ Frecuencia cardíaca</h3><p>Se expresa en latidos por minuto (lpm).</p><ul><li><b>60–100 lpm:</b> normocardia.</li><li><b>Más de 100 lpm:</b> taquicardia.</li><li><b>Menos de 60 lpm:</b> bradicardia.</li></ul></article>
@@ -66,6 +98,22 @@ body.readable-font *{font-family:"Comic Sans MS", "Arial", sans-serif!important}
   <p class="small">Insumos obligatorios y específicos para cada procedimiento con <b>Alcohol al 70%</b> incluido en todas las bandejas:</p>
   
   <div class="grid" style="margin-top:14px;">
+    <div class="term" style="border-color:#ff9fc2; background:#fff5f8;">
+      <h3>Bandeja de Curaciones</h3>
+      <p style="font-size:14px; margin:0;">
+        • Bandeja para colocar el material<br>
+        • Equipo de curación (antisépticos, desinfectante, pomada)<br>
+        • Riñón estéril<br>
+        • Guantes estériles y comunes<br>
+        • Suero fisiológico / Ringer Lactato / Agua Destilada<br>
+        • Jeringa de 20cc<br>
+        • Agujas (optativo para irrigación)<br>
+        • Tela adhesiva<br>
+        • Apósitos y gasas<br>
+        • Venda[span_12](start_span)[span_12](end_span)
+      </p>
+    </div>
+
     <div class="term">
       <h3>Bandeja de Acceso Venoso Periférico (AVP)</h3>
       <p style="font-size:14px; margin:0;">
@@ -141,7 +189,7 @@ body.readable-font *{font-family:"Comic Sans MS", "Arial", sans-serif!important}
 </section>
 
 <section id="bandajes" class="card hidden">
-  <h2>🩹 Tipos de Vendajes y Definiciones</h2>
+  <h2>🎗️ Tipos de Vendajes y Definiciones</h2>
   <p class="small">El vendaje es el arte de envolver un miembro o región del cuerpo mediante vendas, gasas, lienzos o materiales similares.</p>
   <div class="grid" style="margin-top:14px;">
     <article class="need">
@@ -193,10 +241,11 @@ body.readable-font *{font-family:"Comic Sans MS", "Arial", sans-serif!important}
 <button onclick="showGamePanel('extraGame');startTF()">🧠 Verdadero o falso</button>
 <button onclick="showGamePanel('extraGame');startMemory()">🧩 Memoria de enfermería</button>
 <button onclick="showGamePanel('hendersonGame')">❤️ Las 14 necesidades de Henderson</button>
+<button onclick="showGamePanel('curacionGamePanel')">🩹 Ordená el procedimiento de curación</button>
 <button onclick="showGamePanel('vitalGame');startVitalGame()">🩺 Clasificá los signos vitales</button>
 <button onclick="showGamePanel('handGame');startHandGame()">🧼 Los 5 momentos de higiene de manos</button>
 <button onclick="showGamePanel('trayGame');resetTrayGame()">🧺 Armá la bandeja contra reloj</button>
-<button onclick="showGamePanel('bandageGame');startBandageGame()">🩹 Juego de Vendajes</button>
+<button onclick="showGamePanel('bandageGame');startBandageGame()">🎗️ Juego de Vendajes</button>
 </div>
 <div id="game" class="game-panel hidden">
 <h2>🎯 ¿Qué significa?</h2><p>Elegí la definición correcta y ganá puntos.</p>
@@ -209,12 +258,24 @@ body.readable-font *{font-family:"Comic Sans MS", "Arial", sans-serif!important}
 <div class="hend-progress-wrap"><div class="hend-progress-track"><div id="hendProgressFill" class="hend-progress-fill"></div></div><div class="hend-progress-label"><span>Ubicaciones correctas</span><b id="hPercent">0%</b></div></div>
 <p class="hend-legend"><span class="legend-good">✓ Correcta</span><span class="legend-bad">✗ Incorrecta</span></p><div id="hendGameBoard" class="hend-game-board"></div><p id="hFeedback" class="game-feedback"></p><button class="primary" onclick="startHendersonGame()">🔄 Mezclar nuevamente</button>
 </div>
-<div id="vitalGame" class="game-panel hidden"><h2>🩺 Clasificá los signos vitales</h2><p>Leé la valor y elegí la clasificación que corresponde a los parámetros de este glosario.</p><div id="vitalQuiz"></div></div>
+
+<div id="curacionGamePanel" class="game-panel hidden">
+  <h2>🩹 Juego: Ordená el procedimiento de curación por prioridad</h2>
+  <p>Ordená los pasos del procedimiento clínico de curación en su secuencia correcta. Tocá un paso para seleccionarlo y luego otro para intercambiarlos de lugar[span_13](start_span)[span_13](end_span).</p>
+  <div class="hend-game-info"><b>Progreso: <span id="cProg">0/12</span></b><span>Intentos: <span id="cAttempts">0</span></span></div>
+  <div class="hend-progress-wrap"><div class="hend-progress-track"><div id="cProgressFill" class="hend-progress-fill"></div></div><div class="hend-progress-label"><span>Pasos en orden correcto</span><b id="cPercent">0%</b></div></div>
+  <p class="hend-legend"><span class="legend-good">✓ Correcto</span><span class="legend-bad">✗ Desordenado</span></p>
+  <div id="cGameBoard" class="hend-game-board"></div>
+  <p id="cFeedback" class="game-feedback"></p>
+  <button class="primary" onclick="startCuracionGame()">🔄 Mezclar pasos nuevamente</button>
+</div>
+
+<div id="vitalGame" class="game-panel hidden"><h2>🩺 Clasificá los signos vitales</h2><p>Leé el valor y elegí la clasificación que corresponde a los parámetros de este glosario.</p><div id="vitalQuiz"></div></div>
 <div id="handGame" class="game-panel hidden"><h2>🧼 Los 5 momentos de higiene de manos</h2><p>Leé la situación y elegí el momento correcto.</p><div id="handQuiz"></div></div>
-<div id="trayGame" class="game-panel hidden"><h2>🧺 Desafío: armá la bandeja contra reloj</h2><p>Primero elegí qué bandeja te piden. Después, cuando comiences, aparecerán todos los elementos mezclados. Seleccioná únicamente los que corresponden a esa bandeja y presioná <b>Comprobar bandeja</b>. El tiempo se detiene cuando la selección es correcta.</p><div class="tray-controls"><label for="trayPlayer"><b>Nombre de quien participa</b></label><input id="trayPlayer" class="search" placeholder="Ingresá tu nombre" maxlength="40"><label for="trayType"><b>Armá esta bandeja</b></label><select id="trayType" class="search"><option value="avp">Bandeja de Acceso Venoso Periférico (AVP)</option><option value="ev">Bandeja endovenosa</option><option value="im">Bandeja intramuscular</option><option value="sc">Bandeja subcutánea</option><option value="id">Bandeja intradérmica</option></select><button class="primary" id="trayStartBtn" onclick="startTrayGame()">⏱️ Comenzar desafío</button></div><div class="tray-clock" aria-live="polite"><span>⏱️ Tu tiempo</span><strong id="trayTimer">00:00.0</strong></div><p id="trayInstruction" class="small">Cada alumno tiene su propio cronómetro en la página que abrió.</p><div id="trayChecklist" class="tray-checklist"><p>Elegí la bandeja y comenzá para ver los elementos mezclados.</p></div><div class="tray-actions"><button class="primary" id="trayFinishBtn" onclick="finishTrayGame()" disabled>Comprobar bandeja</button><button id="trayStopBtn" onclick="stopTrayClock()" disabled>⏹️ Detener cronómetro</button><button onclick="resetTrayGame()">🔄 Reiniciar / siguiente alumno</button></div><p id="trayFeedback" aria-live="polite"></p><div class="tray-leaderboard"><h3>🏆 Mejores tiempos de esta página</h3><p class="small">Esta lista es local a esta pestaña/dispositivo. Para declarar un ganador entre alumnos conectados desde distintos dispositivos, los tiempos deben reunirse en un registro compartido o enviarse a quien coordina la competencia.</p><ol id="trayResults"><li>Todavía no hay tiempos registrados en esta página.</li></ol></div><p class="small">Material educativo: respetá las indicaciones docentes e institucionales sobre selección de jeringas, agujas, preparación de medicamentos y descarte seguro. En la lista se conservan las medidas tal como fueron proporcionadas.</p></div>
+<div id="trayGame" class="game-panel hidden"><h2>🧺 Desafío: armá la bandeja contra reloj</h2><p>Primero elegí qué bandeja te piden. Después, cuando comiences, aparecerán todos los elementos mezclados. Seleccioná únicamente los que corresponden a esa bandeja y presioná <b>Comprobar bandeja</b>. El tiempo se detiene cuando la selección es correcta.</p><div class="tray-controls"><label for="trayPlayer"><b>Nombre de quien participa</b></label><input id="trayPlayer" class="search" placeholder="Ingresá tu nombre" maxlength="40"><label for="trayType"><b>Armá esta bandeja</b></label><select id="trayType" class="search"><option value="curacion">Bandeja de Curaciones</option><option value="avp">Bandeja de Acceso Venoso Periférico (AVP)</option><option value="ev">Bandeja endovenosa</option><option value="im">Bandeja intramuscular</option><option value="sc">Bandeja subcutánea</option><option value="id">Bandeja intradérmica</option></select><button class="primary" id="trayStartBtn" onclick="startTrayGame()">⏱️ Comenzar desafío</button></div><div class="tray-clock" aria-live="polite"><span>⏱️ Tu tiempo</span><strong id="trayTimer">00:00.0</strong></div><p id="trayInstruction" class="small">Cada alumno tiene su propio cronómetro en la página que abrió.</p><div id="trayChecklist" class="tray-checklist"><p>Elegí la bandeja y comenzá para ver los elementos mezclados.</p></div><div class="tray-actions"><button class="primary" id="trayFinishBtn" onclick="finishTrayGame()" disabled>Comprobar bandeja</button><button id="trayStopBtn" onclick="stopTrayClock()" disabled>⏹️ Detener cronómetro</button><button onclick="resetTrayGame()">🔄 Reiniciar / siguiente alumno</button></div><p id="trayFeedback" aria-live="polite"></p><div class="tray-leaderboard"><h3>🏆 Mejores tiempos de esta página</h3><p class="small">Esta lista es local a esta pestaña/dispositivo. Para declarar un ganador entre alumnos conectados desde distintos dispositivos, los tiempos deben reunirse en un registro compartido o enviarse a quien coordina la competencia.</p><ol id="trayResults"><li>Todavía no hay tiempos registrados en esta página.</li></ol></div><p class="small">Material educativo: respetá las indicaciones docentes e institucionales sobre selección de jeringas, agujas, preparación de medicamentos y descarte seguro. En la lista se conservan las medidas tal como fueron proporcionadas.</p></div>
 
 <div id="bandageGame" class="game-panel hidden">
-  <h2>🩹 Juego de Tipos de Vendajes</h2>
+  <h2>🎗️ Juego de Tipos de Vendajes</h2>
   <p>Leé atentamente la definición o característica y seleccioná el tipo de vendaje correspondiente.</p>
   <div id="bandageQuiz"></div>
 </div>
@@ -287,6 +348,7 @@ function showGamePanel(id){
   
   if(id==='game') loadQ();
   if(id==='hendersonGame') startHendersonGame();
+  if(id==='curacionGamePanel') startCuracionGame();
   if(id==='vitalGame') startVitalGame();
   if(id==='handGame') startHandGame();
   if(id==='trayGame') resetTrayGame();
@@ -406,14 +468,15 @@ function renderHandQuestion(){let root=document.getElementById('handQuiz');if(!r
 function answerHand(btn,choice){let x=handDeck[handIndex];let all=document.querySelectorAll('#handOptions .quiz-choice');all.forEach(b=>{b.disabled=true;if(b.textContent===x.a)b.classList.add('correct')});let ok=choice===x.a;if(!ok)btn.classList.add('incorrect');if(ok)handScore++;document.getElementById('handFeedback').textContent=ok?'¡Muy bien! Ese es el momento correcto. ⭐':'La respuesta correcta es: '+x.a+'. Repasá los cinco momentos en Conceptos.';document.getElementById('handNext').style.display='inline-block';if(handIndex===handDeck.length-1)document.getElementById('handNext').textContent='Ver resultado 🎉'}
 
 const trayLists={
+ curacion:["Bandeja para colocar el material","Equipo de curación (antisépticos, desinfectante, pomada)","Riñón estéril","Guantes estériles y comunes","Suero fisiológico / Ringer Lactato / Agua Destilada","Jeringa de 20cc","Agujas (optativo para irrigación)","Tela adhesiva","Apósitos y gasas","Venda"],
  avp:["Guante de examinación","Descartador","Catéter venoso","3 torundas de algodón","Prolongador con llave de 3 vías","Prolongador con Y","Macrogoteo / Microgoteo","Baxter","Lazo hemostático","Tegaderm / cinta hipoalergénica","Alcohol al 70%"],
  ev:["Descartador","Guante de examinación","3 torundas de algodón","Jeringa (x) ml","Aguja 25/8","Lazo hemostático","Cinta","Fármaco","Alcohol al 70%"],
  im:["Descartador","Guante de examinación","Jeringa (x) ml","3 torundas de algodón","Agujas 50/8, 40/8 y 25/8, según el tejido adiposo de la persona","Fármaco","Alcohol al 70%"],
  sc:["Descartador","Guante de examinación","Jeringa de 1 ml","Agujas 15/5 y 16/5","Fármaco","2 torundas de algodón","Alcohol al 70%"],
  id:["Descartador","Guante de examinación","Jeringa de 1 ml","Agujas 15/5 y 16/5","2 torundas de algodón","Lapicera","Fármaco","Alcohol al 70%"]
 };
-const trayNames={avp:'Acceso Venoso Periférico (AVP)',ev:'Endovenosa',im:'Intramuscular',sc:'Subcutánea',id:'Intradérmica'};
-let trayInterval=null,trayStart=0,trayRunning=false,trayCurrentName='',trayCurrentType='avp',trayScores=[];
+const trayNames={curacion:'Bandeja de Curaciones',avp:'Acceso Venoso Periférico (AVP)',ev:'Endovenosa',im:'Intramuscular',sc:'Subcutánea',id:'Intradérmica'};
+let trayInterval=null,trayStart=0,trayRunning=false,trayCurrentName='',trayCurrentType='curacion',trayScores=[];
 const trayPool=[...new Set(Object.values(trayLists).flat())];
 function formatTrayTime(ms){let mins=Math.floor(ms/60000),secs=Math.floor((ms%60000)/1000),tenths=Math.floor((ms%1000)/100);return String(mins).padStart(2,'0')+':'+String(secs).padStart(2,'0')+'.'+tenths}
 function updateTrayClock(){if(trayRunning)document.getElementById('trayTimer').textContent=formatTrayTime(performance.now()-trayStart)}
@@ -423,6 +486,73 @@ function toggleTrayItem(input){input.closest('.tray-item').classList.toggle('che
 function finishTrayGame(){if(!trayRunning)return;let boxes=[...document.querySelectorAll('#trayChecklist input[type=checkbox]')];let selected=boxes.filter(x=>x.checked).map(x=>x.dataset.item);let correct=trayLists[trayCurrentType];let missing=correct.filter(x=>!selected.includes(x));let extra=selected.filter(x=>!correct.includes(x));if(missing.length||extra.length){document.getElementById('trayFeedback').textContent='Todavía no está correcta. Revisá la selección: '+(missing.length?`faltan ${missing.length} elemento(s). `:'')+(extra.length?`hay ${extra.length} elemento(s) que no corresponden. `:'')+'El cronómetro sigue corriendo; corregí y volvé a comprobar.';return}let elapsed=performance.now()-trayStart;trayRunning=false;if(trayInterval){clearInterval(trayInterval);trayInterval=null}document.getElementById('trayTimer').textContent=formatTrayTime(elapsed);trayScores.push({name:trayCurrentName,type:trayNames[trayCurrentType],ms:elapsed,display:formatTrayTime(elapsed)});trayScores.sort((a,b)=>a.ms-b.ms);document.getElementById('trayFeedback').textContent=`¡Correcto, ${trayCurrentName}! Armó la bandeja ${trayNames[trayCurrentType]} en ${formatTrayTime(elapsed)}.`;document.getElementById('trayStartBtn').disabled=false;document.getElementById('trayFinishBtn').disabled=true;document.getElementById('trayStopBtn').disabled=true;document.getElementById('trayPlayer').disabled=false;document.getElementById('trayType').disabled=false;document.querySelectorAll('#trayChecklist input').forEach(x=>x.disabled=true);document.getElementById('trayInstruction').textContent='Tiempo detenido. Presioná “Reiniciar / siguiente alumno” para empezar una nueva partida desde cero.';renderTrayResults();celebrateGame(`¡${trayCurrentName} completó correctamente la bandeja ${trayNames[trayCurrentType]} en ${formatTrayTime(elapsed)}! La rapidez cuenta, pero también la selección correcta y la seguridad.`)}
 function stopTrayClock(){if(!trayRunning)return;let elapsed=performance.now()-trayStart;trayRunning=false;if(trayInterval){clearInterval(trayInterval);trayInterval=null}document.getElementById('trayTimer').textContent=formatTrayTime(elapsed);let boxes=[...document.querySelectorAll('#trayChecklist input[type=checkbox]')];let selected=boxes.filter(x=>x.checked).map(x=>x.dataset.item);let correct=trayLists[trayCurrentType];let missing=correct.filter(x=>!selected.includes(x));let extra=selected.filter(x=>!correct.includes(x));document.getElementById('trayStartBtn').disabled=false;document.getElementById('trayFinishBtn').disabled=true;document.getElementById('trayStopBtn').disabled=true;document.getElementById('trayPlayer').disabled=false;document.getElementById('trayType').disabled=false;document.querySelectorAll('#trayChecklist input').forEach(x=>x.disabled=true);if(!missing.length&&!extra.length){trayScores.push({name:trayCurrentName,type:trayNames[trayCurrentType],ms:elapsed,display:formatTrayTime(elapsed)});trayScores.sort((a,b)=>a.ms-b.ms);document.getElementById('trayFeedback').textContent=`Cronómetro detenido. ${trayCurrentName}: bandeja correcta en ${formatTrayTime(elapsed)}.`;renderTrayResults()}else{document.getElementById('trayFeedback').textContent=`Cronómetro detenido en ${formatTrayTime(elapsed)}. La bandeja no estaba completa/correcta: faltan ${missing.length} elemento(s) y hay ${extra.length} elemento(s) de más. Esta partida no se agrega a los mejores tiempos.`}document.getElementById('trayInstruction').textContent='Tiempo detenido. Mostrá el resultado a quien coordina la actividad y presioná “Reiniciar / siguiente alumno” para una nueva partida.'} 
 function renderTrayResults(){let list=document.getElementById('trayResults');if(!list)return;if(!trayScores.length){list.innerHTML='<li>Todavía no hay tiempos registrados en esta página.</li>';return}list.innerHTML=trayScores.map((x,i)=>`<li class="${i===0?'tray-result-winner':''}">${i===0?'🥇 ':''}<b>${x.name}</b> — ${x.type}: ${x.display}${i===0?' · Mejor tiempo de esta página':''}</li>`).join('')}
+
+// --- JUEGO DE CURACIONES (ORDENAR PASOS) ---
+const curacionSteps = [
+  ["1", "Lavado de manos.", "Realizar higiene de manos clínica antes de iniciar."],
+  ["2", "Colocación de guantes estériles.", "Usar guantes estériles para mantener la asepsia del procedimiento."],
+  ["3", "Recibir y ordenar el material.", "Recibir el riñón estéril, equipo de curación, suero, jeringa, apósitos y gasas preservando su esterilidad[span_14](start_span)[span_14](end_span)."],
+  ["4", "Preparar campo y delimitar áreas.", "Organizar el espacio de trabajo estéril."],
+  ["5", "Arrastre mecánico con jeringa y suero.", "Irrigar la herida con suero fisiológico usando la jeringa para eliminar contaminantes[span_15](start_span)[span_15](end_span)."],
+  ["6", "Debridamiento del tejido necrótico.", "Retirar el tejido susceptible de ser debridado según el grado de adherencia[span_16](start_span)[span_16](end_span)."],
+  ["7", "Limpieza con gasa húmeda.", "Limpiar desde los bordes hacia el centro de la lesión[span_17](start_span)[span_17](end_span)."],
+  ["8", "Revisión de cavidades.", "Verificar que no queden residuos de tejido que se puedan retirar[span_18](start_span)[span_18](end_span)."],
+  ["9", "Colocación de apósito interactivo o gel.", "Colocar apósito interactivo si hay tejido granulatorio o gel debridante si hay tejido necrótico[span_19](start_span)[span_19](end_span)."],
+  ["10", "Apósito absorbente o antimicrobiano.", "Aplicar apósito absorbente si hay exudado abundante o antimicrobiano ante infección local[span_20](start_span)[span_20](end_span)."],
+  ["11", "Verificar bordes y proteger de humedad.", "Asegurar la indemnidad de los tejidos circundantes y cubrir con apósito secundario[span_21](start_span)[span_21](end_span)."],
+  ["12", "Fijación con cinta o vendaje.", "Colocar cinta quirúrgica sobre piel limpia y seca o aplicar vendaje[span_22](start_span)[span_22](end_span)."]
+];
+let cOrder = []; let cAttempts = 0; let cSelected = null;
+function startCuracionGame() {
+  cOrder = [...curacionSteps].sort(() => Math.random() - 0.5);
+  cAttempts = 0;
+  cSelected = null;
+  renderCuracionGame();
+  document.getElementById('cFeedback').textContent = '';
+  document.getElementById('cFeedback').className = 'game-feedback';
+}
+function renderCuracionGame() {
+  let b = document.getElementById('cGameBoard');
+  if (!b) return;
+  b.innerHTML = cOrder.map((x, i) => {
+    let right = Number(x[0]) === i + 1;
+    return `<button class="hend-card ${right ? 'correct' : 'incorrect'}" data-ci="${i}" onclick="selectCuracion(${i})"><span class="hend-num">${i + 1}</span><span><b>Paso ${x[0]}:</b> ${x[1]}</span><strong aria-label="${right ? 'Correcta' : 'Incorrecta'}">${right ? '✓' : '✗'}</strong></button>`;
+  }).join('');
+  updateCuracionProgress();
+}
+function selectCuracion(i) {
+  if (cSelected === null) {
+    cSelected = i;
+    document.querySelector(`[data-ci="${i}"]`).classList.add('selected');
+    return;
+  }
+  if (cSelected === i) return;
+  let a = cSelected, b = i;
+  [cOrder[a], cOrder[b]] = [cOrder[b], cOrder[a]];
+  cAttempts++;
+  cSelected = null;
+  renderCuracionGame();
+  let right = cOrder.filter((x, idx) => Number(x[0]) === idx + 1).length;
+  let fb = document.getElementById('cFeedback');
+  if (right === 12) {
+    fb.textContent = '🎉 ¡Excelente! Todos los pasos de la curación están ordenados correctamente.';
+    fb.className = 'game-feedback good';
+    celebrateGame('¡Ordenaste correctamente los pasos del procedimiento de curación! ¡Excelente dominio clínico!');
+  } else {
+    fb.textContent = `Tenés ${right} de 12 pasos correctos. Revisá los que están en rojo y volvé a intercambiarlos.`;
+    fb.className = 'game-feedback';
+  }
+}
+function updateCuracionProgress() {
+  let right = cOrder.filter((x, i) => Number(x[0]) === i + 1).length;
+  let pct = Math.round(right / 12 * 100);
+  document.getElementById('cProg').textContent = `${right}/12`;
+  document.getElementById('cAttempts').textContent = cAttempts;
+  let fill = document.getElementById('cProgressFill');
+  if (fill) fill.style.width = pct + '%';
+  let per = document.getElementById('cPercent');
+  if (per) per.textContent = pct + '%';
+}
 
 // --- JUEGO DE VENDAJES ---
 const bandageQuestions = [
