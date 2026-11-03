@@ -39,7 +39,7 @@ body.readable-font *{font-family:"Comic Sans MS", "Arial", sans-serif!important}
 </style></head><body>
 <div id="readingGuide" class="reading-guide"></div>
 
-<header><span class="floating f1">💗</span><span class="floating f2">🩹</span><span class="floating f3">⭐</span><span class="floating f4">💉</span><div class="icons">🩺 💉 🌡️ 🧤 🩹</div><h1>Glosario de Enfermería Básica 1</h1><p><b>Basado en las clases con la profesora Natalia Méndez</b></p><p>100 términos · conceptos · curaciones · vendajes · juegos · Enfermerita Virtual</p></header><div class="wrap"><div class="card hero"><div class="welcome-illustration"><div class="mini-nurse">👩‍⚕️</div><div><h2>💉 ¡Aprendé jugando!</h2><p>Explorá el glosario, los conceptos, las curaciones, vendajes, las 14 necesidades de Henderson y practicá con preguntas.</p></div></div><nav><button class="primary" onclick="show('home')">🏠 Inicio</button><button onclick="show('gloss')">📖 Glosario</button><button onclick="show('concepts')">📚 Conceptos</button><button onclick="show('curacionesSec')">🩹 Curaciones</button><button onclick="show('vitalSigns')">🩺 Signos vitales</button><button onclick="show('trays')">💉 Bandejas</button><button onclick="show('bandajes')">🎗️ Vendajes</button><button onclick="show('henderson')">❤️ Henderson</button><button onclick="show('games')">🎮 Juegos</button><button onclick="toggleDark()">🌙 Fondo oscuro</button></nav></div>
+<header><span class="floating f1">💗</span><span class="floating f2">🛏️</span><span class="floating f3">⭐</span><span class="floating f4">💉</span><div class="icons">🩺 🛏️ 🌡️ 🧤 🩹</div><h1>Glosario de Enfermería Básica 1</h1><p><b>Basado en las clases con la profesora Natalia Méndez</b></p><p>100 términos · conceptos · curaciones · vendajes · posiciones · juegos · Enfermerita Virtual</p></header><div class="wrap"><div class="card hero"><div class="welcome-illustration"><div class="mini-nurse">👩‍⚕️</div><div><h2>💉 ¡Aprendé jugando!</h2><p>Explorá el glosario, conceptos, curaciones, vendajes, posiciones anatómicas, las 14 necesidades y practicá con preguntas.</p></div></div><nav><button class="primary" onclick="show('home')">🏠 Inicio</button><button onclick="show('gloss')">📖 Glosario</button><button onclick="show('concepts')">📚 Conceptos</button><button onclick="show('posicionesSec')">🛏️ Posiciones</button><button onclick="show('curacionesSec')">🩹 Curaciones</button><button onclick="show('vitalSigns')">🩺 Signos vitales</button><button onclick="show('trays')">🧺 Bandejas</button><button onclick="show('bandajes')">🎗️ Vendajes</button><button onclick="show('henderson')">❤️ Henderson</button><button onclick="show('games')">🎮 Juegos</button><button onclick="toggleDark()">🌙 Fondo oscuro</button></nav></div>
 <section id="home" class="card"><h2>💉 Tu progreso</h2><div class="syringe"><div class="cartoon-syringe"><div class="plunger"></div><div class="rod"></div><div class="barrel"><div class="liquid"></div></div><div class="tip"></div><div class="needle"></div><span class="smile">⌣</span></div></div><div class="syringe-track"><div id="fill" class="syringe-fill"></div></div><div class="sticker-row">
 <div class="sticker-wrap"><button class="sticker" onclick="showSticker('steto')" aria-label="Estetoscopio">🩺</button><div id="steto" class="sticker-info"><h3>🩺 Estetoscopio</h3><p>Instrumento utilizado para auscultar y escuchar sonidos internos del cuerpo.</p><button onclick="speakText('Estetoscopio. Instrumento utilizado para auscultar y escuchar sonidos internos del cuerpo.')">🔊 Escuchar</button></div></div>
 <div class="sticker-wrap"><button class="sticker" onclick="showSticker('termometro')" aria-label="Termómetro">🌡️</button><div id="termometro" class="sticker-info"><h3>🌡️ Termómetro</h3><p>Instrumento utilizado para medir la temperatura corporal.</p><button onclick="speakText('Termómetro. Instrumento utilizado para medir la temperatura corporal.')">🔊 Escuchar</button></div></div>
@@ -82,7 +82,72 @@ body.readable-font *{font-family:"Comic Sans MS", "Arial", sans-serif!important}
     <article class="need"><h3>2. Antes de realizar una tarea limpia o aséptica</h3><p>Antes de un procedimiento que requiere evitar la introducción de microorganismos.</p></article>
     <article class="need"><h3>3. Después del riesgo de exposición a líquidos corporales</h3><p>Después de una actividad con posibilidad de contacto con sangre u otros líquidos corporales.</p></article>
     <article class="need"><h3>4. Después de tocar al paciente</h3><p>Al finalizar el contacto directo con la persona atendida.</p></article>
-    <article class="need"><h3>5. Después del contacto con el entorno del paciente</h3><p>Después de tocar objetos o superficies cercanas al paciente, aunque no se lo haya tocado directamente.</p></article>
+    <article class="need"><h3>5. Después del contacto con el entorno del paciente</h3><p>After de tocar objetos o superficies cercanas al paciente, aunque no se lo haya tocado directamente.</p></article>
+  </div>
+</section>
+
+<section id="posicionesSec" class="card hidden">
+  <h2>🛏️ Posiciones Anatómicas Básicas en Enfermería</h2>
+  <p class="small">Guía completa de posicionamiento, preparación de camas, cuidados y galería de filminas ilustrativas basadas en las clases.</p>
+
+  <div class="card" style="border-color:#ff9fc2; background:#fffafc; margin-top:14px; text-align:center;">
+    <h3 style="color:var(--deep)">📸 Filminas y Secuencias Ilustrativas Oficiales</h3>
+    <p class="small">Infografía principal y tarjetas de secuencia detalladas para cada posición anatómica.</p>
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:12px; margin-top:12px;">
+      <div>
+        <img src="1000531476.jpg" alt="Infografía General de Posiciones" style="width:100%; height:auto; border-radius:14px; border:3px solid #ff9fc5; box-shadow:0 6px 16px rgba(0,0,0,0.1);">
+        <p class="small" style="margin-top:6px;"><b>Infografía general</b></p>
+      </div>
+      <div>
+        <img src="1000531540.jpg" alt="Secuencia Posiciones 1 a 4" style="width:100%; height:auto; border-radius:14px; border:3px solid #65b9e8; box-shadow:0 6px 16px rgba(0,0,0,0.1);">
+        <p class="small" style="margin-top:6px;"><b>Secuencia 1:</b> Supino, Lateral, Prono y Sim</p>
+      </div>
+      <div>
+        <img src="1000531541.jpg" alt="Secuencia Posiciones 5 a 8" style="width:100%; height:auto; border-radius:14px; border:3px solid #65b9e8; box-shadow:0 6px 16px rgba(0,0,0,0.1);">
+        <p class="small" style="margin-top:6px;"><b>Secuencia 2:</b> Fowler, Semi-Fowler, Trendelenburg y Litotomía</p>
+      </div>
+      <div>
+        <img src="1000531542.jpg" alt="Secuencia Posiciones 9 a 12" style="width:100%; height:auto; border-radius:14px; border:3px solid #65b9e8; box-shadow:0 6px 16px rgba(0,0,0,0.1);">
+        <p class="small" style="margin-top:6px;"><b>Secuencia 3:</b> Genupectoral, Roser, Kraske y Punción Lumbar</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="grid" style="margin-top:14px;">
+    <article class="need">
+      <span>Introducción</span>
+      <h3>1. Concepto y Objetivos</h3>
+      <p>Las posiciones anatómicas son las diferentes posturas que puede adoptar una persona sobre una cama, camilla o mesa de exploración.<br><br><b>Objetivos:</b><br>• Facilitar procedimientos médicos.<br>• Mejorar la comodidad del paciente.<br>• Favorecer determinadas funciones corporales.<br>• Prevenir complicaciones relacionadas con la inmovilidad.</p>
+    </article>
+
+    <article class="need">
+      <span>Cama</span>
+      <h3>2. Preparación de la Cama</h3>
+      <p>• Las sábanas deben estar limpias, secas y bien estiradas (sin arrugas para evitar fricción o lesiones en la piel).<br>• Proteger zonas de mayor presión: talones, tobillos, codos, sacro y hombros.<br>• Explicar el procedimiento al paciente, respetar su intimidad y usar almohadas o dispositivos de apoyo.</p>
+    </article>
+
+    <article class="need">
+      <span>No Quirúrgicas</span>
+      <h3>3. Posiciones No Quirúrgicas</h3>
+      <p>• <b>Decúbito Supino o Dorsal:</b> Boca arriba, espalda apoyada sobre el colchón. Para exploraciones de tórax, abdomen y extremidades.<br>• <b>Decúbito Lateral:</b> Acostado sobre un costado. Para higiene, cambios posturales y vía rectal.<br>• <b>Decúbito Prono o Ventral:</b> Boca abajo, apoyando abdomen y tórax. Cabeza girada.<br>• <b>Posición Sims o Semiprona:</b> Intermedia lateral-prono, pierna superior flexionada. Para enemas y exploraciones rectales.<br>• <b>Posición Fowler:</b> Semisentada (45°). Variantes: Semi-Fowler (30-45°) y Fowler alta (60-90°). Para expansión pulmonar y alimentación.<br>• <b>Posición Sedente:</b> Sentado a 90°. Facilita alimentación y respiración.</p>
+    </article>
+
+    <article class="need">
+      <span>Quirúrgicas</span>
+      <h3>4. Posiciones Quirúrgicas y Especiales</h3>
+      <p>• <b>Trendelenburg:</b> Boca arriba, cabeza más baja que los pies. Usos pélvicos.<br>• <b>Antitrendelenburg:</b> Contraria a Trendelenburg (cabeza más alta).<br>• <b>Ginecológica o de Litotomía:</b> Boca arriba, rodillas flexionadas y piernas en estribos. Para exploraciones ginecológicas.<br>• <b>Genupectoral o Mahometana:</b> De rodillas, pecho y cabeza sobre la superficie. Exploraciones rectales.<br>• <b>Kraske o Navaja:</b> Prono con flexión de cadera elevando la pelvis (cirugía sacra/rectal).<br>• <b>Roser o Proetz:</b> Supina con cabeza en extensión (exploración faríngea).<br>• <b>Laminectomía:</b> Prono con soportes especiales para columna.<br>• <b>Punción Lumbar:</b> De lado con rodillas flexionadas o sentado inclinado hacia adelante.</p>
+    </article>
+  </div>
+
+  <div class="card" style="background:#eaf8ff; border-color:#80cfe8; margin-top:16px;">
+    <h3 style="color:#17465a">💡 Cuidados Generales de Enfermería</h3>
+    <p style="margin:0; line-height:1.6;">
+      • Valoración previa obligatoria del paciente.<br>
+      • Informar, explicar el procedimiento y asegurar la intimidad.<br>
+      • Proteger prominencias óseas y evitar movimientos bruscos.<br>
+      • Mantener alineación corporal y vigilar respiración, circulación y confort.<br>
+      • Registrar los cambios posturales en el plan de cuidados.
+    </p>
   </div>
 </section>
 
@@ -106,7 +171,7 @@ body.readable-font *{font-family:"Comic Sans MS", "Arial", sans-serif!important}
     <article class="need">
       <span>Técnicas</span>
       <h3>3. Métodos y Debridamiento</h3>
-      <p>• <b>Arrastre Mecánico:</b> Lavado o irrigación con solución fisiológica, Ringer Lactato o agua destilada para eliminar contaminantes y preservar tejido de granulación.<br>• <b>Debridamiento Quirúrgico:</b> Elección en heridas infectadas, úlceras tipo 3 y 4, quemaduras y pie diabético grado II a IV.<br>• <b>Debridamiento Médico:</b><br>  - <i>Mecánico:</i> Gasa húmeda adherida al tejido necrótico retirada a las 24 h.<br>  - <i>Enzimático:</i> Pomadas con enzimas proteolíticas o agentes desnaturalizante.<br>  - <i>Autolítico:</i> Apósito interactivo/bioactivo que permite al organismo eliminar el tejido necrótico.<br>• <b>Toma de Cultivo:</b> Obtención de muestra para estudio microbiológico.</p>
+      <p>• <b>Arrastre Mecánico:</b> Lavado o irrigación con solución fisiológica, Ringer Lactato o agua destilada para eliminar contaminantes y preservar tejido de granulación.<br>• <b>Debridamiento Quirúrgico:</b> Elección en heridas infectadas, úlceras tipo 3 y 4, quemaduras y pie diabético grado II a IV.<br>• <b>Debridamiento Médico:</b><br>  - <i>Mecánico:</i> Gasa húmeda adherida al tejido necrótico retirada a las 24 h.<br>  - <i>Enzimático:</i> Pomadas con enzimas proteolíticas o agentes desnaturalizantes.<br>  - <i>Autolítico:</i> Apósito interactivo/bioactivo que permite al organismo eliminar el tejido necrótico.<br>• <b>Toma de Cultivo:</b> Obtención de muestra para estudio microbiológico.</p>
     </article>
 
     <article class="need">
@@ -127,7 +192,7 @@ body.readable-font *{font-family:"Comic Sans MS", "Arial", sans-serif!important}
 </div><p class="small">Importante: estos parámetros son material de estudio solicitado para el glosario y no reemplazan la valoración clínica ni los protocolos del establecimiento.</p></section>
 
 <section id="trays" class="card hidden">
-  <h2>💉 Bandejas Clínicas </h2>
+  <h2>🧺 Bandejas Clínicas </h2>
   <p class="small">Insumos obligatorios y específicos para cada procedimiento:</p>
   
   <div class="grid" style="margin-top:14px;">
@@ -269,12 +334,14 @@ body.readable-font *{font-family:"Comic Sans MS", "Arial", sans-serif!important}
 </section>
 
 <section id="henderson" class="card hidden"><h2>❤️ Las 14 necesidades de Virginia Henderson</h2><p>Estas necesidades orientan la valoración y el cuidado de la persona, buscando favorecer su independencia.</p><div class="grid"><article class="need"><span>Necesidad 1</span><h3>Respirar normalmente</h3><p>Necesidad de mantener una respiración adecuada.</p></article><article class="need"><span>Necesidad 2</span><h3>Comer y beber adecuadamente</h3><p>Necesidad de ingerir alimentos y líquidos suficientes.</p></article><article class="need"><span>Necesidad 3</span><h3>Eliminar por todas las vías corporales</h3><p>Necesidad de eliminar los productos de desecho del organismo.</p></article><article class="need"><span>Necesidad 4</span><h3>Moverse y mantener una postura adecuada</h3><p>Necesidad de movimiento, desplazamiento y mantenimiento de una postura conveniente.</p></article><article class="need"><span>Necesidad 5</span><h3>Dormir y descansar</h3><p>Necesidad de disponer de períodos adecuados de sueño y descanso.</p></article><article class="need"><span>Necesidad 6</span><h3>Escoger ropa adecuada, vestirse y desvestirse</h3><p>Necesidad de seleccionar y utilizar ropa apropiada y poder vestirse y desvestirse.</p></article><article class="need"><span>Necesidad 7</span><h3>Mantener la temperatura corporal</h3><p>Necesidad de conservar la temperatura corporal dentro de límites normales mediante medidas adecuadas.</p></article><article class="need"><span>Necesidad 8</span><h3>Mantener la higiene e integridad de la piel</h3><p>Necesidad de cuidar la higiene corporal y proteger la piel.</p></article><article class="need"><span>Necesidad 9</span><h3>Evitar peligros ambientales y evitar lesionar a otros</h3><p>Necesidad de prevenir riesgos y protegerse y proteger a otras personas.</p></article><article class="need"><span>Necesidad 10</span><h3>Comunicarse</h3><p>Necesidad de expresar sentimientos, necesidades, temores y opiniones y relacionarse con otras personas.</p></article><article class="need"><span>Necesidad 11</span><h3>Vivir según sus valores y creencias</h3><p>Necesidad de actuar de acuerdo con los valores y creencias propios.</p></article><article class="need"><span>Necesidad 12</span><h3>Trabajar y sentirse realizado</h3><p>Necesidad de realizar actividades que permitan sentirse útil y realizado.</p></article><article class="need"><span>Necesidad 13</span><h3>Participar en actividades recreativas</h3><p>Necesidad de recrearse y participar en actividades de ocio.</p></article><article class="need"><span>Necesidad 14</span><h3>Aprender, descubrir o satisfacer la curiosidad</h3><p>Necesidad de aprender, adquirir conocimientos y utilizar recursos disponibles para mantener o mejorar la salud.</p></article></div></section>
+
 <section id="games" class="card hidden"><h2>🎮 Juegos</h2><p>Todos los juegos están reunidos en esta sección. Elegí una actividad para comenzar.</p><div class="game-hub">
 <button onclick="showGamePanel('game')">🎯 Elegí la definición</button>
 <button onclick="showGamePanel('extraGame');startTF()">🧠 Verdadero o falso</button>
 <button onclick="showGamePanel('extraGame');startMemory()">🧩 Memoria de enfermería</button>
 <button onclick="showGamePanel('hendersonGame')">❤️ Las 14 necesidades de Henderson</button>
 <button onclick="showGamePanel('curacionGamePanel')">🩹 Ordená el procedimiento de curación</button>
+<button onclick="showGamePanel('posicionGamePanel');startPosicionGame()">🛏️ Juego de Posiciones (según imágenes)</button>
 <button onclick="showGamePanel('vitalGame');startVitalGame()">🩺 Clasificá los signos vitales</button>
 <button onclick="showGamePanel('handGame');startHandGame()">🧼 Los 5 momentos de higiene de manos</button>
 <button onclick="showGamePanel('trayGame');resetTrayGame()">🧺 Armá la bandeja contra reloj</button>
@@ -294,13 +361,19 @@ body.readable-font *{font-family:"Comic Sans MS", "Arial", sans-serif!important}
 
 <div id="curacionGamePanel" class="game-panel hidden">
   <h2>🩹 Juego: Ordená el procedimiento de curación por prioridad</h2>
-  <p>Ordená los pasos del procedimiento clínico de curación en su secuencia correcta. Tocá un paso para seleccionarlo y luego otro para intercambiarlos de lugar[span_34](start_span)[span_34](end_span).</p>
+  <p>Ordená los pasos del procedimiento clínico de curación en su secuencia correcta. Tocá un paso para seleccionarlo y luego otro para intercambiarlos de lugar[span_56](start_span)[span_56](end_span).</p>
   <div class="hend-game-info"><b>Progreso: <span id="cProg">0/12</span></b><span>Intentos: <span id="cAttempts">0</span></span></div>
   <div class="hend-progress-wrap"><div class="hend-progress-track"><div id="cProgressFill" class="hend-progress-fill"></div></div><div class="hend-progress-label"><span>Pasos en orden correcto</span><b id="cPercent">0%</b></div></div>
   <p class="hend-legend"><span class="legend-good">✓ Correcto</span><span class="legend-bad">✗ Desordenado</span></p>
   <div id="cGameBoard" class="hend-game-board"></div>
   <p id="cFeedback" class="game-feedback"></p>
   <button class="primary" onclick="startCuracionGame()">🔄 Mezclar pasos nuevamente</button>
+</div>
+
+<div id="posicionGamePanel" class="game-panel hidden">
+  <h2>🛏️ Juego: Descubrí la Posición Anatómica (con imágenes)</h2>
+  <p>Observá la tarjeta ilustrada y seleccioná a qué posición anatómica corresponde.</p>
+  <div id="posicionQuiz"></div>
 </div>
 
 <div id="vitalGame" class="game-panel hidden"><h2>🩺 Clasificá los signos vitales</h2><p>Leé el valor y elegí la clasificación que corresponde a los parámetros de este glosario.</p><div id="vitalQuiz"></div></div>
@@ -382,6 +455,7 @@ function showGamePanel(id){
   if(id==='game') loadQ();
   if(id==='hendersonGame') startHendersonGame();
   if(id==='curacionGamePanel') startCuracionGame();
+  if(id==='posicionGamePanel') startPosicionGame();
   if(id==='vitalGame') startVitalGame();
   if(id==='handGame') startHandGame();
   if(id==='trayGame') resetTrayGame();
@@ -501,7 +575,7 @@ function renderHandQuestion(){let root=document.getElementById('handQuiz');if(!r
 function answerHand(btn,choice){let x=handDeck[handIndex];let all=document.querySelectorAll('#handOptions .quiz-choice');all.forEach(b=>{b.disabled=true;if(b.textContent===x.a)b.classList.add('correct')});let ok=choice===x.a;if(!ok)btn.classList.add('incorrect');if(ok)handScore++;document.getElementById('handFeedback').textContent=ok?'¡Muy bien! Ese es el momento correcto. ⭐':'La respuesta correcta es: '+x.a+'. Repasá los cinco momentos en Conceptos.';document.getElementById('handNext').style.display='inline-block';if(handIndex===handDeck.length-1)document.getElementById('handNext').textContent='Ver resultado 🎉'}
 
 const trayLists={
- curacion:[".Bandeja para colocar el material","Equipo de curación (antisépticos, desinfectante, pomada)","Riñón estéril","Guantes estériles y comunes","Suero fisiológico / Ringer Lactato / Agua Destilada","Jeringa de 20cc","Agujas (optativo para irrigación)","Tela adhesiva","Apósitos y gasas","Venda"],
+ curacion:["Bandeja para colocar el material","Equipo de curación (antisépticos, desinfectante, pomada)","Riñón estéril","Guantes estériles y comunes","Suero fisiológico / Ringer Lactato / Agua Destilada","Jeringa de 20cc","Agujas (optativo para irrigación)","Tela adhesiva","Apósitos y gasas","Venda"],
  avp:["Guante de examinación","Descartador","Catéter venoso","3 Torundas de algodón","Prolongador con llave de 3 vías","Prolongador con Y","Macrogoteo / Microgoteo","Baxter","Lazo hemostático","Tegaderm / cinta hipoalergénica","Alcohol al 70%"],
  ev:["Descartador","Guante de examinación","3 torundas de algodón","Jeringa (x) ml","Aguja 25/8","Lazo hemostático","Cinta","Fármaco","Alcohol al 70%"],
  im:["Descartador","Guante de examinación","Jeringa (x) ml","3 torundas de algodón","Agujas 50/8, 40/8 y 25/8, según el tejido adiposo","Fármaco","Alcohol al 70%"],
@@ -524,16 +598,16 @@ function renderTrayResults(){let list=document.getElementById('trayResults');if(
 const curacionSteps = [
   ["1", "Lavado de manos.", "Realizar higiene de manos clínica antes de iniciar."],
   ["2", "Colocación de guantes estériles.", "Usar guantes estériles para mantener la asepsia del procedimiento."],
-  ["3", "Recibir y ordenar el material.", "Recibir el riñón estéril, equipo de curación, suero, jeringa, apósitos y gasas preservando su esterilidad[span_35](start_span)[span_35](end_span)."],
+  ["3", "Recibir y ordenar el material.", "Recibir el riñón estéril, equipo de curación, suero, jeringa, apósitos y gasas preservando su esterilidad[span_60](start_span)[span_60](end_span)."],
   ["4", "Preparar campo y delimitar áreas.", "Organizar el espacio de trabajo estéril."],
-  ["5", "Arrastre mecánico con jeringa y suero.", "Irrigar la herida con suero fisiológico usando la jeringa para eliminar contaminantes[span_36](start_span)[span_36](end_span)."],
-  ["6", "Debridamiento del tejido necrótico.", "Retirar el tejido susceptible de ser debridado según el grado de adherencia[span_37](start_span)[span_37](end_span)."],
-  ["7", "Limpieza con gasa húmeda.", "Limpiar desde los bordes hacia el centro de la lesión[span_38](start_span)[span_38](end_span)."],
-  ["8", "Revisión de cavidades.", "Verificar que no queden residuos de tejido que se puedan retirar[span_39](start_span)[span_39](end_span)."],
-  ["9", "Colocación de apósito interactivo o gel.", "Colocar apósito interactivo si hay tejido granulatorio o gel debridante si hay tejido necrótico[span_40](start_span)[span_40](end_span)."],
-  ["10", "Apósito absorbente o antimicrobiano.", "Aplicar apósito absorbente si hay exudado abundante o antimicrobiano ante infección local[span_41](start_span)[span_41](end_span)."],
-  ["11", "Verificar bordes y proteger de humedad.", "Asegurar la indemnidad de los tejidos circundantes y cubrir con apósito secundario[span_42](start_span)[span_42](end_span)."],
-  ["12", "Fijación con cinta o vendaje.", "Colocar cinta quirúrgica sobre piel limpia y seca o aplicar vendaje[span_43](start_span)[span_43](end_span)."]
+  ["5", "Arrastre mecánico con jeringa y suero.", "Irrigar la herida con suero fisiológico usando la jeringa para eliminar contaminantes[span_61](start_span)[span_61](end_span)."],
+  ["6", "Debridamiento del tejido necrótico.", "Retirar el tejido susceptible de ser debridado según el grado de adherencia[span_62](start_span)[span_62](end_span)."],
+  ["7", "Limpieza con gasa húmeda.", "Limpiar desde los bordes hacia el centro de la lesión[span_63](start_span)[span_63](end_span)."],
+  ["8", "Revisión de cavidades.", "Verificar que no queden residuos de tejido que se puedan retirar[span_64](start_span)[span_64](end_span)."],
+  ["9", "Colocación de apósito interactivo o gel.", "Colocar apósito interactivo si hay tejido granulatorio o gel debridante si hay tejido necrótico[span_65](start_span)[span_65](end_span)."],
+  ["10", "Apósito absorbente o antimicrobiano.", "Aplicar apósito absorbente si hay exudado abundante o antimicrobiano ante infección local[span_66](start_span)[span_66](end_span)."],
+  ["11", "Verificar bordes y proteger de humedad.", "Asegurar la indemnidad de los tejidos circundantes y cubrir con apósito secundario[span_67](start_span)[span_67](end_span)."],
+  ["12", "Fijación con cinta o vendaje.", "Colocar cinta quirúrgica sobre piel limpia y seca o aplicar vendaje[span_68](start_span)[span_68](end_span)."]
 ];
 let cOrder = []; let cAttempts = 0; let cSelected = null;
 function startCuracionGame() {
@@ -585,6 +659,51 @@ function updateCuracionProgress() {
   if (fill) fill.style.width = pct + '%';
   let per = document.getElementById('cPercent');
   if (per) per.textContent = pct + '%';
+}
+
+// --- JUEGO DE POSICIONES ANATÓMICAS (CON IMÁGENES SECUENCIALES) ---
+const posicionQuestions = [
+  { img: "1000531540.jpg", q: "¿A qué posición corresponde esta tarjeta ilustrada donde el paciente está acostado boca arriba con la espalda apoyada?", a: "Decúbito supino o dorsal", o: ["Decúbito supino o dorsal", "Decúbito lateral", "Decúbito prono o ventral", "Posición Sims"] },
+  { img: "1000531540.jpg", q: "¿Qué posición muestra la tarjeta con el paciente acostado sobre su costado con almohada entre las piernas?", a: "Decúbito lateral", o: ["Decúbito lateral", "Decúbito supino o dorsal", "Posición sedente", "Roser"] },
+  { img: "1000531540.jpg", q: "Identificá la posición con el paciente boca abajo apoyando el abdomen, tórax y almohada en los empeines:", a: "Decúbito prono o ventral", o: ["Decúbito prono o ventral", "Posición Fowler", "Litotomía", "Genupectoral"] },
+  { img: "1000531540.jpg", q: "¿Cómo se llama la posición intermedia (semiprona) con el brazo inferior semiflexionado?", a: "Posición Sims (semiprona)", o: ["Posición Sims (semiprona)", "Posición Fowler", "Trendelenburg", "Kraske"] },
+  { img: "1000531541.jpg", q: "Observando la imagen con respaldo bajo a 45 grados, ¿qué posición es?", a: "Posición Fowler (45°)", o: ["Posición Fowler (45°)", "Posición Semi-Fowler (30°)", "Posición sedente", "Roser"] },
+  { img: "1000531541.jpg", q: "Identificá la posición con respaldo de descanso a 30 grados según la filmina:", a: "Posición Semi-Fowler (30°)", o: ["Posición Semi-Fowler (30°)", "Posición Fowler (45°)", "Trendelenburg", "Litotomía"] },
+  { img: "1000531541.jpg", q: "¿Qué posición quirúrgica muestra la inclinación con cabeza baja en la camilla?", a: "Posición Trendelenburg", o: ["Posición Trendelenburg", "Antitrendelenburg", "Posición Sims", "Genupectoral"] },
+  { img: "1000531541.jpg", q: "Identificá la posición con vista lateral boca arriba y piernas apoyadas en estribos:", a: "Posición ginecológica / Litotomía", o: ["Posición ginecológica / Litotomía", "Decúbito prono", "Kraske", "Roser"] },
+  { img: "1000531542.jpg", q: "Observá la tarjeta con apoyo en rodillas y pecho, y cabeza de lado:", a: "Posición genupectoral", o: ["Posición genupectoral", "Posición Sims", "Litotomía", "Fowler"] },
+  { img: "1000531542.jpg", q: "¿Cómo se llama la posición con los hombros en el borde superior y cabeza en extensión?", a: "Posición Roser o Proetz", o: ["Posición Roser o Proetz", "Trendelenburg", "Laminectomía", "Decúbito lateral"] },
+  { img: "1000531542.jpg", q: "Identificá la posición con la mesa en ángulo de flexión elevando la región pélvica:", a: "Posición Kraske (navaja)", o: ["Posición Kraske (navaja)", "Genupectoral", "Litotomía", "Punción lumbar"] },
+  { img: "1000531542.jpg", q: "Según la última tarjeta, ¿qué procedimiento/posición muestra con espalda curvada para acceso?", a: "Punción lumbar (decúbito lateral)", o: ["Punción lumbar (decúbito lateral)", "Decúbito supino", "Trendelenburg", "Roser"] }
+];
+let posicionIndex = 0, posicionScore = 0, posicionDeck = [];
+function startPosicionGame() {
+  posicionDeck = shuffle(posicionQuestions);
+  posicionIndex = 0;
+  posicionScore = 0;
+  renderPosicionQuestion();
+}
+function renderPosicionQuestion() {
+  let root = document.getElementById('posicionQuiz');
+  if (!root) return;
+  if (posicionIndex >= posicionDeck.length) {
+    root.innerHTML = `<div class="card"><h3>🎉 ¡Terminaste el juego de posiciones!</h3><p>Resultado: ${posicionScore} de ${posicionDeck.length} respuestas correctas.</p><button class="primary" onclick="startPosicionGame()">Volver a jugar</button></div>`;
+    celebrateGame(`¡Terminaste el juego de posiciones anatómicas con ${posicionScore} de ${posicionDeck.length} respuestas correctas! Excelente dominio visual y clínico.`);
+    return;
+  }
+  let x = posicionDeck[posicionIndex], opts = shuffle(x.o);
+  root.innerHTML = `<div class="game-progress"><b>Pregunta ${posicionIndex+1} de ${posicionDeck.length}</b><div class="mini-track"><div style="width:${Math.round(posicionIndex/posicionDeck.length*100)}%"></div></div></div><div style="text-align:center; margin:12px 0;"><img src="${x.img}" alt="Tarjeta de Posición" style="max-width:100%; width:420px; height:auto; border-radius:12px; border:3px solid #65b9e8; box-shadow:0 4px 12px rgba(0,0,0,0.1);"></div><p class="gameq">${x.q}</p><div id="posicionOptions">${opts.map(o=>`<button class="quiz-choice" data-choice="${o}" onclick="answerPosicion(this,this.dataset.choice)">${o}</button>`).join('')}</div><p id="posicionFeedback" class="quiz-feedback"></p><button id="posicionNext" class="primary" style="display:none" onclick="posicionIndex++;renderPosicionQuestion()">Siguiente ➜</button>`;
+}
+function answerPosicion(btn, choice) {
+  let x = posicionDeck[posicionIndex];
+  let all = document.querySelectorAll('#posicionOptions .quiz-choice');
+  all.forEach(b => { b.disabled = true; if (b.textContent === x.a) b.classList.add('correct'); });
+  let ok = (choice === x.a);
+  if (!ok) btn.classList.add('incorrect');
+  if (ok) posicionScore++;
+  document.getElementById('posicionFeedback').textContent = ok ? '¡Correcto! Muy bien. ⭐' : 'La respuesta correcta era: ' + x.a + '.';
+  document.getElementById('posicionNext').style.display = 'inline-block';
+  if (posicionIndex === posicionDeck.length - 1) document.getElementById('posicionNext').textContent = 'Ver resultado 🎉';
 }
 
 // --- JUEGO DE VENDAJES ---
