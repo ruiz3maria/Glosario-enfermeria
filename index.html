@@ -659,18 +659,18 @@ function updateCuracionProgress() {
 
 // --- JUEGO DE POSICIONES ANATÓMICAS (CON IMÁGENES SECUENCIALES) ---
 const posicionQuestions = [
-  { img: "1000531540_2.jpg", q: "¿A qué posición corresponde esta tarjeta ilustrada donde el paciente está acostado boca arriba con la espalda apoyada?", a: "Decúbito supino o dorsal", o: ["Decúbito supino o dorsal", "Decúbito lateral", "Decúbito prono o ventral", "Posición Sims"] },
-  { img: "1000531540_2.jpg", q: "¿Qué posición muestra la tarjeta con el paciente acostado sobre su costado con almohada entre las piernas?", a: "Decúbito lateral", o: ["Decúbito lateral", "Decúbito supino o dorsal", "Posición sedente", "Roser"] },
-  { img: "1000531540_2.jpg", q: "Identificá la posición con el paciente boca abajo apoyando el abdomen, tórax y almohada en los empeines:", a: "Decúbito prono o ventral", o: ["Decúbito prono o ventral", "Posición Fowler", "Litotomía", "Genupectoral"] },
-  { img: "1000531540_2.jpg", q: "¿Cómo se llama la posición intermedia (semiprona) con el brazo inferior semiflexionado?", a: "Posición Sims (semiprona)", o: ["Posición Sims (semiprona)", "Posición Fowler", "Trendelenburg", "Kraske"] },
-  { img: "1000531541_2.jpg", q: "Observando la imagen con respaldo bajo a 45 grados, ¿qué posición es?", a: "Posición Fowler (45°)", o: ["Posición Fowler (45°)", "Posición Semi-Fowler (30°)", "Posición sedente", "Roser"] },
-  { img: "1000531541_2.jpg", q: "Identificá la posición con respaldo de descanso a 30 grados según la filmina:", a: "Posición Semi-Fowler (30°)", o: ["Posición Semi-Fowler (30°)", "Posición Fowler (45°)", "Trendelenburg", "Litotomía"] },
-  { img: "1000531541_2.jpg", q: "¿Qué posición quirúrgica muestra la inclinación con cabeza baja en la camilla?", a: "Posición Trendelenburg", o: ["Posición Trendelenburg", "Antitrendelenburg", "Posición Sims", "Genupectoral"] },
-  { img: "1000531541_2.jpg", q: "Identificá la posición con vista lateral boca arriba y piernas apoyadas en estribos:", a: "Posición ginecológica / Litotomía", o: ["Posición ginecológica / Litotomía", "Decúbito prono", "Kraske", "Roser"] },
-  { img: "1000531542_2.jpg", q: "Observá la tarjeta con apoyo en rodillas y pecho, y cabeza de lado:", a: "Posición genupectoral", o: ["Posición genupectoral", "Posición Sims", "Litotomía", "Fowler"] },
-  { img: "1000531542_2.jpg", q: "¿Cómo se llama la posición con los hombros en el borde superior y cabeza en extensión?", a: "Posición Roser o Proetz", o: ["Posición Roser o Proetz", "Trendelenburg", "Laminectomía", "Decúbito lateral"] },
-  { img: "1000531542_2.jpg", q: "Identificá la posición con la mesa en ángulo de flexión elevando la región pélvica:", a: "Posición Kraske (navaja)", o: ["Posición Kraske (navaja)", "Genupectoral", "Litotomía", "Punción lumbar"] },
-  { img: "1000531542_2.jpg", q: "Según la última tarjeta, ¿qué procedimiento/posición muestra con espalda curvada para acceso?", a: "Punción lumbar (decúbito lateral)", o: ["Punción lumbar (decúbito lateral)", "Decúbito supino", "Trendelenburg", "Roser"] }
+  { img: "posicion_1.jpg", q: "¿A qué posición corresponde esta tarjeta ilustrada donde el paciente está acostado boca arriba con la espalda apoyada?", a: "Decúbito supino o dorsal", o: ["Decúbito supino o dorsal", "Decúbito lateral", "Decúbito prono o ventral", "Posición Sims"] },
+  { img: "posicion_1.jpg", q: "¿Qué posición muestra la tarjeta con el paciente acostado sobre su costado con almohada entre las piernas?", a: "Decúbito lateral", o: ["Decúbito lateral", "Decúbito supino o dorsal", "Posición sedente", "Roser"] },
+  { img: "posicion_1.jpg", q: "Identificá la posición con el paciente boca abajo apoyando el abdomen, tórax y almohada en los empeines:", a: "Decúbito prono o ventral", o: ["Decúbito prono o ventral", "Posición Fowler", "Litotomía", "Genupectoral"] },
+  { img: "posicion_1.jpg", q: "¿Cómo se llama la posición intermedia (semiprona) con el brazo inferior semiflexionado?", a: "Posición Sims (semiprona)", o: ["Posición Sims (semiprona)", "Posición Fowler", "Trendelenburg", "Kraske"] },
+  { img: "posicion_2.jpg", q: "Observando la imagen con respaldo bajo a 45 grados, ¿qué posición es?", a: "Posición Fowler (45°)", o: ["Posición Fowler (45°)", "Posición Semi-Fowler (30°)", "Posición sedente", "Roser"] },
+  { img: "posicion_2.jpg", q: "Identificá la posición con respaldo de descanso a 30 grados según la filmina:", a: "Posición Semi-Fowler (30°)", o: ["Posición Semi-Fowler (30°)", "Posición Fowler (45°)", "Trendelenburg", "Litotomía"] },
+  { img: "posicion_2.jpg", q: "¿Qué posición quirúrgica muestra la inclinación con cabeza baja en la camilla?", a: "Posición Trendelenburg", o: ["Posición Trendelenburg", "Antitrendelenburg", "Posición Sims", "Genupectoral"] },
+  { img: "posicion_2.jpg", q: "Identificá la posición con vista lateral boca arriba y piernas apoyadas en estribos:", a: "Posición ginecológica / Litotomía", o: ["Posición ginecológica / Litotomía", "Decúbito prono", "Kraske", "Roser"] },
+  { img: "posicion_3.jpg", q: "Observá la tarjeta con apoyo en rodillas y pecho, y cabeza de lado:", a: "Posición genupectoral", o: ["Posición genupectoral", "Posición Sims", "Litotomía", "Fowler"] },
+  { img: "posicion_3.jpg", q: "¿Cómo se llama la posición con los hombros en el borde superior y cabeza en extensión?", a: "Posición Roser o Proetz", o: ["Posición Roser o Proetz", "Trendelenburg", "Laminectomía", "Decúbito lateral"] },
+  { img: "posicion_3.jpg", q: "Identificá la posición con la mesa en ángulo de flexión elevando la región pélvica:", a: "Posición Kraske (navaja)", o: ["Posición Kraske (navaja)", "Genupectoral", "Litotomía", "Punción lumbar"] },
+  { img: "posicion_3.jpg", q: "Según la última tarjeta, ¿qué procedimiento/posición muestra con espalda curvada para acceso?", a: "Punción lumbar (decúbito lateral)", o: ["Punción lumbar (decúbito lateral)", "Decúbito supino", "Trendelenburg", "Roser"] }
 ];
 let posicionIndex = 0, posicionScore = 0, posicionDeck = [];
 function startPosicionGame() {
